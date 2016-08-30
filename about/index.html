@@ -54,13 +54,12 @@
     <script src="../resources/js/ie10-viewport-bug-workaround.js"></script>
     <script> 
 		$(document).ready(function() {
-		$(function(){
-		  $("#navbar-header").load("navbar-header.html"); 
-		});
-			$("#about").addClass("active");
-			
-		});
-		
+			$(function(){
+				$("#navbar-header").load("navbar-header.html", function() {
+					$("#about").addClass("active");
+				});
+			});
+		};
 	</script>
 
   </body>
