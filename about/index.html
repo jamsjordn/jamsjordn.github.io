@@ -53,12 +53,12 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../resources/js/ie10-viewport-bug-workaround.js"></script>
     <script> 
-		var including = $(function(){
+		$(function(){
 		  $("#navbar-header").load("navbar-header.html"); 
 		});
-		all = $.when(including);
-		all.done(function (){
-		$("#about").addClass("active");
+		$(document).ready(function() {
+		while ($( "#about" ).hasClass( "active" ) = false){
+			$("#about").addClass("active");
 		});
 		
 	</script>
