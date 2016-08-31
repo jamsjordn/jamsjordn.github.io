@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">  
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
@@ -19,7 +20,7 @@
 
     <!-- Custom styles for this template -->
     <link href="starter-template.css" rel="stylesheet">
-
+    <link href="../resources/css/font-awesome.min.css" rel="stylesheet">
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="../resources/js/ie-emulation-modes-warning.js"></script>
@@ -29,38 +30,65 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-  </head>
+</head>
 
-  <body>
-	<div id="navbar-header">
-	</div>
+<body>
+    <div id="navbar-header">
+    </div>
     <div class="container">
 
-      <div class="starter-template">
-        <h1>Contact me yo</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
-      </div>
+        <div class="starter-template">
+            <h1>Contact me yo</h1>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">James Jordan</h3>
+                </div>
+                <div class="panel-body">
+                    <p>+61 429 672 525</p>
+                    <a class="btn btn-social-icon btn-twitter">
+                        <span class="fa fa-twitter"></span>
+                    </a>
+                    <p><a href="mailto:james.jordan@live.com.au">james.jordan@live.com.au</a>
+                    </p>
+                    <a href="http://linkedin.com/in/jamsjordn">
+                        <img src="../resources/images/linkedin.svg" alt="LinkedIn" class="img-rounded img-responsive center-block">
+                    </a>
+                    <a href="http://instagram.com/jamsjordn">
+                        <img src="../resources/images/instagram.svg" alt="Instagram" class="img-rounded img-responsive center-block">
+                    </a>
+                    <a href="http://facebook.com/jamsjordn">
+                        <img src="../resources/images/facebook.svg" alt="Facebook" class="img-rounded img-responsive center-block">
+                    </a>
+                </div>
+            </div>
+            <p class="lead">Use this document as a way to quickly start any new project.
+                <br>All you get is this text and a mostly barebones HTML document.</p>
+        </div>
 
-    </div><!-- /.container -->
+    </div>
+    <!-- /.container -->
 
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
+    <script>
+        window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')
+    </script>
     <script src="../resources/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../resources/js/ie10-viewport-bug-workaround.js"></script>
-    <script> 
-		$(document).ready(function() {
-			$(function(){
-				$("#navbar-header").load("../navbar-header.html", function() {
-					$("#contact").addClass("active");
-				});
-			});
-		});
-	</script>
+    <script>
+        $(document).ready(function() {
+            $(function() {
+                $("#navbar-header").load("../navbar-header.html", function() {
+                    $("#contact").addClass("active");
+                });
+            });
+        });
+    </script>
 
-  </body>
+</body>
+
 </html>
