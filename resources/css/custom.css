@@ -1,3 +1,25 @@
-button.instagram-but {
-	color: #3F729B
+.instagram-back {
+	background-color: #3F729B
+}
+
+.linkedin-back {
+	background-color: #007BB6
+}
+
+.social {
+	color: white; 
+	border-width: 0px;
+	margin: 5px;
+}
+
+.orange-back {
+	background-color: #FF8800
+}
+
+.orange-front {
+	color: #FF8800
+}
+
+.dark-grey-back {
+	background-color: #333333; 
 }
