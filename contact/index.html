@@ -21,10 +21,11 @@
     <script src="../resources/js/ie-emulation-modes-warning.js"></script>
 </head>
 
-<body style="height: 100%">
+<body>
+<div id="wrapper">
     <div id="navbar-header">
     </div>
-    <div class="container" style="height: 100%; margin: 0">
+    <div id="content" class="content">
 
         <div class="starter-template">
             <h1 class="orange-front">Contact me yo!</h1>
@@ -33,34 +34,19 @@
         </div>
 
     </div>
-	<div style="display:flex;justify-content:center;align-items:flex-end;" class="dark-grey-back">
-  <div style="text-align: center;">
+	<div id="footer" class="dark-grey-back">
+  <div style="text-align: center; vertical-align: middle">
 	<span>
-        <a role="button" class="btn btn-default btn-lg instagram-back social" href="http://instagram.com/jamsjordn">
-            <i class="fa fa-instagram" title="Instagram"></i>
-            instagram
-        </a>
-
-        <a role="button" class="btn btn-default btn-lg linkedin-back social" href="http://linkedin.com/in/jamsjordn">
-            <i class="fa" title="Instagram">&#xf08c</i>
-            linkedIn
-        </a>
-        <a role="button" class="btn btn-default btn-lg orange-back social" href="tel:+61429672525">
-            <i class="fa" title="Instagram">&#xf095</i>
-            call
-        </a>
-</span><span>
-        <a role="button" class="btn btn-default btn-lg orange-back social" href="mailto:james.jordan@live.com.au">
-            <i class="fa" title="Instagram">&#xf0e0</i>
-            email
-        </a>
-
-        <a role="button" class="btn btn-default btn-lg orange-back social" href="http://instagram.com/jamsjordn">
-            <i class="fa" title="Instagram">&#xf078</i>
-            download contact
-        </a>
+<div class="btn-group btn-group-lg" role="group" aria-label="...">
+  <button type="button" title="Instagram" class="btn btn-default instagram-back social"><i class="fa">&#xf16d</i><span class="hidden-xs"> Instagram</span></button>
+  <button type="button" title="LinkedIn" class="btn btn-default linkedin-back social"><i class="fa">&#xf08c</i><span class="hidden-xs"> LinkedIn</span></button>
+  <button type="button" title="Call" class="btn btn-default orange-back social"><i class="fa">&#xf095</i><span class="hidden-xs"> Phone</span></button>
+  <button type="button" title="email" class="btn btn-default orange-back social"><i class="fa">&#xf0e0</i><span class="hidden-xs"> email</span></button>
+  <button type="button" title="Download Contact" class="btn btn-default orange-back social"><i class="fa">&#xf078</i><span class="hidden-xs"> Download</span></button>
+</div>
 		</span>
     </div>
+	</div>
 	</div>
     <!-- /.container -->
 
