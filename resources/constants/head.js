@@ -10,7 +10,7 @@ document.write('\
     <link href="../resources/css/ie10-viewport-bug-workaround.css" rel="stylesheet">\
     <link href="starter-template.css" rel="stylesheet">\
     <link href="../resources/css/font-awesome.css" rel="stylesheet">\
-    <link href="../resources/css/custom.css" rel="stylesheet">\
 	<link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet"> \
     <script src="../resources/js/ie-emulation-modes-warning.js"></script>\
+    <link href="../resources/css/custom.css" rel="stylesheet">\
 ');
