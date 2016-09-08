@@ -1,3 +1,18 @@
+@font-face{
+	font-family:"DIN Bold";
+	font-weight:normal;
+	src:url(http://www.uts.edu.au/sites/all/themes/custom/uts/fonts/dinweb-bold.eot);
+	src:url(http://www.uts.edu.au/sites/all/themes/custom/uts/fonts/dinweb-bold.eot?#iefix) format("embedded-opentype"),
+	url(http://www.uts.edu.au/sites/all/themes/custom/uts/fonts/dinweb-bold.woff) format("woff"),
+	url(http://www.uts.edu.au/sites/all/themes/custom/uts/fonts/dinweb-bold.ttf) format("truetype"),
+	url(http://www.uts.edu.au/sites/all/themes/custom/uts/fonts/dinweb-bold.svg#DINBold) format("svg");}
+
+
+
+
+
+
+
 .orange-back {
 	background-color: #FF8800
 }
