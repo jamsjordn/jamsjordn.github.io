@@ -99,12 +99,15 @@
                                             .attr('id','book-'+cati+'-'+ topi)))
                                 )
                             )
-                            )
+						)
                         $.each(topitem.covers, function (covi, covitem) {
                             $('#list-' + cati + '-' + topi)
                                 .append($('<li></li>')
                                     .text(covitem))
                         });
+						if (topitem.placesAvailable == 0){
+							$('#book-' + cati + '-' + topi).text("Wait")
+						};
                     });
                 });
 
