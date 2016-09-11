@@ -2,64 +2,149 @@
 <html lang="en">
 
 <head>
-    <script src="/resources/constants/head.js"></script>
-    <title>James Jordan</title>
+	<script src="/resources/constants/head.js"></script>
+	<title>James Jordan</title>
 </head>
 
 <body>
-    <div id="wrapper">
-        <div id="navbar-header">
-            <script src="/resources/constants/navbar-header.js"></script>
-        </div>
-        <div id="content" class="container" style="margin:20px">
-    <div class="panel-group" id="accordion">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">1. What is HTML?</a>
-                </h4>
-            </div>
-            <div id="collapseOne" class="panel-collapse collapse in">
-                <div class="panel-body">
-                    <p>HTML stands for HyperText Markup Language. HTML is the main markup language for describing the structure of Web pages. <a href="http://www.tutorialrepublic.com/html-tutorial/" target="_blank">Learn more.</a></p>
-                </div>
-            </div>
-        </div>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-                <h4 class="panel-title">2. What is Bootstrap?
-                </h4></a>
-            </div>
-            <div id="collapseTwo" class="panel-collapse collapse">
-                <div class="panel-body">
-                    <p>Bootstrap is a powerful front-end framework for faster and easier web development. It is a collection of CSS and HTML conventions. <a href="http://www.tutorialrepublic.com/twitter-bootstrap-tutorial/" target="_blank">Learn more.</a></p>
-                </div>
-            </div>
-        </div>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">3. What is CSS?</a>
-                </h4>
-            </div>
-            <div id="collapseThree" class="panel-collapse collapse">
-                <div class="panel-body">
-                    <p>CSS stands for Cascading Style Sheet. CSS allows you to specify various style properties for a given HTML element such as colors, backgrounds, fonts etc. <a href="http://www.tutorialrepublic.com/css-tutorial/" target="_blank">Learn more.</a></p>
-                </div>
-            </div>
-        </div>
-    </div>
-	<p><strong>Note:</strong> Click on the linked heading text to expand or collapse accordion panels.</p>
-</div>
+	<div id="wrapper" style="padding-top:50px">
+		<div id="navbar-header">
+			<script src="/resources/constants/navbar-header.js"></script>
+		</div>
+		<div id="content" class="container" style="margin:20px">
 
- </div>
+
+			<div class="row">
+				<div class="col-md-2"> </div>
+				<div class="col-md-8">
+					<h2>HELPS workshop booking</h2>
+					<p>Workshop registration for Spring session will be available from Friday 22 July
+						2016.
+						<br />
+						<strong>Important information:</strong>
+					</p>
+					<ul>
+						<li>Follow each step to complete your booking </li>
+						<li>Check the time to ensure that there is no timetable clash</li>
+						<li>Check your email (UTS email address) for the booking confirmation</li>
+						<li>Cancel, if no longer available, 24 hours before the scheduled session by clicking
+							on 'My Booking' tab and then the 'detail' link</li>
+						<li>Please know that failing to turn up for your registered workshop is not fair
+							to those on the waiting list. Repeat offenders (2 no-shows) may be barred
+							from registering for workshops.</li>
+					</ul>
+					<div class="panel-group" id="catAccordian">
+
+					</div>
+				</div>
+				<div class="col-md-2"> </div>
+			</div>
+
+			<script src="sessions.js"></script>
+			<script>
+				$(document).ready(function() {
+					$.each(sessions.category, function(cati, catitem) {
+						$('#catAccordian')
+							.append($(
+									"<div class=\"panel panel-default\" style=\"margin-top:40px\"></div>"
+								)
+								.append($("<div class=\"panel-heading\"></div>").append($(
+										'<a data-toggle="collapse" data-parent="#catAccordian" style="text-decoration: none; color:#000"></a>'
+									)
+									.attr('href', '#catCollpase-' + cati)
+									.append($('<h4></h4>')
+										.text(catitem.name))))
+								.append($(
+										'<div class="panel-collapse collapse" style="padding:5px"></div>'
+									)
+									.attr('id', 'catCollpase-' + cati)
+									.append($(
+										'<div class="panel-heading"><h4 class="panel-title"><div class="row" style="padding-left:15px;padding-right:15px;"><div class="col-sm-7" style="padding-left:0px;padding-right:0px;">Topic</div><div class="col-sm-5" style="padding-left:0px;padding-right:0px;"><div class="row" style="margin:0"><p class="col-xs-5" style="padding-left:0px;padding-right:0px; margin-bottom:0px">Date</p><p class="col-xs-4" style="padding-left:0px;padding-right:0px; margin-bottom:0px">Time</p><p align="right" class="col-xs-3" style="padding-left:0px;padding-right:0px; margin-bottom:0px">Sessions</p></div></div></div></h4></div>'
+									))
+									.append($("<div class=\"panel-group\"></div>")
+										.attr('id', "accordian-" + cati)))
+							);
+
+						$.each(catitem.topics, function(topi, topitem) {
+							$('#accordian-' + cati)
+								.append($("<div class=\"panel panel-default\"></div>")
+									.append($('<div class="panel-heading"></div>')
+										.append($("<h4 class=\"panel-title\"></h4>")
+											.append($("<a data-toggle=\"collapse\"></a>")
+												.attr('data-parent', "#accordian-" + cati)
+												.attr('href', "#collapse-" + cati + "-" + topi)
+												.append($(
+														'<div class="row" style="padding-left:15px;padding-right:15px;"></div>'
+													)
+													.append($(
+															'<div class="col-sm-7" style="padding-left:0px;padding-right:0px;"></div>'
+														)
+														.text(topitem.topic))
+													.append($(
+															'<div class="col-sm-5" style="padding-left:0px;padding-right:0px;"><div class="row"></div></div>'
+														)
+														.append($(
+																'<p class="col-xs-5" style="padding-left:0px;padding-right:0px; margin-bottom:0px"></p>'
+															)
+															.text(topitem.startDate))
+														.append($(
+																'<p class="col-xs-5" style="padding-left:0px;padding-right:0px; margin-bottom:0px"></p>'
+															)
+															.text(topitem.time))
+														.append($(
+																'<p align="right" class="col-xs-2" style="padding-left:0px;padding-right:0px; margin-bottom:0px"></p>'
+															)
+															.text(topitem.noOfSessions))))))
+									)
+									.append($("<div class=\"panel-collapse collapse\"></div>")
+										.attr('id', "collapse-" + cati + "-" + topi)
+										.append($("<div class=\"panel-body\"></div>")
+											.append($("<div class=\"col-sm-10\"></div>")
+												.append($("<p></p>")
+													.append(
+														'<b>Title: </b>' + topitem.topic + '<br>' +
+														'<b>Room: </b>' + topitem.room + '<br>' +
+														'<b>Date: </b>' + topitem.startDate + '<br>' +
+														'<b>Time: </b>' + topitem.time + '<br>' +
+														'<b>Target Group: </b>' + topitem.targetGroup + '<br>' +
+														'<b>What it covers: </b>'
+													))
+												.append($("<ul></ul>")
+													.attr('id', 'list-' + cati + '-' + topi))
+												.append($("<p></p>")
+													.append($('<b>Places available: </b>' + topitem.placesAvailable +
+														'<br>'))))
+											.append($("<div class=\"col-sm-2\"></div>")
+												.append($(
+														'<button type="button" class="btn btn-default" style="float: right; ">Book</button>'
+													)
+													.attr('id', 'book-' + cati + '-' + topi)))
+										)
+									)
+								)
+							$.each(topitem.covers, function(covi, covitem) {
+								$('#list-' + cati + '-' + topi)
+									.append($('<li></li>')
+										.text(covitem))
+							});
+						});
+						//$.each(sessions.category, function (i, item) {
+						//});
+					});
+					//alert(v);
+
+
+
+				});
+			</script>
+
+
+		</div>
 		<div id="footer" class="dark-grey-back">
-            <script src="/resources/constants/footer.js"></script>
-        </div>
-    </div>
+			<script src="/resources/constants/footer.js"></script>
+		</div>
+	</div>
 	<script src="/resources/constants/foot.js"></script>
 </body>
 
 </html>
-                              		                                		
