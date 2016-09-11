@@ -40,103 +40,82 @@
 				<div class="col-md-2"> </div>
 			</div>
 
-			<script src="sessions.js"></script>
-			<script>
-				$(document).ready(function() {
-					$.each(sessions.category, function(cati, catitem) {
-						$('#catAccordian')
-							.append($(
-									"<div class=\"panel panel-default\" style=\"margin-top:40px\"></div>"
-								)
-								.append($("<div class=\"panel-heading\"></div>").append($(
-										'<a data-toggle="collapse" data-parent="#catAccordian" style="text-decoration: none; color:#000"></a>'
-									)
-									.attr('href', '#catCollpase-' + cati)
-									.append($('<h4></h4>')
-										.text(catitem.name))))
-								.append($(
-										'<div class="panel-collapse collapse" style="padding:5px"></div>'
-									)
-									.attr('id', 'catCollpase-' + cati)
-									.append($(
-										'<div class="panel-heading"><h4 class="panel-title"><div class="row" style="padding-left:15px;padding-right:15px;"><div class="col-sm-7" style="padding-left:0px;padding-right:0px;">Topic</div><div class="col-sm-5" style="padding-left:0px;padding-right:0px;"><div class="row" style="margin:0"><p class="col-xs-5" style="padding-left:0px;padding-right:0px; margin-bottom:0px">Date</p><p class="col-xs-4" style="padding-left:0px;padding-right:0px; margin-bottom:0px">Time</p><p align="right" class="col-xs-3" style="padding-left:0px;padding-right:0px; margin-bottom:0px">Sessions</p></div></div></div></h4></div>'
-									))
-									.append($("<div class=\"panel-group\"></div>")
-										.attr('id', "accordian-" + cati)))
-							);
+			    <script src="sessions.js"></script>
+        <script>
+            
+            $(document).ready(function () {
+                $.each(sessions.category, function (cati, catitem) {
+                    $('#catAccordian')
+                        .append($("<div class=\"panel panel-default\" style=\"margin-top:40px\"></div>")
+                            .append($("<div class=\"panel-heading\"></div>").append($('<a data-toggle="collapse" data-parent="#catAccordian" style="text-decoration: none; color:#000"></a>')
+                                    .attr('href', '#catCollpase-' + cati)
+                                    .append($('<h4></h4>')
+                                        .text(catitem.name))))
+                            .append($('<div class="panel-collapse collapse" style="padding:5px"></div>')
+                                .attr('id', 'catCollpase-' + cati)
+                                .append($('<div class="panel-heading"><h4 class="panel-title"><div class="row" style="padding-left:15px;padding-right:15px;"><div class="col-sm-7" style="padding-left:0px;padding-right:0px;">Topic</div><div class="col-sm-5" style="padding-left:0px;padding-right:0px;"><div class="row" style="margin:0"><p class="col-xs-5" style="padding-left:0px;padding-right:0px; margin-bottom:0px">Date</p><p class="col-xs-4" style="padding-left:0px;padding-right:0px; margin-bottom:0px">Time</p><p align="right" class="col-xs-3" style="padding-left:0px;padding-right:0px; margin-bottom:0px">Sessions</p></div></div></div></h4></div>'))
+                                .append($("<div class=\"panel-group\"></div>")
+                                    .attr('id',"accordian-"+cati)))
+                    );
+                    
+                    $.each(catitem.topics, function (topi, topitem) {
+                        $('#accordian-' + cati)
+                            .append($("<div class=\"panel panel-default\"></div>")
+                                .append($('<div class="panel-heading"></div>')
+                                    .append($("<h4 class=\"panel-title\"></h4>")
+                                        .append($("<a data-toggle=\"collapse\"></a>")
+                                            .attr('data-parent', "#accordian-" + cati)
+                                            .attr('href', "#collapse-" + cati + "-" + topi)
+                                            .append($('<div class="row" style="padding-left:15px;padding-right:15px;"></div>')
+                                                .append($('<div class="col-sm-7" style="padding-left:0px;padding-right:0px;"></div>')
+                                                    .text(topitem.topic))
+                                                .append($('<div class="col-sm-5" style="padding-left:0px;padding-right:0px;"><div class="row"></div></div>')
+                                                    .append($('<p class="col-xs-5" style="padding-left:0px;padding-right:0px; margin-bottom:0px"></p>')
+                                                        .text(topitem.startDate))
+                                                    .append($('<p class="col-xs-5" style="padding-left:0px;padding-right:0px; margin-bottom:0px"></p>')
+                                                        .text(topitem.time))
+                                                    .append($('<p align="right" class="col-xs-2" style="padding-left:0px;padding-right:0px; margin-bottom:0px"></p>')
+                                                        .text(topitem.noOfSessions))))))
+                                                )
+                                .append($("<div class=\"panel-collapse collapse\"></div>")
+                                    .attr('id', "collapse-" + cati + "-" + topi)
+                                    .append($("<div class=\"panel-body\"></div>")
+                                        .append($("<div class=\"col-sm-10\"></div>")
+                                            .append($("<p></p>")
+                                                .append(
+                                                    '<b>Title: </b>' + topitem.topic + '<br>' +
+                                                    '<b>Room: </b>' + topitem.room + '<br>' +
+                                                    '<b>Date: </b>' + topitem.startDate + '<br>' +
+                                                    '<b>Time: </b>' + topitem.time + '<br>' +
+                                                    '<b>Target Group: </b>' + topitem.targetGroup + '<br>' +
+                                                    '<b>What it covers: </b>'  
+                                                    ))
+                                            .append($("<ul></ul>")
+                                                .attr('id','list-'+cati+'-'+topi))
+                                            .append($("<p></p>")
+                                                .append($('<b>Places available: </b>' + topitem.placesAvailable + '<br>'))))
+                                        .append($("<div class=\"col-sm-2\"></div>")
+                                            .append($('<button type="button" class="btn btn-default bookingButton " style="float: right; ">Book</button>')
+                                            .attr('id','book-'+cati+'-'+ topi)))
+                                )
+                            )
+                            )
+                        $.each(topitem.covers, function (covi, covitem) {
+                            $('#list-' + cati + '-' + topi)
+                                .append($('<li></li>')
+                                    .text(covitem))
+                        });
+                    });
+                });
 
-						$.each(catitem.topics, function(topi, topitem) {
-							$('#accordian-' + cati)
-								.append($("<div class=\"panel panel-default\"></div>")
-									.append($('<div class="panel-heading"></div>')
-										.append($("<h4 class=\"panel-title\"></h4>")
-											.append($("<a data-toggle=\"collapse\"></a>")
-												.attr('data-parent', "#accordian-" + cati)
-												.attr('href', "#collapse-" + cati + "-" + topi)
-												.append($(
-														'<div class="row" style="padding-left:15px;padding-right:15px;"></div>'
-													)
-													.append($(
-															'<div class="col-sm-7" style="padding-left:0px;padding-right:0px;"></div>'
-														)
-														.text(topitem.topic))
-													.append($(
-															'<div class="col-sm-5" style="padding-left:0px;padding-right:0px;"><div class="row"></div></div>'
-														)
-														.append($(
-																'<p class="col-xs-5" style="padding-left:0px;padding-right:0px; margin-bottom:0px"></p>'
-															)
-															.text(topitem.startDate))
-														.append($(
-																'<p class="col-xs-5" style="padding-left:0px;padding-right:0px; margin-bottom:0px"></p>'
-															)
-															.text(topitem.time))
-														.append($(
-																'<p align="right" class="col-xs-2" style="padding-left:0px;padding-right:0px; margin-bottom:0px"></p>'
-															)
-															.text(topitem.noOfSessions))))))
-									)
-									.append($("<div class=\"panel-collapse collapse\"></div>")
-										.attr('id', "collapse-" + cati + "-" + topi)
-										.append($("<div class=\"panel-body\"></div>")
-											.append($("<div class=\"col-sm-10\"></div>")
-												.append($("<p></p>")
-													.append(
-														'<b>Title: </b>' + topitem.topic + '<br>' +
-														'<b>Room: </b>' + topitem.room + '<br>' +
-														'<b>Date: </b>' + topitem.startDate + '<br>' +
-														'<b>Time: </b>' + topitem.time + '<br>' +
-														'<b>Target Group: </b>' + topitem.targetGroup + '<br>' +
-														'<b>What it covers: </b>'
-													))
-												.append($("<ul></ul>")
-													.attr('id', 'list-' + cati + '-' + topi))
-												.append($("<p></p>")
-													.append($('<b>Places available: </b>' + topitem.placesAvailable +
-														'<br>'))))
-											.append($("<div class=\"col-sm-2\"></div>")
-												.append($(
-														'<button type="button" class="btn btn-default" style="float: right; ">Book</button>'
-													)
-													.attr('id', 'book-' + cati + '-' + topi)))
-										)
-									)
-								)
-							$.each(topitem.covers, function(covi, covitem) {
-								$('#list-' + cati + '-' + topi)
-									.append($('<li></li>')
-										.text(covitem))
-							});
-						});
-						//$.each(sessions.category, function (i, item) {
-						//});
-					});
-					//alert(v);
+                $(".bookingButton").click(function () {
+                    var conf = confirm("Are you sure you want to make this booking???");
+                    alert(conf);
+                });
 
 
-
-				});
-			</script>
+            });
+        </script>
 
 
 		</div>
