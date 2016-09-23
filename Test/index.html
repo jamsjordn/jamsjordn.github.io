@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="/resources/constants/head.js"></script>
+    <title>James Jordan</title>
+	
+	<style type="text/css">
+		.bg {
+		  background: url('/assets/example/bg_blueplane.jpg') no-repeat center center;
+		  position: fixed;
+		  width: 100%;
+		  height: 350px; /*same height as jumbotron */
+		  top:0;
+		  left:0;
+		  z-index: -1;
+		}
+
+		.jumbotron {
+		  height: 350px;
+		  color: white;
+		  text-shadow: #444 0 1px 1px;
+		  background:transparent;
+		}
+
+	</style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="navbar-header">
+            <script src="/resources/constants/navbar-header.js"></script>
+        </div>
+		<div>
+			<div class="bg"></div>
+				<div class="jumbotron">
+					<h1>Bootstrap Jumbotron</h1>
+					<p class="lead">+ Parallax Effect using jQuery</p>
+				</div>
+			</div>
+		</div>
+		<div id="footer" class="dark-grey-back">
+            <script src="/resources/constants/footer.js"></script>
+        </div>
+    </div>
+    <!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')
+    </script>
+    <script src="/resources/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="/resources/js/ie10-viewport-bug-workaround.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#about").addClass("active");
+        });
+    </script>
+	<script>
+		var jumboHeight = $('.jumbotron').outerHeight();
+		function parallax(){
+			var scrolled = $(window).scrollTop();
+			$('.bg').css('height', (jumboHeight-scrolled) + 'px');
+		}
+
+		$(window).scroll(function(e){
+			parallax();
+		});
+	</script>
+</body>
+
+</html>
