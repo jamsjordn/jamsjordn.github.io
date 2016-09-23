@@ -4,29 +4,52 @@
 <head>
     <script src="/resources/constants/head.js"></script>
     <title>James Jordan</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
 </head>
 
 <body>
-    <div id="wrapper">
-        <div id="navbar-header">
-            <script src="/resources/constants/navbar-header.js"></script>
-        </div>
-        <div id="content" class="container">
-            <div class="starter-template">
-                <h1 class="orange-front">Contact me yo!</h1>
-                <p class="lead">Use this document as a way to quickly start any new project.
-                    <br>All you get is this text and a mostly barebones HTML document.</p>
-					<a href ="http://www.uts.edu.au/sites/all/themes/custom/uts/fonts/iconminia.ttf" download>FILEO!</a>
-            </div>
-        </div>
-		<div id="footer" class="dark-grey-back">
-            <script src="/resources/constants/footer.js"></script>
-        </div>
-    </div>
-    <!-- /.container -->
-
-
-	<script src="/resources/constants/foot.js"></script>
+<div class="orange-back" style="height:100%; padding:10%; text-align: center">
+	<div class="dark-grey-back footer-font centreMe" style="padding:3%; border-radius: 15px; text-align: center">
+		<div >
+			<h1 style="text-align: center; margin-top:0px;">James Jordan</h1>      
+			<p  style="text-align: center;">Site under development<br>Find me at the links below</p>
+			<div style="text-align: center; vertical-align: middle">
+				<a class="footer-but-span" href="http://instagram.com/jamsjordn">
+					<i class="fa footer-font">&#xf16d</i>
+				</a>
+				<a class="footer-but-span" href="http://linkedin.com/in/jamsjordn">
+					<i class="fa footer-font">&#xf08c</i>
+				</a>
+				<a class="footer-but-span" href="tel:+61429672525">
+					<i class="fa footer-font">&#xf095</i>
+				</a>
+				<a class="footer-but-span" href="mailto:james.jordan@live.com.au">
+					<i class="fa footer-font">&#xf003</i>
+				</a>
+				<a class="footer-but-span" href="...">
+					<i class="fa footer-font">&#xf019</i>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>	
+<script>
+$(document).ready(function (){
+    $(window).resize(function (){
+        $('.centreMe').css({
+        'position' : 'absolute',
+        'left' : '50%',
+        'top' : '50%',
+        'margin-left' : -$('.centreMe').outerWidth()/2,
+        'margin-top' : -$('.centreMe').outerHeight()/2
+		});
+    });
+    $(window).resize();
+	
+    $(window).resize();
+});
+</script>
 </body>
 
 </html>
