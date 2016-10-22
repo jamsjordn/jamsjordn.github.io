@@ -12,11 +12,11 @@
 
 
 .back-gradient{
-  background: #FF8800; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(left top, #FF8800, #FF8f08); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(bottom right, #FF8800, #FF8f08); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(bottom right, #FF8800, #FF8f08); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to bottom right, #FF8800, #FF8f08); /* Standard syntax */
+	background: red; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(left top, #FF8800, #FF8f08); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(bottom right, #FF8800, #FF8f08); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(bottom right, #FF8800, #FF8f08); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to bottom right, #FF8800, #FF8f08); /* Standard syntax */
 } 
 
 .orange-back {
