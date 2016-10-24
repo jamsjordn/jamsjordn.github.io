@@ -1,55 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="height:100%">
 
 <head>
-    <script src="/resources/constants/head.js"></script>
-    <title>James Jordan</title>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="/resources/head.js"></script>
+	<title>James Jordan</title>
 
-</head>
-
-<body>
-<div class="back-gradient" style="height:100%; padding:10%; text-align: center">
-	<div class="dark-grey-back footer-font centreMe" style="padding:3%; border-radius: 15px; text-align: center">
-		<div >
-			<h1 style="text-align: center; margin-top:0px;">James Jordan</h1>      
-			<p  style="text-align: center;">Site under development<br>Find me at the links below</p>
-			<div style="text-align: center; vertical-align: middle">
-				<a class="footer-but-span" href="http://instagram.com/jamsjordn">
-					<i class="fa footer-font">&#xf16d</i>
-				</a>
-				<a class="footer-but-span" href="http://linkedin.com/in/jamsjordn">
-					<i class="fa footer-font">&#xf08c</i>
-				</a>
-				<a class="footer-but-span" href="tel:+61429672525">
-					<i class="fa footer-font">&#xf095</i>
-				</a>
-				<a class="footer-but-span" href="mailto:james.jordan@live.com.au">
-					<i class="fa footer-font">&#xf003</i>
-				</a>
-				<a class="footer-but-span" href="...">
-					<i class="fa footer-font">&#xf019</i>
-				</a>
+	<body style="height:100%">
+		<div class="accent-lightest" style="height:100%; padding:10%; text-align: center">
+			<div class="theme-light centreMe raise-2" style="padding:60px; border-radius: 15px; text-align: center">
+				<h1 style="text-align: center; margin-top:0px;"><b>James Jordan</b></h1>
+					<p style="text-align: center;">Site under development
+						<br>Find me at the links below</p>
+					<div style="padding-top:30px;" class="row theme-light">
+						<div class="col-xs-2">
+							<a class="center-block theme-dark circle" href="http://linkedin.com/in/jamsjordn">
+								<p><i class="fa fa-2x fa-linkedin" aria-hidden="true"></i>
+								</p>
+							</a>
+						</div>
+						<div class="col-xs-2">
+							<a class="center-block theme-dark circle" href="http://instagram.com/jamsjordn">
+								<p><i class="fa fa-2x fa-instagram" aria-hidden="true"></i>
+								</p>
+							</a>
+						</div>
+						<div class="col-xs-2">
+							<a class="center-block theme-dark circle" href="http://facebook.com/jamsjordn">
+								<p><i class="fa fa-2x fa-facebook" aria-hidden="true"></i>
+								</p>
+							</a>
+						</div>
+						<div class="col-xs-2">
+							<a class="center-block theme-dark circle" href="tel:+61429672525">
+								<p><i class="fa fa-2x fa-phone" aria-hidden="true"></i>
+								</p>
+							</a>
+						</div>
+						<div class="col-xs-2">
+							<a class="center-block theme-dark circle" href="mailto:james.jordan@live.com.au">
+								<p><i class="fa fa-2x fa-envelope" aria-hidden="true"></i>
+								</p>
+							</a>
+						</div>
+						<div class="col-xs-2">
+							<a class="center-block theme-dark circle">
+								<p><i class="fa fa-2x fa-download" aria-hidden="true"></i>
+								</p>
+							</a>
+						</div>
+					</div>
+				
 			</div>
 		</div>
-	</div>
-</div>	
-<script>
-$(document).ready(function (){
-    $(window).resize(function (){
-        $('.centreMe').css({
-        'position' : 'absolute',
-        'left' : '50%',
-        'top' : '50%',
-        'margin-left' : -$('.centreMe').outerWidth()/2,
-        'margin-top' : -$('.centreMe').outerHeight()/2
-		});
-    });
-    $(window).resize();
-	
-    $(window).resize();
-});
-</script>
-</body>
+		<script>
+			$(document).ready(function() {
+				$(window).resize(function() {
+					$('.centreMe').css({
+						'position': 'absolute',
+						'left': '50%',
+						'top': '50%',
+						'margin-left': -$('.centreMe').outerWidth() / 2,
+						'margin-top': -$('.centreMe').outerHeight() / 2
+					});
+				});
+				$(window).resize();
+
+				$(window).resize();
+			});
+		</script>
+	</body>
 
 </html>
