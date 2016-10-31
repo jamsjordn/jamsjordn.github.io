@@ -69,7 +69,7 @@ a.circle:hover {
 }xx
 
 .circle > p > i{
-vertical-align:middle;
+	vertical-align:middle;
 }
 
 .roundedButton {
@@ -86,7 +86,7 @@ a.roundedButton:hover {
 }
 
 .roundedButton > p > i{
-vertical-align:middle;
+	vertical-align:middle;
 }
 
 .raise-2{
@@ -100,14 +100,18 @@ vertical-align:middle;
 
 
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-device-width: 1440px) {
+	.main-block{
+		width: 100%;
+		margin: 0px;
+	}
+	
+	h1 {
+		font-size: 3em;
+	}
 
-   h1 {
-      font-size: 3em;
-   }
-
-   h2 {
-      font-size: 2em;
-   }
+	h2 {
+		font-size: 2em;
+	}
 
 }
