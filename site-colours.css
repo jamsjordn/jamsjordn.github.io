@@ -60,6 +60,11 @@
 	width:60px;height:60px;border-radius:50px;margin-top:10px;margin-bottom:10px;margin-left:10px;margin-right:10px;box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.54);position:relative; display:inline-block;
 }
 
+.big-circle {
+	transition:box-shadow 0.3s ease;
+	width:100px;height:100px;border-radius:50px;margin-top:10px;margin-bottom:10px;margin-left:10px;margin-right:10px;box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.54);position:relative; display:inline-block;
+}
+
 a.circle:hover {
 	box-shadow:0px 12px 12px rgba(0, 0, 0, 0.34);
 }
