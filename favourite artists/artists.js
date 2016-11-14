@@ -21,7 +21,7 @@ var artists = [
 	},
 	{
 		name: 'Foxes',
-		image: '/assets/img/Foxes.jpg',
+		image: '/assets/img/Foxes - Copy.jpg',
 		desc: 'Top notch british stuff'
 	},
 	{
