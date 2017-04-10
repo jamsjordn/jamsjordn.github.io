@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="http://jamsjordn.com/colors.css" />
+</head>
+
+<body style="background:#FF8900">
+	<table>
+		<tr>
+			<td class="color-primary-0"><h1>color-primary-0</h1></td>
+			<td class="color-primary-1"><h1>color-primary-1</h1></td>
+			<td class="color-primary-2"><h1>color-primary-2</h1></td>
+			<td class="color-primary-3"><h1>color-primary-3</h1></td>
+			<td class="color-primary-4"><h1>color-primary-4</h1></td>
+		</tr>
+		<tr>
+			<td class="color-secondary-1-0"><h1>color-secondary-1-0</h1></td>
+			<td class="color-secondary-1-1"><h1>color-secondary-1-1</h1></td>
+			<td class="color-secondary-1-2"><h1>color-secondary-1-2</h1></td>
+			<td class="color-secondary-1-3"><h1>color-secondary-1-3</h1></td>
+			<td class="color-secondary-1-4"><h1>color-secondary-1-4</h1></td>
+		</tr>
+		<tr>
+			<td class="color-secondary-2-0"><h1>color-secondary-2-0</h1></td>
+			<td class="color-secondary-2-1"><h1>color-secondary-2-1</h1></td>
+			<td class="color-secondary-2-2"><h1>color-secondary-2-2</h1></td>
+			<td class="color-secondary-2-3"><h1>color-secondary-2-3</h1></td>
+			<td class="color-secondary-2-4"><h1>color-secondary-2-4</h1></td>
+		</tr>
+		<tr>
+			<td class="color-complement-0"><h1>color-complement-0</h1></td>
+			<td class="color-complement-1"><h1>color-complement-1</h1></td>
+			<td class="color-complement-2"><h1>color-complement-2</h1></td>
+			<td class="color-complement-3"><h1>color-complement-3</h1></td>
+			<td class="color-complement-4"><h1>color-complement-4</h1></td>
+		</tr>
+	</table>
+	<button onclick="change()">change back</button>
+	<script>
+		function change(){
+			var colors = [{"name":"color-primary-0" , "color": "#FF8900" },
+{"name":"color-primary-1" , "color": "#FFB763" },
+{"name":"color-primary-2" , "color": "#FFA339" },
+{"name":"color-primary-3" , "color": "#C56A00" },
+{"name":"color-primary-4" , "color": "#9B5300" },
+
+{"name":"color-secondary-1-0" , "color": "#8EEB00" },
+{"name":"color-secondary-1-1" , "color": "#B6F05D" },
+{"name":"color-secondary-1-2" , "color": "#A4EC35" },
+{"name":"color-secondary-1-3" , "color": "#6EB500" },
+{"name":"color-secondary-1-4" , "color": "#568F00" },
+
+{"name":"color-secondary-2-0" , "color": "#D50065" },
+{"name":"color-secondary-2-1" , "color": "#DF5797" },
+{"name":"color-secondary-2-2" , "color": "#D7307F" },
+{"name":"color-secondary-2-3" , "color": "#A4004E" },
+{"name":"color-secondary-2-4" , "color": "#81003D" },
+
+{"name":"color-complement-0" , "color": "#086FA1" },
+{"name":"color-complement-1" , "color": "#4D96B9" },
+{"name":"color-complement-2" , "color": "#2C7FA7" },
+{"name":"color-complement-3" , "color": "#06567D" },
+{"name":"color-complement-4" , "color": "#044362" }]
+		
+		var i = Math.floor((Math.random() * 20) + 0); 
+		document.body.style.background = colors[i].color;
+		}
+	</script>
+</body>
