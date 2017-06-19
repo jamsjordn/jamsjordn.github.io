@@ -1,0 +1,208 @@
+html {
+  height: 100%; }
+  html > body {
+    height: 100%;
+    min-height: 100%; }
+    html > body > div {
+      display: flex;
+      height: 100%;
+      width: 100%; }
+      @media only screen and (max-width: 720px) {
+        html > body > div {
+          flex-flow: column wrap; } }
+      html > body > div > div:nth-child(1) {
+        flex: 1;
+        background: black;
+        background: linear-gradient(to left, #e67b00, #e67b00 15px, #cc6e00 15px, #cc6e00 30px, #ddd 30px); }
+        @media only screen and (max-width: 720px) {
+          html > body > div > div:nth-child(1) {
+            display: none; } }
+        @media only screen and (max-width: 720px) {
+          html > body > div > div:nth-child(1) {
+            display: none; } }
+      html > body > div > .sidebar, html > body > div > div:nth-child(2) {
+        background: #ff8900;
+        display: flex;
+        flex-flow: column wrap;
+        overflow-y: auto;
+        overflow-x: hidden;
+        width: 250px;
+        min-width: 250px;
+        padding: 10px 30px 10px 0px;
+        background: linear-gradient(to left, #cc6e00, #cc6e00 15px, #e67b00 15px, #e67b00 30px, #ff8900 30px); }
+        @media only screen and (max-width: 720px) {
+          html > body > div > .sidebar, html > body > div > div:nth-child(2) {
+            width: auto;
+            flex-flow: row wrap; } }
+        html > body > div > .sidebar > .sitePicture, html > body > div > div:nth-child(2) > .sitePicture {
+          display: block;
+          background: #e67b00;
+          width: 120px;
+          height: 120px;
+          margin: 50px 50px 20px 50px;
+          border-radius: 20px;
+          padding: 5px; }
+          @media only screen and (max-width: 720px) {
+            html > body > div > .sidebar > .sitePicture, html > body > div > div:nth-child(2) > .sitePicture {
+              width: 50px;
+              height: 50px;
+              margin: 0px 10px 0px 10px;
+              border-radius: 9px;
+              padding: 3px;
+              align-self: center; } }
+          html > body > div > .sidebar > .sitePicture > div, html > body > div > div:nth-child(2) > .sitePicture > div {
+            height: 100%;
+            background: #cc6e00;
+            border-radius: 15px;
+            padding: 5px; }
+            @media only screen and (max-width: 720px) {
+              html > body > div > .sidebar > .sitePicture > div, html > body > div > div:nth-child(2) > .sitePicture > div {
+                border-radius: 6px;
+                padding: 3px; } }
+            html > body > div > .sidebar > .sitePicture > div > div, html > body > div > div:nth-child(2) > .sitePicture > div > div {
+              height: 100%;
+              border-radius: 10px;
+              background-image: url(/assets/img/self.jpg);
+              background-size: cover; }
+              @media only screen and (max-width: 720px) {
+                html > body > div > .sidebar > .sitePicture > div > div, html > body > div > div:nth-child(2) > .sitePicture > div > div {
+                  border-radius: 3px; } }
+        html > body > div > .sidebar > .title, html > body > div > div:nth-child(2) > .title {
+          display: block;
+          color: #fff;
+          font-size: 30px;
+          text-align: center;
+          text-shadow: #b36000 0px 1px 0px;
+          transition: 0.5s; }
+          html > body > div > .sidebar > .title:hover, html > body > div > div:nth-child(2) > .title:hover {
+            text-shadow: #b36000 0px 0px 1px, #cc6e00 1px 10px 5px; }
+          @media only screen and (max-width: 720px) {
+            html > body > div > .sidebar > .title, html > body > div > div:nth-child(2) > .title {
+              align-self: center;
+              transition: 0;
+              font-size: 25px; } }
+        html > body > div > .sidebar > .menu, html > body > div > div:nth-child(2) > .menu {
+          padding: 10px 0px 0px 20px; }
+          html > body > div > .sidebar > .menu > .subheader, html > body > div > div:nth-child(2) > .menu > .subheader {
+            display: block;
+            padding: 10px 0px 4px 0px;
+            color: #fff;
+            font-size: 23px;
+            text-shadow: #b36000 0px 1px 0px;
+            transition: 0.5s; }
+            html > body > div > .sidebar > .menu > .subheader:hover, html > body > div > div:nth-child(2) > .menu > .subheader:hover {
+              text-shadow: #b36000 0px 0px 1px, #cc6e00 1px 7px 5px; }
+          html > body > div > .sidebar > .menu > .menuitem, html > body > div > div:nth-child(2) > .menu > .menuitem {
+            display: block;
+            color: #fff;
+            padding-left: 10px;
+            cfont-size: 17px;
+            text-shadow: 2px 2px #cc6e00;
+            text-shadow: #b36000 0px 1px 0px;
+            transition: 0.5s; }
+            html > body > div > .sidebar > .menu > .menuitem:hover, html > body > div > div:nth-child(2) > .menu > .menuitem:hover {
+              text-shadow: #b36000 0px 0px 1px, #cc6e00 1px 5px 5px; }
+          @media only screen and (max-width: 720px) {
+            html > body > div > .sidebar > .menu, html > body > div > div:nth-child(2) > .menu {
+              display: none; } }
+        html > body > div > .sidebar > .socialLinks, html > body > div > div:nth-child(2) > .socialLinks {
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: center; }
+          html > body > div > .sidebar > .socialLinks > a, html > body > div > div:nth-child(2) > .socialLinks > a {
+            display: block;
+            background: #e67b00;
+            width: 60px;
+            height: 60px;
+            margin: 10px 10px 10px 10px;
+            border-radius: 10px;
+            padding: 5px;
+            text-align: center; }
+            html > body > div > .sidebar > .socialLinks > a > div, html > body > div > div:nth-child(2) > .socialLinks > a > div {
+              display: flex;
+              height: 100%;
+              background: #cc6e00;
+              border-radius: 5px;
+              padding: 5px;
+              align-items: center;
+              justify-content: center; }
+              html > body > div > .sidebar > .socialLinks > a > div > i, html > body > div > div:nth-child(2) > .socialLinks > a > div > i {
+                color: white; }
+          @media only screen and (max-width: 720px) {
+            html > body > div > .sidebar > .socialLinks, html > body > div > div:nth-child(2) > .socialLinks {
+              display: none; } }
+        html > body > div > .sidebar > .menuCollapse, html > body > div > div:nth-child(2) > .menuCollapse {
+          display: none;
+          color: white; }
+          @media only screen and (max-width: 720px) {
+            html > body > div > .sidebar > .menuCollapse, html > body > div > div:nth-child(2) > .menuCollapse {
+              display: block;
+              margin-left: auto;
+              margin-right: 10px;
+              align-self: center;
+              text-shadow: #b36000 0px 1px 0px; } }
+        html > body > div > .sidebar a:hover,
+        html > body > div > .sidebar a:visited,
+        html > body > div > .sidebar a:link,
+        html > body > div > .sidebar a:active, html > body > div > div:nth-child(2) a:hover,
+        html > body > div > div:nth-child(2) a:visited,
+        html > body > div > div:nth-child(2) a:link,
+        html > body > div > div:nth-child(2) a:active {
+          text-decoration: none; }
+      html > body > div > div:nth-child(3) {
+        width: 700px;
+        background: #fff; }
+        @media only screen and (max-width: 720px) {
+          html > body > div > div:nth-child(3) {
+            flex: 1; } }
+        @media only screen and (max-width: 720px) {
+          html > body > div > div:nth-child(3) {
+            flex: 1; } }
+        @media only screen and (max-width: 720px) {
+          html > body > div > div:nth-child(3) {
+            flex: 1;
+            width: auto; } }
+      html > body > div > div:nth-child(4) {
+        flex: 1;
+        background: #ddd; }
+        @media only screen and (max-width: 720px) {
+          html > body > div > div:nth-child(4) {
+            display: none; } }
+        @media only screen and (max-width: 720px) {
+          html > body > div > div:nth-child(4) {
+            display: none; } }
+
+.not-active {
+  pointer-events: none;
+  cursor: default;
+  opacity: 0.6; }
+
+.profile-pic {
+  float: left;
+  width: 250px; }
+  @media only screen and (max-width: 720px) {
+    .profile-pic {
+      width: 100%; } }
+  @media only screen and (max-width: 720px) {
+    .profile-pic {
+      width: 125px; } }
+  @media only screen and (max-width: 720px) {
+    .profile-pic {
+      float: none; } }
+
+.content {
+  padding: 80px 30px;
+  overflow-y: scroll; }
+  .content > .title {
+    text-align: center;
+    font-size: 30px; }
+  .content > .subtitle {
+    text-align: center;
+    font-size: 20px;
+    font-style: italic; }
+  .content > .date {
+    text-align: center; }
+  .content > .mainText {
+    text-align: justify; }
+
+/*# sourceMappingURL=site.css.map */

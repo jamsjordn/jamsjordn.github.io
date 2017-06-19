@@ -1,0 +1,267 @@
+$theme-main-color: #ff8900;
+$theme-main-dark: (darken($theme-main-color,
+5%));
+$theme-main-darker: (darken($theme-main-color,
+10%));
+$theme-main-darkest: (darken($theme-main-color,
+15%));
+$theme-main-light: (lighten($theme-main-color,
+5%));
+$body-background: #ddd;
+$content-background: #fff;
+$profile-pic-url: "/assets/img/self.jpg";
+@mixin respond-to($media) {
+    @if $media handhelds {
+        @media only screen and (max-width: 720px) {
+            @content;
+        }
+    }
+    @else if $media medium-screens {
+        @media only screen and (min-width: 721px) and (max-width: 1024px) {
+            @content;
+        }
+    }
+    @else if $media wide-screens {
+        @media only screen and (min-width: 1024px) {
+            @content;
+        }
+    }
+}
+html {
+    height: 100%;
+    > body {
+        height: 100%;
+        min-height: 100%;
+        > div {
+            display: flex;
+			@include respond-to(handhelds) {
+					flex-flow: column wrap;
+			}
+			
+            height: 100%;
+            width: 100%;
+            > div:nth-child(1) {
+                flex: 1;
+                background: black;
+                background: linear-gradient( to left, $theme-main-dark, $theme-main-dark 15px, $theme-main-darker 15px, $theme-main-darker 30px, $body-background 30px);
+                @include respond-to(medium-screens) {
+                    display: none;
+                }
+                @include respond-to(handhelds) {
+                    display: none;
+                }
+            }
+            > .sidebar, > div:nth-child(2) {
+                background: $theme-main-color;
+				display: flex;
+						flex-flow: column wrap;
+                overflow-y: auto;
+                overflow-x: hidden;
+                width: 250px;
+                min-width: 250px;
+                padding: 10px 30px 10px 0px;
+                background: linear-gradient( to left, $theme-main-darker, $theme-main-darker 15px, $theme-main-dark 15px, $theme-main-dark 30px, $theme-main-color 30px);
+				@include respond-to(handhelds){
+						width:auto;
+						flex-flow: row wrap;
+					}
+
+                > .sitePicture {
+                    display: block;
+                    background: $theme-main-dark;
+                    width: 120px;
+                    height: 120px;
+                    margin: 50px 50px 20px 50px;
+                    border-radius: 20px;
+                    padding: 5px;
+				@include respond-to(handhelds){
+                    width: 50px;
+                    height: 50px;
+                    margin: 0px 10px 0px 10px;
+                    border-radius: 9px;
+                    padding: 3px;
+					align-self: center;
+					}
+                    > div {
+                        height: 100%;
+                        background: $theme-main-darker;
+                        border-radius: 15px;
+                        padding: 5px;
+				@include respond-to(handhelds){
+                        border-radius: 6px;
+                        padding: 3px;
+					}
+                        > div {
+                            height: 100%;
+                            border-radius: 10px;
+                            background-image: url(#{$profile-pic-url});
+                            background-size: cover;
+				@include respond-to(handhelds){
+                            border-radius: 3px;
+					}
+                        }
+                    }
+                }
+                > .title {
+                    display: block;
+                    color: #fff;
+                    font-size: 30px;
+                    text-align: center;
+					text-shadow: $theme-main-darkest 0px 1px 0px;
+					transition: 0.5s;
+					&:hover {
+						text-shadow: $theme-main-darkest 0px 0px 1px, $theme-main-darker 1px 10px 5px;
+					}
+					@include respond-to(handhelds){
+						align-self: center;
+						transition:0;
+                    font-size: 25px;
+					}
+                }
+                > .menu {
+                    padding: 10px 0px 0px 20px;
+                    > .subheader {
+                        display: block;
+                        padding: 10px 0px 4px 0px;
+                        color: #fff;
+                        font-size: 23px;
+						text-shadow: $theme-main-darkest 0px 1px 0px;
+						transition: 0.5s;
+						&:hover {
+							text-shadow: $theme-main-darkest 0px 0px 1px, $theme-main-darker 1px 7px 5px;
+						}
+                    }
+                    > .menuitem {
+                        display: block;
+                        color: #fff;
+						padding-left:10px;
+                        cfont-size: 17px;
+                        text-shadow: 2px 2px $theme-main-darker;
+						text-shadow: $theme-main-darkest 0px 1px 0px;
+						transition: 0.5s;
+						&:hover {
+							text-shadow: $theme-main-darkest 0px 0px 1px, $theme-main-darker 1px 5px 5px;
+						}
+                    }
+					@include respond-to(handhelds){
+						display:none;
+					}
+                }
+                > .socialLinks {
+                    display: flex;
+                    flex-flow: row wrap;
+                    justify-content: center;
+                    > a {
+                        display: block;
+                        background: $theme-main-dark;
+                        width: 60px;
+                        height: 60px;
+                        margin: 10px 10px 10px 10px;
+                        border-radius: 10px;
+                        padding: 5px;
+                        text-align: center;
+                        > div {
+                            display: flex;
+                            height: 100%;
+                            background: $theme-main-darker;
+                            border-radius: 5px;
+                            padding: 5px;
+                            align-items: center;
+                            justify-content: center;
+                            > i {
+                                color: white;
+                            }
+                        }
+                    }
+				@include respond-to(handhelds){
+					display:none;
+				}
+                }
+				> .menuCollapse {
+					display:none;
+					color:white;
+				@include respond-to(handhelds){
+					display:block;   
+					margin-left: auto;
+					margin-right:10px;
+					align-self: center;
+					text-shadow: $theme-main-darkest 0px 1px 0px;
+					
+}
+				
+				}
+                a:hover,
+                a:visited,
+                a:link,
+                a:active {
+                    text-decoration: none;
+                }
+				@include respond-to(handhelds){
+					//display:none;
+				}
+            }
+            > div:nth-child(3) {
+                width: 700px;
+                background: $content-background;
+                @include respond-to(medium-screens) {
+                    flex: 1;
+                }
+                @include respond-to(handhelds) {
+                    flex: 1;
+                }
+				@include respond-to(handhelds){
+					flex:1;
+					width:auto;
+				}
+            }
+            > div:nth-child(4) {
+                flex: 1;
+                background: $body-background;
+                @include respond-to(medium-screens) {
+                    display: none;
+                }
+                @include respond-to(handhelds) {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.not-active {
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.6;
+}
+.profile-pic {
+    float: left;
+    width: 250px;
+    @include respond-to(handhelds) {
+        width: 100%;
+    }
+    @include respond-to(medium-screens) {
+        width: 125px;
+    }
+    @include respond-to(wide-screens) {
+        float: none;
+    }
+}
+.content {
+    padding: 80px 30px;
+    overflow-y: scroll;
+    > .title {
+        text-align: center;
+        font-size: 30px;
+    }
+    > .subtitle {
+        text-align: center;
+        font-size: 20px;
+        font-style: italic;
+    }
+    > .date {
+        text-align: center;
+    }
+    > .mainText {
+        text-align: justify;
+    }
+}
