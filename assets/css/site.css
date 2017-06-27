@@ -9,11 +9,12 @@ html {
       width: 100%; }
       @media only screen and (max-width: 720px) {
         html > body > div {
-          flex-flow: column wrap; } }
+          flex-flow: column nowrap; } }
       html > body > div > div:nth-child(1) {
         flex: 1;
-        background: black;
-        background: linear-gradient(to left, #e67b00, #e67b00 15px, #cc6e00 15px, #cc6e00 30px, #ddd 30px); }
+        background: white;
+        /*background: linear-gradient( to left, $theme-main-dark, $theme-main-dark 15px, $theme-main-darker 15px, $theme-main-darker 30px, $body-background 30px);*/
+        background: linear-gradient(to left, #ff951a, #ffa133 15px, #ffac4d 15px, #ffac4d 30px, white 30px); }
         @media only screen and (max-width: 720px) {
           html > body > div > div:nth-child(1) {
             display: none; } }
@@ -23,17 +24,17 @@ html {
       html > body > div > .sidebar, html > body > div > div:nth-child(2) {
         background: #ff8900;
         display: flex;
-        flex-flow: column wrap;
+        flex-flow: column nowrap;
         overflow-y: auto;
         overflow-x: hidden;
         width: 250px;
         min-width: 250px;
         padding: 10px 30px 10px 0px;
-        background: linear-gradient(to left, #cc6e00, #cc6e00 15px, #e67b00 15px, #e67b00 30px, #ff8900 30px); }
+        background: linear-gradient(to left, #ffac4d, #ffac4d 15px, #ffa133 15px, #ff951a 30px, #ff8900 30px); }
         @media only screen and (max-width: 720px) {
           html > body > div > .sidebar, html > body > div > div:nth-child(2) {
             width: auto;
-            flex-flow: row wrap; } }
+            flex-flow: row nowrap; } }
         html > body > div > .sidebar > .sitePicture, html > body > div > div:nth-child(2) > .sitePicture {
           display: block;
           background: #e67b00;
@@ -82,7 +83,12 @@ html {
               transition: 0;
               font-size: 25px; } }
         html > body > div > .sidebar > .menu, html > body > div > div:nth-child(2) > .menu {
+          display: flex;
+          flex-flow: column nowrap;
           padding: 10px 0px 0px 20px; }
+          @media only screen and (max-width: 720px) {
+            html > body > div > .sidebar > .menu, html > body > div > div:nth-child(2) > .menu {
+              flex-flow: row nowrap; } }
           html > body > div > .sidebar > .menu > .subheader, html > body > div > div:nth-child(2) > .menu > .subheader {
             display: block;
             padding: 10px 0px 4px 0px;
@@ -92,6 +98,15 @@ html {
             transition: 0.5s; }
             html > body > div > .sidebar > .menu > .subheader:hover, html > body > div > div:nth-child(2) > .menu > .subheader:hover {
               text-shadow: #b36000 0px 0px 1px, #cc6e00 1px 7px 5px; }
+            @media only screen and (max-width: 720px) {
+              html > body > div > .sidebar > .menu > .subheader, html > body > div > div:nth-child(2) > .menu > .subheader {
+                padding: 0px 10px 0px 4px; } }
+            html > body > div > .sidebar > .menu > .subheader > p, html > body > div > div:nth-child(2) > .menu > .subheader > p {
+              display: inline-block;
+              padding-left: 15px; }
+              @media only screen and (max-width: 720px) {
+                html > body > div > .sidebar > .menu > .subheader > p, html > body > div > div:nth-child(2) > .menu > .subheader > p {
+                  display: none; } }
           html > body > div > .sidebar > .menu > .menuitem, html > body > div > div:nth-child(2) > .menu > .menuitem {
             display: block;
             color: #fff;
@@ -102,9 +117,6 @@ html {
             transition: 0.5s; }
             html > body > div > .sidebar > .menu > .menuitem:hover, html > body > div > div:nth-child(2) > .menu > .menuitem:hover {
               text-shadow: #b36000 0px 0px 1px, #cc6e00 1px 5px 5px; }
-          @media only screen and (max-width: 720px) {
-            html > body > div > .sidebar > .menu, html > body > div > div:nth-child(2) > .menu {
-              display: none; } }
         html > body > div > .sidebar > .socialLinks, html > body > div > div:nth-child(2) > .socialLinks {
           display: flex;
           flex-flow: row wrap;
@@ -164,7 +176,7 @@ html {
             width: auto; } }
       html > body > div > div:nth-child(4) {
         flex: 1;
-        background: #ddd; }
+        background: white; }
         @media only screen and (max-width: 720px) {
           html > body > div > div:nth-child(4) {
             display: none; } }
