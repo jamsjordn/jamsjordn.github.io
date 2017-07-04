@@ -76,6 +76,14 @@ html {
       text-decoration: none; }
   #menu #siteTitle {
     background: white; }
+    #menu #siteTitle .siteImage {
+      margin: auto;
+      margin-bottom: 10px;
+      height: 100px;
+      width: 100px;
+      border-radius: 10px;
+      background-image: url(/assets/img/self.jpg);
+      background-size: cover; }
     @media only screen and (max-width: 720px) {
       #menu #siteTitle {
         position: fixed;
@@ -100,14 +108,6 @@ html {
         #menu #siteTitle > a {
           flex-direction: row;
           text-align: center; } }
-    #menu #siteTitle .siteImage {
-      margin: auto;
-      margin-bottom: 10px;
-      height: 100px;
-      width: 100px;
-      border-radius: 10px;
-      background-image: url(/assets/img/self.jpg);
-      background-size: cover; }
   #menu .menuItem {
     padding-top: 8px; }
     @media only screen and (max-width: 720px) {

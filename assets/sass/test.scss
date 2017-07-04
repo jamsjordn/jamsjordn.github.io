@@ -126,6 +126,15 @@ html {
 	
 	#siteTitle{
 		background:$body-background;
+		.siteImage {
+			margin:auto;
+			margin-bottom:10px;
+			height: 100px;
+			width: 100px;
+			border-radius: 10px;
+			background-image: url(#{$profile-pic-url});
+			background-size: cover;
+		}
 		@include respond-to(handhelds) {	
 			position: fixed;
 			top: 0;
@@ -157,15 +166,6 @@ html {
 		}
 		
 		
-		.siteImage {
-			margin:auto;
-			margin-bottom:10px;
-			height: 100px;
-			width: 100px;
-			border-radius: 10px;
-			background-image: url(#{$profile-pic-url});
-			background-size: cover;
-		}
 		
 	}
 	
