@@ -74,7 +74,8 @@ html {
           font-size: 30px;
           text-align: center;
           text-shadow: #b36000 0px 1px 0px;
-          transition: 0.5s; }
+          transition: 0.5s;
+          overflow: none; }
           html > body > div > .sidebar > .title:hover, html > body > div > div:nth-child(2) > .title:hover {
             text-shadow: #b36000 0px 0px 1px, #cc6e00 1px 10px 5px; }
           @media only screen and (max-width: 720px) {
@@ -143,16 +144,6 @@ html {
           @media only screen and (max-width: 720px) {
             html > body > div > .sidebar > .socialLinks, html > body > div > div:nth-child(2) > .socialLinks {
               display: none; } }
-        html > body > div > .sidebar > .menuCollapse, html > body > div > div:nth-child(2) > .menuCollapse {
-          display: none;
-          color: white; }
-          @media only screen and (max-width: 720px) {
-            html > body > div > .sidebar > .menuCollapse, html > body > div > div:nth-child(2) > .menuCollapse {
-              display: block;
-              margin-left: auto;
-              margin-right: 10px;
-              align-self: center;
-              text-shadow: #b36000 0px 1px 0px; } }
         html > body > div > .sidebar a:hover,
         html > body > div > .sidebar a:visited,
         html > body > div > .sidebar a:link,

@@ -39,7 +39,7 @@ html {
         > div {
             display: flex;
 			@include respond-to(handhelds) {
-					flex-flow: column nowrap;
+				flex-flow: column nowrap;
 			}
 			
             height: 100%;
@@ -114,6 +114,7 @@ html {
                     text-align: center;
 					text-shadow: $theme-main-darkest 0px 1px 0px;
 					transition: 0.5s;
+					overflow:none;
 					&:hover {
 						text-shadow: $theme-main-darkest 0px 0px 1px, $theme-main-darker 1px 10px 5px;
 					}
@@ -194,19 +195,6 @@ html {
 					display:none;
 				}
                 }
-				> .menuCollapse {
-					display:none;
-					color:white;
-				@include respond-to(handhelds){
-					display:block;   
-					margin-left: auto;
-					margin-right:10px;
-					align-self: center;
-					text-shadow: $theme-main-darkest 0px 1px 0px;
-					
-}
-				
-				}
                 a:hover,
                 a:visited,
                 a:link,
