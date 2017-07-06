@@ -114,4 +114,19 @@ html {
       #menu .menuItem {
         display: none; } }
 
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px; }
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(50, 50, 50, 0.25);
+  border: 2px solid transparent;
+  border-radius: 10px;
+  backgrund-clip: padding-box; }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(50, 50, 50, 0.5); }
+
+::-webkit-scrollbar-track {
+  background-color: rgba(50, 50, 50, 0.05); }
+
 /*# sourceMappingURL=test.css.map */
