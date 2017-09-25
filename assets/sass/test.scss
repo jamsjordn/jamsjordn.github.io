@@ -181,9 +181,27 @@ html {
 	}*/
 }
 
+#content > div{
+	padding:60px;
+	position: relative;
+    float: left;
+	color: white;
+	font-family: 'Muli', sans-serif;
+	
+	
+}
 
+.back-pink-to-red {
+	background:url(/assets/noise.png), linear-gradient(120deg, #f093fb 0%, #f5576c 100%),black;
+}
 
+.back-blue-to-purple {
+	background:url(/assets/noise.png), linear-gradient(120deg, #667eea 0%, #764ba2 100%),black;
+}
 
+.back-green-to-blue {
+	background:url(/assets/noise.png), linear-gradient(120deg, #2af598 0%, #009efd 100%),black;
+}
 
 
 ::-webkit-scrollbar{
