@@ -10,6 +10,7 @@ Enteruptors | University of Technology Sydney">
 	<link href="icons/ico.ico" rel="shortcut icon" type="image/x-icon">
 	<script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 	<style>
 		h1, p {
 		font-family: 'Open Sans', sans-serif;
@@ -39,7 +40,7 @@ Enteruptors | University of Technology Sydney">
 		.back.b2 { 
 			background-image: 
 			radial-gradient(
-				circle at 0% 50%,
+				circle at 0% 44%,
 				rgba(255,170,0,0) 60%,
 				rgba(255,170,0,1) 100%
 			);
@@ -47,7 +48,7 @@ Enteruptors | University of Technology Sydney">
 		.back.b3 { 
 			background-image: 
 			radial-gradient(
-				circle at 0% 100%,
+				circle at 0% 89%,
 				rgba(170,255,0,0) 60%,
 				rgba(170,255,0,1) 100%
 			);
@@ -55,7 +56,7 @@ Enteruptors | University of Technology Sydney">
 		.back.b4 { 
 			background-image: 
 			radial-gradient(
-				circle at 50% 100%,
+				circle at 33% 100%,
 				rgba(0,255,0,0) 60%,
 				rgba(0,255,0,1) 100%
 			);
@@ -63,7 +64,7 @@ Enteruptors | University of Technology Sydney">
 		.back.b5 { 
 			background-image: 
 			radial-gradient(
-				circle at 100% 100%,
+				circle at 78% 100%,
 				rgba(0,255,170,0) 60%,
 				rgba(0,255,170,1) 100%
 			);
@@ -71,7 +72,7 @@ Enteruptors | University of Technology Sydney">
 		.back.b6 { 
 			background-image: 
 			radial-gradient(
-				circle at 100% 50%,
+				circle at 100% 78%,
 				rgba(0,170,255,0) 60%,
 				rgba(0,170,255,1) 100%
 			);
@@ -79,7 +80,7 @@ Enteruptors | University of Technology Sydney">
 		.back.b7 { 
 			background-image: 
 			radial-gradient(
-				circle at 100% 0%,
+				circle at 100% 33%,
 				rgba(0,0,255,0) 60%,
 				rgba(0,0,255,1) 100%
 			);
@@ -87,7 +88,7 @@ Enteruptors | University of Technology Sydney">
 		.back.b8 { 
 			background-image: 
 			radial-gradient(
-				circle at 66% 0%,
+				circle at 89% 0%,
 				rgba(170,0,255,0) 60%,
 				rgba(170,0,255,1) 100%
 			);
@@ -95,7 +96,7 @@ Enteruptors | University of Technology Sydney">
 		.back.b9 { 
 			background-image: 
 			radial-gradient(
-				circle at 33% 0%,
+				circle at 44% 0%,
 				rgba(255,0,170,0) 60%,
 				rgba(255,0,170,1) 100%
 			);
@@ -133,6 +134,24 @@ Enteruptors | University of Technology Sydney">
 			<a style="color:black" href="http://facebook.com/jamsjordn" target="_blank"><i class="fab fa-facebook fa-3x"></i></a>
 		</div>
 	</div>
+	<script>
+		var gradients=[
+			{"class":"b1",	"r":255,	"g":0,		"b":0,		"x":0,		"y":0,		"xd":1,	"yd":2},
+			{"class":"b2",	"r":255,	"g":170,	"b":0,		"x":44,		"y":0,		"xd":1,	"yd":2},
+			{"class":"b3",	"r":170,	"g":255,	"b":0,		"x":89,		"y":0,		"xd":1,	"yd":1},
+			{"class":"b4",	"r":0,		"g":255,	"b":0,		"x":100,	"y":33,		"xd":2,	"yd":1},
+			{"class":"b5",	"r":0,		"g":255,	"b":170,	"x":100,	"y":78,		"xd":2,	"yd":1},
+			{"class":"b6",	"r":0,		"g":170,	"b":255,	"x":78,		"y":100,	"xd":0,	"yd":2},
+			{"class":"b7",	"r":0,		"g":0,		"b":255,	"x":33,		"y":100,	"xd":0,	"yd":2},
+			{"class":"b8",	"r":255,	"g":0,		"b":170,	"x":0,		"y":89,		"xd":2,	"yd":0},
+			{"class":"b9",	"r":170,	"g":0,		"b":255,	"x":0,		"y":44,		"xd":2,	"yd":0},
+		]
+		
+		$( document ).ready(function() {
+			console.log( "ready!" );
+		});
+		
+	</script>
 </body>
 
 </html>
