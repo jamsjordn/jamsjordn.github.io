@@ -93,14 +93,6 @@ Enteruptors | University of Technology Sydney">
 				rgba(170,0,255,1) 100%
 			);
 		}
-		.back.b9 { 
-			background-image: 
-			radial-gradient(
-				circle at 44% 0%,
-				rgba(255,0,170,0) 60%,
-				rgba(255,0,170,1) 100%
-			);
-		}
 		.back.b10 { 
 			background-image: 
 			radial-gradient(
@@ -112,15 +104,12 @@ Enteruptors | University of Technology Sydney">
 	</style>
 </head>
 <body>
-	<div class="back b1"  id="b1"></div>
-	<div class="back b2"  id="b2"></div>
 	<div class="back b3"  id="b3"></div>
 	<div class="back b4"  id="b4"></div>
 	<div class="back b5"  id="b5"></div>
 	<div class="back b6"  id="b6"></div>
 	<div class="back b7"  id="b7"></div>
 	<div class="back b8"  id="b8"></div>
-	<div class="back b9"  id="b9"></div>
 	<div class="back b10" id="b10"></div>
 	<div class="back b1"  id="b1"></div>
 	<div class="back b2"  id="b2"></div>
@@ -153,7 +142,7 @@ Enteruptors | University of Technology Sydney">
 			
 			window.setInterval(function() {
 				spin();
-			}, 100);
+			}, 10);
 		});
 		function spin() {
 			for (i=0; i<gradients.length; i++){
