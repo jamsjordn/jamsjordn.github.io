@@ -1,0 +1,186 @@
+
+ 
+body {font-family: "Segoe UI", "Avenir", Verdana, Helvetica, Sans-Serif;}
+ 
+::-webkit-scrollbar {display: none;}
+ 
+.customModal * {
+	-ms-overflow-style: none;
+	transition: all 0.5s;
+ }
+ 
+/*LOADING SIMPLER*/
+.customModal {
+	display: flex;
+	display: none;
+	z-index: 100;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	justify-content: center;
+	align-items: center;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0,0.4);
+	z-index: 1;
+	position: relative;
+	color: #ffffff;
+ }
+ 
+	.customModal > div {
+		background-color: #5e7ebe;
+		margin: auto;
+		padding: 5px;
+		border-radius: 5px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+	 }
+ 
+	.customModal.customModalLoading > div {
+		width: 200px;
+		height: 200px;
+	 }
+ 
+	.customModal.customModalNotes > div {
+		max-width: 90%;
+		max-height: 90%;
+		min-width: 200px;
+		min-height: 200px;
+	 }
+ 
+	.customModal.customModalNotes .modalContent {
+		overflow: auto;
+		width: 100%;
+		flex-grow: 1;
+		flex-basis: 1;
+	 }
+ 
+	.customModal .loadingText {
+		opacity: 0.4;
+		font-size: 28px;
+		font-weight: bold;
+		animation-name: pulse;
+		animation-duration: 1.5s;
+		animation-timing-function: ease;
+		animation-delay: 0s;
+		animation-direction: alternate;
+		animation-iteration-count: infinite;
+	 }
+ 
+	.customModal svg.icon {
+		stroke: #fff;
+		stroke-width: 5;
+		stroke-linecap: round;
+		stroke-linejoin: round;
+		fill: none;
+	 }
+ 
+	.customModal .modalTitleBar {
+		min-height: 20px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		width: 100%;
+		}
+ 
+	.customModal .modalTitleText {}
+ 
+	.customModal .modalTitleButtons {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: flex-end;
+	 }
+ 
+		.customModal .modalTitleButtons svg {
+			width: 20px;
+			height: 20px;
+			opacity: 0.4;
+			padding-left: 5px;
+		 }
+ 
+		.customModal .modalTitleButtons .close {height: 18px;}
+ 
+	.customModal .animationEmphasise:hover,
+	.customModal .animationEmphasise:focus {
+		opacity: 1 !important;
+		text-decoration: none !important;
+		cursor: pointer !important;
+	 }
+ 
+	.customModal .modalTabs {
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		min-height: 30px;
+	 }
+ 
+		.customModal .modalTabs .addNote {
+			height: 13px;
+			width: 20px;
+			opacity: 0.4;
+		 }
+ 
+			.customModal .modalTabs .addNote:hover {opacity: 1;}
+ 
+		.customModal .modalTabs>div {
+			flex-grow: 1;
+			text-align: center;
+		 }
+ 
+		.customModal .modalTabs>span {opacity: 0.4;}
+ 
+		.customModal .modalTabs>div.inactive {opacity: 0.4;}
+ 
+		.customModal .modalTabs>div.active {opacity: 1;}
+ 
+	.customModal .loadingSpinner {
+		display: inline-block;
+		width: 50px;
+		height: 50px;
+		border: 5px solid rgba(255,255,255,.25);
+		border-radius: 50%;
+		border-top-color: #fff;
+		animation: spin 1s linear infinite;
+		-webkit-animation: spin 1s linear infinite;
+	 }
+ 
+@keyframes spin {to}
+ 
+{}
+ 
+@-webkit-keyframes spin {to}
+ 
+{}
+ 
+@keyframes pulse {0%}
+ 
+100% {opacity: 1}
+ 
+{}
+ 
+	.customModal.customModalNotes .modalContent {
+		background-color: white;
+		color: black;
+		border-radius: 5px;
+		margin: 2px;
+	 }
+ 
+		.customModal.customModalNotes .modalContent .noteListBlock {
+			padding: 8px;
+			background-color: rgb(0,0,0);
+			background-color: rgba(94,126,190,0);
+		 }
+ 
+			.customModal.customModalNotes .modalContent .noteListBlock:hover,
+			.customModal.customModalNotes .modalContent .noteListBlock:focus {background-color: rgba(94,126,190,0.15);}
+ 
+		.customModal.customModalNotes .modalContent .noteListInfo {}
+ 
+		.customModal.customModalNotes .modalContent .noteListDate {}
+ 
+		.customModal.customModalNotes .modalContent .noteListAuthor {}
+ 
+		.customModal.customModalNotes .modalContent .noteListText {}
+ 
