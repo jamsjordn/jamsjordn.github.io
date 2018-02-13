@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-GB" style="height:100%;">
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script src="https://use.fontawesome.com/b8bde06d1c.js"></script>
+	<link rel="stylesheet" type="text/css" href="../modals.css"/>
+	<script src="notes.js"></script>
+</head>
+<body style="height:100%;width:100%;margin:0;">
+	<svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
+		<symbol id="iconsClose" viewBox="0 0 20 20">
+			<line y1="3" x1="3" y2="17" x2="17"/>
+			<line y1="17" x1="3" y2="3" x2="17"/>
+		</symbol>
+		<symbol id="iconsPlus" viewBox="0 20 20 20">
+			<line y1="30" x1="3" y2="30" x2="17"/>
+			<line y1="23" x1="10" y2="37" x2="10"/>
+		</symbol>
+	</svg>
+	<div class="customModal customModalNotes">
+		<div>
+			<div class="modalTitleBar">
+				<div class="modalTitleText"></div>
+				<div class="modalTitleButtons">
+					<svg class="icon close animationEmphasise"><use xlink:href="#iconsClose"/></svg>
+				</div>
+			</div>
+			<div class="modalTabs"><div class="modalTabsNotes active animationEmphasise">Notes <svg class="icon addNote animationEmphasise"><use xlink:href="#iconsPlus"/></svg></div><span>|</span><div class="modalTabsHistory inactive animationEmphasise">History</div></div>
+			<div class="modalContent">
+			<div class="modalContentNotes">
+			</div>
+			<div class="modalContentHistory">
+			
+			</div>
+			
+		</div>
+	</div>
+</body>
+</html>
