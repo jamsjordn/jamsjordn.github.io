@@ -8,12 +8,20 @@ Enteruptors | University of Technology Sydney">
 	<meta name="keywords" content="James,Jordan">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<link href="icons/ico.ico" rel="shortcut icon" type="image/x-icon">
-	<script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
+	<script defer src="js/fontawesome-all.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 	<style>
+		body {
+			opacity:0;
+			transition:opacity 1s;
+		}
+		.fontawesome-i2svg-active body {
+			display: initial;
+			opacity:1;
+		}
 		h1, p {
-		font-family: 'Open Sans', sans-serif;
+			font-family: 'Open Sans', sans-serif;
 		}
 		.back {
 			height:100%;
@@ -27,7 +35,12 @@ Enteruptors | University of Technology Sydney">
 			right: 0;
 			width: 100%;
 			height: 100%;
-
+		}
+		.back>div>div>a{
+			padding:15px;
+			height:0px;	
+		}
+		.back>div>div>a:hover{
 		}
 		.back.b1 { 
 			background-image: 
@@ -119,11 +132,10 @@ Enteruptors | University of Technology Sydney">
 		<h1 style="text-align: center;">james jordan</h1>
 		<p style="text-align: center;">computers & stuff</p>
 		<div style="padding:20px">
-			<a style="color:black " href="http://instagram.com/jamsjordn" target="_blank"><i class="fab fa-instagram fa-3x"></i></a>
-			&nbsp;&nbsp;&nbsp;
-			<a style="color:black" href="http://linkedin.com/in/jamsjordn" target="_blank"><i class="fab fa-linkedin fa-3x"></i></a>
-			&nbsp;&nbsp;&nbsp;
-			<a style="color:black" href="http://facebook.com/jamsjordn" target="_blank"><i class="fab fa-facebook fa-3x"></i></a>
+			<a style="color:black " href="http://instagram.com/jamsjordn" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+			<a style="color:black" href="http://linkedin.com/in/jamsjordn" target="_blank"><i class="fab fa-linkedin-in fa-2x"></i></a>
+			<a style="color:black" href="http://facebook.com/jamsjordn" target="_blank"><i class="fab fa-facebook-f fa-2x"></i></a>
+			<a style="color:black" href="https://codepen.io/jamsjordn/" target="_blank"><i class="fab fa-codepen fa-2x"></i></a>
 		</div>
 	</div>
 	<script>
