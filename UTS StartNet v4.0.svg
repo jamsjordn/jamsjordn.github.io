@@ -1,0 +1,1429 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg2"
+   viewBox="0 0 931.57 723.63"
+   version="1.1"
+   sodipodi:docname="UTS StartNet v4.0.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <metadata
+     id="metadata380">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1308"
+     inkscape:window-height="749"
+     id="namedview378"
+     showgrid="false"
+     inkscape:zoom="0.62260484"
+     inkscape:cx="390.46935"
+     inkscape:cy="436.61945"
+     inkscape:window-x="-4"
+     inkscape:window-y="-4"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <defs
+     id="defs4">
+    <style
+       id="style2">.cls-1,.cls-14,.cls-15,.cls-22,.cls-5{font-size:10px;}.cls-1,.cls-18,.cls-22{font-family:Arial-BoldMT, Arial;}.cls-18,.cls-2,.cls-22{font-weight:700;}.cls-13,.cls-14,.cls-15,.cls-3,.cls-5{font-family:ArialMT, Arial;}.cls-4{fill:#ebebeb;}.cls-13,.cls-15,.cls-5{fill:#0f4beb;}.cls-6{fill:blue;stroke:#b2b2b2;}.cls-11,.cls-6,.cls-7,.cls-8{stroke-miterlimit:10;}.cls-7,.cls-8{fill:none;}.cls-7{stroke:gray;stroke-width:0.93px;}.cls-11,.cls-8{stroke:#0f4beb;}.cls-9{fill:#0f4aec;}.cls-10{fill:#b1b1b1;}.cls-11,.cls-18,.cls-24{fill:#fff;}.cls-12,.cls-13,.cls-14,.cls-15,.cls-18,.cls-22{isolation:isolate;}.cls-13{font-size:12px;}.cls-16{letter-spacing:-0.06em;}.cls-17{letter-spacing:-0.02em;}.cls-18{font-size:12.22px;}.cls-19{letter-spacing:-0.04em;}.cls-20{letter-spacing:-0.07em;}.cls-21{letter-spacing:-0.11em;}.cls-23{fill:#aab2ab;}</style>
+  </defs>
+  <title id="title6">UTS StartNet v4.0
+  </title>
+
+  <g
+     id="text1073-7-0-6-9-57-4-85-4-6-7-7-6-54"
+     class="cls-12">
+     <text
+        class="cls-1"
+        transform="translate(17.03 43.44)"
+        id="text20">
+        <tspan
+          class="cls-2"
+          id="tspan8">Legend:</tspan>
+        <tspan
+          class="cls-3"
+          id="tspan18">
+          <tspan
+             x="0"
+             y="12"
+             id="tspan10">Circle size = credit points</tspan>
+          <tspan
+             x="0"
+             y="24"
+             id="tspan12">Some small circles represent many </tspan>
+          <tspan
+             x="0"
+             y="36"
+             id="tspan14">subjects (e.g. lists of electives).</tspan>
+          <tspan
+             x="0"
+             y="52"
+             id="tspan16">Hover mouse for more detail.</tspan>
+        </tspan>
+     </text>
+     <path
+        id="path512-Legend-UG"
+        class="cls-9"
+        d="M29.62,114.17a6.47,6.47,0,1,1-6.47-6.46,6.48,6.48,0,0,1,6.47,6.46"
+        inkscape:label="#path512-4" />
+     <text
+        class="cls-14"
+        transform="translate(34.45 116.97)"
+        id="text288">Undergraduate focussed</text>
+     <path
+        id="path512-Legend-PG"
+        class="cls-10"
+        d="M29.67,133a6.47,6.47,0,1,1-6.48-6.45A6.49,6.49,0,0,1,29.67,133"
+        inkscape:label="#path512-4-7" />
+     <text
+        class="cls-14"
+        transform="translate(34.49 136.26)"
+        id="text292">Postgraduate focussed</text>
+     <path
+        id="path512-Legend-Co"
+        d="M29.57,151.74a6.47,6.47,0,1,1-6.48-6.46,6.49,6.49,0,0,1,6.48,6.46"
+        inkscape:label="#path512-4-1" />
+     <text
+        class="cls-14"
+        transform="translate(34.39 155.04)"
+        id="text296">Co-curricular</text>
+  </g>
+
+  <circle
+     id="path261-ALL-Shared"
+     class="cls-4"
+     cx="465.36"
+     cy="359.37"
+     r="201.92"
+     inkscape:label="#path261" />
+  <text
+     class="cls-5"
+     transform="matrix(0.97, -0.23, 0.23, 0.97, 422.67, 192.49)"
+     id="text23">C</text>
+  <text
+     class="cls-5"
+     transform="matrix(0.98, -0.19, 0.19, 0.98, 429.71, 190.85)"
+     id="text25">R</text>
+  <text
+     class="cls-5"
+     transform="translate(436.83 189.5) rotate(-8.17)"
+     id="text27">O</text>
+  <text
+     class="cls-5"
+     transform="translate(444.54 188.41) rotate(-5.77)"
+     id="text29">S</text>
+  <text
+     class="cls-5"
+     transform="translate(451.22 187.73) rotate(-3.55)"
+     id="text31">S</text>
+  <text
+     class="cls-5"
+     transform="translate(457.94 187.34) rotate(-1.88)"
+     id="text33">-</text>
+  <text
+     class="cls-5"
+     transform="translate(461.33 187.25) rotate(-0.93)"
+     id="text35">F</text>
+  <text
+     class="cls-5"
+     transform="matrix(1, 0.03, -0.03, 1, 466.92, 187.17)"
+     id="text37">A</text>
+  <text
+     class="cls-5"
+     transform="translate(473.6 187.35) rotate(3.89)"
+     id="text39">C</text>
+  <text
+     class="cls-5"
+     transform="translate(480.83 187.84) rotate(6.28)"
+     id="text41">U</text>
+  <text
+     class="cls-5"
+     transform="matrix(0.99, 0.15, -0.15, 0.99, 488.03, 188.65)"
+     id="text43">L</text>
+  <text
+     class="cls-5"
+     transform="translate(492.87 189.35) rotate(10.14)"
+     id="text45">T</text>
+  <text
+     class="cls-5"
+     transform="translate(498.9 190.43) rotate(12.28)"
+     id="text47">Y</text>
+  <text
+     class="cls-5"
+     transform="matrix(0.98, -0.21, 0.21, 0.98, 416.52, 145.36)"
+     id="text49">F</text>
+  <text
+     class="cls-5"
+     transform="translate(421.99 144.19) rotate(-10.46)"
+     id="text51">A</text>
+  <text
+     class="cls-5"
+     transform="translate(428.58 142.97) rotate(-8.63)"
+     id="text53">C</text>
+  <text
+     class="cls-5"
+     transform="translate(435.78 141.88) rotate(-6.73)"
+     id="text55">U</text>
+  <text
+     class="cls-5"
+     transform="translate(443.01 141.04) rotate(-5.05)"
+     id="text57">L</text>
+  <text
+     class="cls-5"
+     transform="matrix(1, -0.06, 0.06, 1, 447.87, 140.6)"
+     id="text59">T</text>
+  <text
+     class="cls-5"
+     transform="translate(453.98 140.19) rotate(-2.06)"
+     id="text61">Y</text>
+  <text
+     class="cls-5"
+     transform="translate(460.56 139.98) rotate(-0.93)"
+     id="text63" />
+  <text
+     class="cls-5"
+     transform="matrix(1, 0.02, -0.02, 1, 463.36, 139.88)"
+     id="text65">S</text>
+  <text
+     class="cls-5"
+     transform="matrix(1, 0.04, -0.04, 1, 470.11, 139.95)"
+     id="text67">P</text>
+  <text
+     class="cls-5"
+     transform="translate(476.82 140.2) rotate(3.81)"
+     id="text69">E</text>
+  <text
+     class="cls-5"
+     transform="translate(483.51 140.64) rotate(5.62)"
+     id="text71">C</text>
+  <text
+     class="cls-5"
+     transform="matrix(0.99, 0.12, -0.12, 0.99, 490.77, 141.38)"
+     id="text73">I</text>
+  <text
+     class="cls-5"
+     transform="translate(493.58 141.71) rotate(8.11)"
+     id="text75">F</text>
+  <text
+     class="cls-5"
+     transform="translate(499.7 142.6) rotate(9.3)"
+     id="text77">I</text>
+  <text
+     class="cls-5"
+     transform="translate(502.49 143.03) rotate(10.62)"
+     id="text79">C</text>
+  <g
+     id="text1073-5-6"
+     class="cls-12">
+    <text
+       class="cls-15"
+       transform="translate(731.4 232.32)"
+       id="text81">OFF CAMPUS</text>
+  </g>
+
+  <path
+     id="path44-IEU-Line"
+     class="cls-6"
+     d="M468.69,363,898.54,232"
+     inkscape:label="#path44" />
+  <path
+     id="path98"
+     class="cls-7"
+     d="M617.9,93l.07-.12" />
+  <path
+     id="path108-SCI-Line"
+     class="cls-8"
+     d="M458.59,352.29,286.32,48.17"
+     inkscape:label="#path108" />
+  <path
+     id="path110-LAW-Line"
+     class="cls-8"
+     d="M458.57,374.72l-168.76,300"
+     inkscape:label="#path110" />
+  <path
+     id="path112-FASS-Line"
+     class="cls-8"
+     d="M471.49,374.73,643,677.07"
+     inkscape:label="#path112" />
+  <path
+     id="path114-DAB-Line"
+     class="cls-8"
+     d="M452.3,358.1,34.92,232.94"
+     inkscape:label="#path114" />
+  <path
+     id="path116-FEIT-Line"
+     class="cls-8"
+     d="M452.12,369.48,35.66,492.68"
+     inkscape:label="#path116" />
+  <path
+     id="path118-FTDI-Line"
+     class="cls-8"
+     d="M477.82,369.1l422.1,125.28"
+     inkscape:label="#path118" />
+  <path
+     id="path120-BUS-Line"
+     class="cls-8"
+     d="M473.68,351,644.17,46.15"
+     inkscape:label="#path120" />
+
+  <g
+     onclick="window.open('http://startups.uts.edu.au', '_blank')"
+     id="text1073-7-0-6-9-55"
+     class="cls-12"
+	 onmouseover="style=&quot;cursor: pointer;&quot;" >
+     <path
+        id="path122-UTS-Startups"
+        d="M498.06,363.5a33,33,0,1,1-33-33,33,33,0,0,1,33,33"
+        inkscape:label="#path122"
+      />
+	 <text
+       class="cls-18"
+       transform="translate(452.1 358.4)"
+       id="text200">UTS <tspan
+       x="-10.87"
+       y="14.67"
+       id="tspan198">Startups</tspan></text>
+	 <title id="title501-UTS-Startups">UTS Startups is a university-wide program 
+to inspire and support startups at UTS. Incl. 
+Startup Internships, Startups Awards and 
+much MUCH more.</title>
+  </g>
+
+  <g
+     onclick="window.open('https://open.uts.edu.au', '_blank')"
+     id="text1073-7-0-6-9-57-4"
+     class="cls-12"
+	 onmouseover="style=&quot;cursor: pointer;&quot;" >
+     <path
+        id="path532-UTSOpen"
+        d="M621.1,317.27a5.58,5.58,0,1,1-5.58-5.58,5.58,5.58,0,0,1,5.58,5.58"
+        inkscape:label="#path532"
+     />
+     <text
+        class="cls-14"
+        transform="translate(601.38 334.49)"
+        id="text203">UTS Open</text>
+     <title id="title502-UTSOpen">UTS Open: Free online courses for anyone</title>
+  </g>
+
+  <g
+     onclick="window.open('http://newsroom.uts.edu.au/news/2018/07/fishburners-partnership-puts-uts-students-startup-ecosystem', '_blank')"
+	 id="text1073-7-0-6-9-57-43"
+     class="cls-12"
+ 	 onmouseover="style=&quot;cursor: pointer;&quot;" >
+     <path
+        id="path542-Fishburners"
+        d="M681.5,299.56A7.54,7.54,0,1,1,674,292a7.54,7.54,0,0,1,7.53,7.54"
+        inkscape:label="#path542" 
+	 />
+     <text
+        class="cls-14"
+        transform="translate(668.12 318.68)"
+        id="text206">Fishburners</text>
+	 <title id="title503-Fishburners">Fishburners: Sydney's Best Coworking Space For Scaleable Tech Startups</title>
+  </g>
+
+  <g
+     onclick="window.open('https://www.uts.edu.au/partners-and-community/initiatives/entrepreneurship/news/minding-talent-gap-tech-skills-startup', '_blank')"
+	 id="text1073-7-0-6-9-57-8"
+     class="cls-12"
+ 	 onmouseover="style=&quot;cursor: pointer;&quot;" >
+     <path
+        id="path602-StartupAus"
+        d="M714.27,289.32a4.8,4.8,0,1,1-4.8-4.8,4.79,4.79,0,0,1,4.8,4.8"
+        inkscape:label="#path602" 
+	 />
+	 <text
+       class="cls-14"
+       transform="translate(704.72 305.77)"
+       id="text209">StartupAus</text>
+	 <title id="title504">StartupAus is a not for profit organisation with a mission to transform Australia through technology entrepreneurship</title>
+  </g>
+
+  <g
+     onclick="window.open('http://newsroom.uts.edu.au/news/2017/11/women-muster-bigger-presence-national-startup-survey', '_blank')"
+     id="text1073-7-0-6-9-57-48"
+     class="cls-12"
+     onmouseover="style=&quot;cursor: pointer;&quot;" >
+     <path
+        id="path572-StartupMuster"
+        d="M747.92,277.8a5.2,5.2,0,1,1-5.2-5.19,5.19,5.19,0,0,1,5.2,5.19"
+        inkscape:label="#path572" />
+     <text
+        class="cls-14"
+        transform="translate(742.56 294.02)"
+        id="text212">Startup Muster</text>
+	 <title id="title505">Startup Muster is the largest survey of the Australian startup ecosystem</title>
+  </g>
+  
+  <g
+     onclick="window.open('https://www.techsydney.com.au/', '_blank')"
+     id="text1073-7-0-6-9-57-48-2"
+     class="cls-12"
+     onmouseover="style=&quot;cursor: pointer;&quot;" >
+     <path
+        id="path572-TechSydney"
+        d="M787.48,266a5.2,5.2,0,1,1-5.19-5.2,5.19,5.19,0,0,1,5.19,5.2"
+        inkscape:label="#path572-6" />
+     <text
+        class="cls-14"
+        transform="translate(781.5 280.55)"
+        id="text300">TechSydney</text>
+	 <title id="title506">TechSydney is the peak industry group for high-growth start-ups and technology companies, run by entrepreneurs</title>
+  </g>
+  
+  <g
+     onclick="window.open('https://www.uts.edu.au/partners-and-community/initiatives/innovation-entrepreneurship-and-creative-intelligence/events-12', '_blank')"
+	 id="text1073-7-0-6-9-57-7"
+     class="cls-12"
+     onmouseover="style=&quot;cursor: pointer;&quot;" >
+     <path
+        id="path482-StartCon"
+        d="M825.41,255.19a4.71,4.71,0,1,1-4.7-4.71,4.7,4.7,0,0,1,4.7,4.71"
+        inkscape:label="#path482" />
+     <text
+        class="cls-14"
+        transform="translate(823.28 267.92)"
+        id="text215">StartCon</text>
+	 <title id="title507">StartCon: Australia's largest startup &amp; growth conference</title>
+  </g>
+
+  <g
+     onclick="window.open('http://www.remixsummits.com/syd/', '_blank')"
+     id="text1073-7-0-6-9-57-1"
+     class="cls-12"
+     onmouseover="style=&quot;cursor: pointer;&quot;" >
+     <path
+        id="path492-Remix"
+        d="M863.21,243.7a4.8,4.8,0,1,1-4.8-4.8,4.8,4.8,0,0,1,4.8,4.8"
+        inkscape:label="#path492" />
+     <text
+        class="cls-14"
+        transform="translate(863.82 255.75)"
+        id="text218">Remix</text>
+	 <title id="title508">REMIX Global Summits: Culture, Technology, Entrepreneurship</title>
+  </g>
+  
+  <g
+     onclick="window.open('https://startupgenome.com/', '_blank')"
+     id="text1073-7-0-6-9-57-79"
+     class="cls-12"
+     onmouseover="style=&quot;cursor: pointer;&quot;" >
+     <path
+        id="path582-StartupGenome"
+        d="M903,231.82a4.8,4.8,0,1,1-4.8-4.8,4.79,4.79,0,0,1,4.8,4.8"
+        inkscape:label="#path582" />
+     <text
+        class="cls-14"
+        transform="translate(841.16 222.59)"
+        id="text221">StartupGenome</text>
+	 <title id="title509">StartupGenome: Accelerating Startup Ecosystem Development</title>
+  </g>
+
+  <g
+     onclick="window.open('https://www.uts.edu.au/partners-and-community/initiatives/entrepreneurship/courses-subjects-degrees/entrepreneurial', '_blank')"
+     id="text1073-7-0-6-9-1-1"
+     class="cls-12"
+     onmouseover="style=&quot;cursor: pointer;&quot;" >
+     <path
+        id="path202-FTDI-SharedUGE"
+        class="cls-9"
+        d="M519.07,379.18a5.69,5.69,0,1,1-5.69-5.69,5.68,5.68,0,0,1,5.69,5.69"
+        inkscape:label="#path202-0" />
+     <text
+        class="cls-14"
+        transform="translate(495.11 395.7)"
+        id="text310">
+        <tspan
+           xml:space="preserve"
+           id="tspan308">    UG </tspan>    
+	 </text>
+     <text
+        class="cls-14"
+        transform="translate(495.11 408.2)"
+        id="text312">Electives</text>
+	 <title id="title510">FTDI electives
+Electives: All 8 Diploma subjects + 6 BTi subjects
+See also list of subjects in FTDI Submajors</title>
+  </g>
+  
+  <g
+     onclick="window.open('http://www.handbook.uts.edu.au/directory/submajors.html', '_blank')"
+	 id="text1073-7-0-6-9-1-1-4"
+     class="cls-12"
+     onmouseover="style=&quot;cursor: pointer;&quot;" >
+	 <path
+        id="path242-FTDI-SMJ"
+        class="cls-9"
+        d="M555.07,388.7a7.54,7.54,0,1,1-7.54-7.53,7.53,7.53,0,0,1,7.54,7.53"
+        inkscape:label="#path242-1" />
+     <text
+        class="cls-14"
+        transform="translate(535.71 375.24)"
+        id="text341">Submajors</text>
+     <title id="title605-4">SMJ10096 Entrepreneurship and Innovation
+94663 Navigating Entrepreneurial Ecosystems and Initiating Change
+94662 Entrepreneurial Experimenting and Innovation Validation
+94658 Evaluating Portfolios of Innovative Opportunities
+
+SMJ10097 Creative Intelligence and Innovation
+81539 Impossibilities to Possibilities
++ Any of
+  81540 Technology, Methods and Creative Practice
+  81538 Frame Innovation
+  94672 Creative Methods and Entrepreneurial Initiatives
++ Any of
+  94665 Complexity and Sustainability
+  94657 Futures Thinking: Making Futures
+  94679 Complexity and Sustainable Futures
+
+SMJ10098 Technology and Innovation
+94674 Technology Lab 1: Imagine and Create
+94676 Technology Lab 2: Connect and Network
+94677 Technology Lab 3: Exchange and Influence</title>
+  </g>
+  
+  <g
+     onclick="window.open('http://dipinn.uts.edu.au', '_blank')"
+ 	 id="text1073-7-0-6-9-57-4-8"
+     class="cls-12"
+     onmouseover="style=&quot;cursor: pointer;&quot;" >
+     <path
+        id="path142-FTDI-DipInn"
+        class="cls-9"
+        d="M593.05,399.65a10.49,10.49,0,1,1-10.49-10.49,10.49,10.49,0,0,1,10.49,10.49"
+        inkscape:label="#path142" />
+	 <text
+       class="cls-14"
+       transform="translate(587.39 386.96)"
+       id="text224">DipInn</text>
+	 <title id="title559">Diploma in Innovation subjects: 
+81539  Impossibilities to Possibilities 
+81538  Frame Innovation 
+81540  Technology, Methods and Creative Practice 
+94665  Complexity and Sustainability 
+94657  Futures Thinking: Making Futures 
+94663  Navigating Entrepreneurial Ecosystems 
+94662  Entrepreneurial Experimenting 
+94658  Portfolios of Innovative Opportunities</title>
+  </g>
+  
+  <g
+     onclick="window.open('https://cii.uts.edu.au/', '_blank')"
+     id="text1073-7-0-6-9-57-4-5"
+     class="cls-12"
+     onmouseover="style=&quot;cursor: pointer;&quot;" >
+     <path
+        id="path342-FTDI-BCII"
+        class="cls-9"
+        d="M634.48,410.72A14.71,14.71,0,1,1,619.77,396a14.71,14.71,0,0,1,14.71,14.71"
+        inkscape:label="#path342" />
+     <text
+        class="cls-14"
+        transform="translate(628.3 396.8)"
+        id="text227">BCII</text>
+	 <title id="title561">Bachelor of Creative Intelligence &amp; Innovation subjects:
+81511 Problems to Possibilities
+81512 Creative Practice and Methods
+81513 Past, Present and Future of Innovation
+81514 Creativity and Complexity
+81515 Leading Innovation
+81516 Initiatives and Entrepreneurship
+81521 Envisioning Futures
+81522 Innovation Internship A
+81525 Innovation Internship B
+81524 Professional Practice at the Cutting Edge
+81523 Speculative Start-up
+81528 New Knowledge-making Lab
+81531 Industry Innovation Project
+81532 Creative Intelligence Capstone
+81517 Global Innovation Studio A
+81518 Global Innovation Studio B</title>
+  </g>
+  
+  <g
+     onclick="window.open('https://bti.uts.edu.au/', '_blank')"
+     id="text1073-7-0-6-9-57-4-85"
+     class="cls-12"
+     onmouseover="style=&quot;cursor: pointer;&quot;" >
+     <path
+        id="path352-FTDI-BTi"
+        class="cls-9"
+        d="M760.69,449.19a18,18,0,1,1-18-18,18,18,0,0,1,18,18"
+        inkscape:label="#path352" />
+     <text
+        class="cls-14"
+        transform="translate(745.03 425.71)"
+        id="text230">BTi</text>
+	 <title id="title563">Bachelor of Technology and Innovation subjects:
+94674 Technology Lab 1: Imagine and Create
+94668 Project: Complex Challenges to Creative Possibilities
+94673 Science Fiction: Making Futures
+94676 Technology Lab 2: Connect and Network
+94669 Project: Data-driven Design Challenges
+94672 Creative Methods and Entrepreneurial Initiatives
+94677 Technology Lab 3: Exchange and Influence
+94670 Project: Global Grand Challenges
+94679 Complexity and Sustainable Futures
+94666 Innovation Internship
+94678 Innovation Capstone: Ressearch and Development
+94667 Emergent Professional Practice
+94671 Innovation Capstone: Realisation and Transformation</title>
+  </g>
+
+  <g
+     onclick="window.open('http://mdsi.uts.edu.au', '_blank')"
+     id="text1073-7-0-6-9-57-4-85-8"
+     class="cls-12"
+     onmouseover="style=&quot;cursor: pointer;&quot;" >
+     <path
+        id="path362-FTDI-MDSI"
+        class="cls-10"
+        d="M672.61,421.87a14.71,14.71,0,1,1-14.71-14.71,14.7,14.7,0,0,1,14.71,14.71"
+        inkscape:label="#path362" />
+     <text
+        class="cls-14"
+        transform="translate(669.96 407.44)"
+        id="text233">MDSI</text>
+	 <title id="title565">Master of Data Science and Innovation</title>
+  </g>
+
+  <g
+     onclick="window.open('https://animallogicacademy.uts.edu.au/', '_blank')"
+     id="text1073-7-0-6-9-57-4-85-2"
+     class="cls-12"
+     onmouseover="style=&quot;cursor: pointer;&quot;" >
+     <path
+        id="path372-FTDI-MAVALA"
+        class="cls-10"
+        d="M835.28,471.35a12.78,12.78,0,1,1-12.78-12.77,12.78,12.78,0,0,1,12.78,12.77"
+        inkscape:label="#path372" />
+     <text
+        class="cls-14"
+        transform="translate(814.09 453.54)"
+        id="text236">MAV/ALA</text>
+	 <title id="title567">Master of Animation and Visualisation (aka Animal Logic Academy)</title>
+  </g>
+
+  <g
+     onclick="window.open('https://tdi.uts.edu.au/', '_blank')"
+     id="text1073-7-0-6-9-57-4-85-6"
+     class="cls-12"
+     onmouseover="style=&quot;cursor: pointer;&quot;" >
+     <path
+        id="path382-FTDI"
+        class="cls-11"
+        d="M913.05,495.93a10.7,10.7,0,1,1-10.7-10.7,10.7,10.7,0,0,1,10.7,10.7"
+        inkscape:label="#path382" />
+     <text
+        class="cls-13"
+        transform="translate(889.23 524.12)"
+        id="text239">FTDI</text>
+	 <title id="title569">Faculty of Transdisciplinary Innovation</title>
+  </g>
+  
+  <g
+     onclick="window.open('https://www.uts.edu.au/current-students/current-students-information-uts-business-school/prizes-awards-and-competitions-7', '_blank')"
+     id="text1073-7-0-6-9-53"
+     class="cls-12"
+     onmouseover="style=&quot;cursor: pointer;&quot;" >
+     <path
+        id="path132-BUS-IBISWorld"
+        d="M502.07,313.74a7.54,7.54,0,1,1-7.54-7.54,7.55,7.55,0,0,1,7.54,7.54"
+        inkscape:label="#path132" />
+     <text
+        class="cls-14"
+        transform="translate(506.82 317.68)"
+        id="text195">IBISWorld 3P</text>
+	 <title id="title585">IBISWorld 3P Innovation Competition</title>
+  </g>
+
+  <g
+     onclick="window.open('https://www.uts.edu.au/future-students/business-practice/events/event-series', '_blank')"
+     id="text1073-7-0-6-9-4"
+     class="cls-12"
+     onmouseover="style=&quot;cursor: pointer;&quot;" >
+     <path
+        id="path312-BUS-Events"
+        d="M514,287.27a5.59,5.59,0,1,1-5.58-5.58,5.58,5.58,0,0,1,5.58,5.58"
+        inkscape:label="#path312" />
+     <text
+        class="cls-14"
+        transform="translate(518.19 291.17)"
+        id="text192">Event Series</text>
+	 <title id="title587">Public events designed for members of the entrepreneurial ecosystem</title>
+  </g>
+
+  <g
+     onclick="window.open('https://www.uts.edu.au/future-students/business-practice/masterclasses/masterclasses', '_blank')"
+     id="text1073-7-0-6-9-57"
+     class="cls-12"
+     onmouseover="style=&quot;cursor: pointer;&quot;" >
+     <path
+        id="path272-BUS-Masterclasses"
+        d="M527.74,264.39a5.59,5.59,0,1,1-5.58-5.58,5.58,5.58,0,0,1,5.58,5.58"
+        inkscape:label="#path272" />
+     <text
+        class="cls-14"
+        transform="translate(532.42 268.04)"
+        id="text189">Masterclasses</text>
+	 <title id="title589">Masterclasses</title>
+  </g>
+  
+  <g
+     id="text1073-7-0-6-9-1"
+     class="cls-12" >
+     <path
+        id="path202-BUS-SharedUGE"
+        class="cls-9"
+        d="M541.85,238.55a5.69,5.69,0,1,1-5.69-5.7,5.68,5.68,0,0,1,5.69,5.7"
+        inkscape:label="#path202" />
+     <text
+        class="cls-14"
+        transform="translate(544.91 242.57)"
+        id="text186">UG Electives</text>
+	 <title id="title591">UG Electives
+21227 Innovation and Entrepreneurship
+21632 Business Strategy and Scenario Planning</title>
+  </g>
+  
+  <g
+     onclick="window.open('https://www.uts.edu.au/future-students/business/business-courses/undergraduate-programs/bachelor-entrepreneurship-honours', '_blank')"
+     id="text1073-7-0-6-9-1-10"
+     class="cls-12"
+     onmouseover="style=&quot;cursor: pointer;&quot;" >
+     <path
+        id="path142-BUS-HonsEnt"
+        class="cls-9"
+        d="M561.77,210.7a10.49,10.49,0,1,1-10.49-10.49,10.49,10.49,0,0,1,10.49,10.49"
+        inkscape:label="#path142-1" />
+     <text
+        class="cls-14"
+        transform="translate(566.2 214.92)"
+        id="text317">Honours (Entrep.)</text>
+	 <title id="title559-7">Starting 2019 .. 
+Bachelor of Entrepreneurship (Honours)</title>
+  </g>
+
+  <g
+     onclick="window.open('https://www.uts.edu.au/future-students/business-practice/uts-venture-day', '_blank')"
+	 id="text1073-7-0-6-9-8"
+     class="cls-12"
+     onmouseover="style=&quot;cursor: pointer;&quot;" >
+     <path
+        id="path212-BUS-VentureDay"
+        d="M569.57,187.33a4.8,4.8,0,1,1-4.8-4.8,4.79,4.79,0,0,1,4.8,4.8"
+        inkscape:label="#path212" />
+     <text
+        class="cls-14"
+        transform="translate(574.48 190.94)"
+        id="text183">Venture Day</text>
+	 <title id="title593">VentureDay</title>
+  </g>
+
+  <g
+     onclick="window.open('https://mbae.uts.edu.au/', '_blank')"
+     id="text1073-7-0-6-9-3"
+     class="cls-12"
+     onmouseover="style=&quot;cursor: pointer;&quot;" >
+     <path
+        id="path282-BUS-VentureLab"
+        class="cls-10"
+        d="M580.31,168.58a5.2,5.2,0,1,1-5.2-5.19,5.2,5.2,0,0,1,5.2,5.19"
+        inkscape:label="#path282" />
+     <text
+        class="cls-14"
+        transform="translate(585.1 172.82)"
+        id="text180">Venture Lab</text>
+	 <title id="title595">VentureLab. Special purpose space for MBAe students</title>
+  </g>
+
+  <g
+     onclick="window.open('https://mbae.uts.edu.au/', '_blank')"
+     id="text1073-7-0-6-9-06"
+     class="cls-12"
+     onmouseover="style=&quot;cursor: pointer;&quot;" >
+     <path
+        id="path292-BUS-Mentoring"
+        class="cls-10"
+        d="M589.07,151.41a4.41,4.41,0,1,1-4.41-4.41,4.42,4.42,0,0,1,4.41,4.41"
+        inkscape:label="#path292" />
+     <text
+        class="cls-14"
+        transform="translate(594.09 154.78)"
+        id="text177">Mentoring</text>
+	 <title id="title597">Mentoring for MBAe students</title>
+  </g>
+  
+  <g
+     onclick="window.open('https://mbae.uts.edu.au/', '_blank')"
+     id="text1073-7-0-6-9-5"
+     class="cls-12"
+     onmouseover="style=&quot;cursor: pointer;&quot;" >
+     <path
+        id="path302-BUS-EiR"
+        class="cls-10"
+        d="M598.34,136.19a4.8,4.8,0,1,1-4.8-4.8,4.8,4.8,0,0,1,4.8,4.8"
+        inkscape:label="#path302" />
+     <text
+        class="cls-14"
+        transform="translate(602.19 139.87)"
+        id="text174">EiR</text>
+	 <title id="title599">Entrepreneur-in-Residence support for MBAe students</title>
+  </g>
+  
+  <g
+     onclick="window.open('https://mbae.uts.edu.au/', '_blank')"
+     id="text1073-7-0-6-9-0"
+     class="cls-12"
+     onmouseover="style=&quot;cursor: pointer;&quot;" >
+     <path
+        id="path262-BUS-MBAe"
+        class="cls-10"
+        d="M617.68,114.31a12.78,12.78,0,1,1-12.76-12.77,12.77,12.77,0,0,1,12.76,12.77"
+        inkscape:label="#path262" />
+     <text
+        class="cls-14"
+        transform="translate(621.87 119.19)"
+        id="text171">MBAe</text>
+	 <title id="title601">The MBA in Entrepreneurship is uniquely designed 
+as three integrated graduate certificates: 
+Commercialisation, Entrepreneurship and 
+Venture Acceleration</title>
+  </g>
+  
+  <g
+     id="text1073-7-0-6-9-2"
+     class="cls-12">
+     <path
+        id="path252-BUS-PGE"
+        class="cls-10"
+        d="M622,93.41a4.11,4.11,0,1,1-4.12-4.12A4.11,4.11,0,0,1,622,93.41"
+        inkscape:label="#path252" />
+	 <text
+        class="cls-14"
+        transform="translate(628.7 97.28)"
+        id="text168">PG Electives</text>
+	 <title id="title603">PG Electives
+21778 Fundraising and Resource Development 
+21854 Innovation, Creativity and Entrepreneurship
+21869 Innovation by Design
+21898 Integrated Business Consulting
+21919 Business Models and Strategic Planning
+25733 Finance for Entrepreneurs</title>
+  </g>
+  
+  <g
+     onclick="window.open('https://www.uts.edu.au/future-students/business/business-courses/undergraduate-programs/bachelor-management/digital', '_blank')"
+     id="text1073-7-0-6-4"
+     class="cls-12"
+     onmouseover="style=&quot;cursor: pointer;&quot;" >
+     <path
+        id="path242-BUS-SMJ"
+        class="cls-9"
+        d="M635.91,74.47a7.54,7.54,0,1,1-7.54-7.54,7.54,7.54,0,0,1,7.54,7.54"
+        inkscape:label="#path242" />
+     <text
+        class="cls-14"
+        transform="translate(639.55 79.81)"
+        id="text165">SMJ08223</text>
+     <title id="title605">Submajor in Digital Creative Enterprise (powered by FTDI)</title>
+  </g>
+  
+  <g
+     id="text1073-7-0-6-9"
+     class="cls-12">
+     <path
+        id="path222-BUS-UGE"
+        class="cls-9"
+        d="M640.86,59.64a4.12,4.12,0,1,1-4.12-4.11,4.11,4.11,0,0,1,4.12,4.11"
+        inkscape:label="#path222" />
+     <text
+        class="cls-14"
+        transform="translate(646.83 63.96)"
+        id="text162">UG Electives</text>
+     <title id="title607">UG Electives
+20105 Innovation and Entrepreneurship
+21066 Innovation and Entrepreneurship
+21061 Business Model Generation (Project)
+21643 Innovation Lab
+22573 Innovation and Commercialisation</title>
+  </g>
+  
+  <g
+     onclick="window.open('http://business.uts.edu.au', '_blank')"
+     id="text1073-7-0-6-1"
+     class="cls-12"
+     onmouseover="style=&quot;cursor: pointer;&quot;" >
+     <path
+        id="path232-BUS"
+        class="cls-11"
+        d="M656.73,41.8A10.69,10.69,0,1,1,646,31.1a10.69,10.69,0,0,1,10.69,10.7"
+        inkscape:label="#path232" />
+     <text
+        class="cls-13"
+        transform="translate(620.86 22.58)"
+        id="text159">BUSINESS</text>
+     <title id="title609">Business</title>
+  </g>
+
+  <g
+     onclick="window.open('https://deepgreenhub.uts.edu.au/greenlight/', '_blank')"
+     id="text1073-7-0-6-9-57-4-85-4-2-43"
+     class="cls-12"
+     onmouseover="style=&quot;cursor: pointer;&quot;" >
+     <path
+        id="path162-GreenLight"
+        d="M411.75,259a6,6,0,1,1-6-6,6,6,0,0,1,6,6"
+        inkscape:label="#path162-9" />
+     <text
+        class="cls-14"
+        transform="translate(415.37 262.54)"
+        id="text346">Green Light</text>
+     <title id="title641-6">Algae biotech accelerator program by the Deep Green Biotech Hub</title>
+  </g>
+
+  <g
+     id="text1073-7-0"
+     class="cls-12">
+     <path
+        id="path192-SCI-PGE"
+        class="cls-10"
+        d="M338.16,129.13a6.08,6.08,0,1,1-6.09-6.07,6.08,6.08,0,0,1,6.09,6.07"
+        inkscape:label="#path192" />
+     <text
+        class="cls-14"
+        transform="translate(262.75 132.8)"
+        id="text153">PG Electives</text>
+	 <title id="title611">PG Electives
+60904 Innovation, Entrepreneurship and Commercialisation</title>
+  </g>
+
+  <g
+   onclick="window.open('http://science.uts.edu.au', '_blank')"
+     id="text1073-7-0-6"
+     class="cls-12"
+     onmouseover="style=&quot;cursor: pointer;&quot;" >
+     <path
+        id="path462-SCI"
+        class="cls-11"
+        d="M293.08,41.67A10.7,10.7,0,1,1,282.38,31a10.69,10.69,0,0,1,10.7,10.7"
+        inkscape:label="#path462" />
+     <text
+        class="cls-13"
+        transform="translate(248.96 23.23)"
+        id="text156">SCIENCE</text>
+	 <title id="title613">Science</title>
+  </g>
+
+  <g
+     id="text1073-7-0-6-9-57-4-85-4-2"
+     class="cls-12"
+     onmouseover="style=&quot;cursor: pointer;&quot;" >
+     <path 
+        onclick="window.open('https://www.uts.edu.au/partners-and-community/initiatives/city-campus-master-plan/campus-development-news/2017-news-10', '_blank')"
+        id="path162-DigMakerSpace"
+        d="M370.54,331.18a6,6,0,1,1-6-6,6,6,0,0,1,6,6"
+        inkscape:label="#path162" />
+     <text
+        class="cls-14"
+        transform="translate(352.79 320.78)"
+        id="text245">Dig.MakerSpace</text>
+	 <title id="title641">Digital MakerSpace</title>
+  </g>
+  
+  <g
+     onclick="window.open('https://www.uts.edu.au/current-students/current-students-information-faculty-design-architecture-and-building/manage-6', '_blank')"
+     id="text1073-7-0-6-9-57-4-85-4-6"
+     class="cls-12"
+     onmouseover="style=&quot;cursor: pointer;&quot;" >
+     <path
+        id="path392-DAB-SharedUGE"
+        class="cls-9"
+        d="M320.8,316.48a6.47,6.47,0,1,1-6.47-6.46,6.46,6.46,0,0,1,6.47,6.46"
+        inkscape:label="#path392" />
+     <text
+        class="cls-14"
+        transform="translate(301.71 305.33)"
+        id="text242">UG Electives</text>
+     <title id="title643">UG Electives
+85500 Design Futures: Creative Technologies
+85503 Thinking Through Design
+85601 Design Futures: Business Innovation</title>
+  </g>
+
+  <g
+     onclick="window.open('https://www.uts.edu.au/future-students/design-architecture-and-building/design', '_blank')"
+     id="text1073-7-0-6-9-57-4-85-67"
+     class="cls-12"
+     onmouseover="style=&quot;cursor: pointer;&quot;" >
+     <path
+        id="path402-DAB-BDesign"
+        class="cls-9"
+        d="M288.51,304.43a18,18,0,1,1-18-18,18,18,0,0,1,18,18"
+        inkscape:label="#path402" />
+     <text
+        class="cls-14"
+        transform="translate(237.52 281.76)"
+        id="text134">BDesign</text>
+	 <title id="title645">Bachelor of Design (multiple single and double-degree options)</title>
+  </g>
+
+   <g
+     id="text1073-7-0-6-9-57-4-85-4"
+     class="cls-12">
+     <path
+        id="path412-DAB-PGE"
+        class="cls-10"
+        d="M194,278.2a6.47,6.47,0,1,1-6.48-6.48A6.47,6.47,0,0,1,194,278.2"
+        inkscape:label="#path412" />
+     <text
+        class="cls-14"
+        transform="translate(173.61 266.68)"
+        id="text131">PG Electives</text>
+     <title id="title647">PG Electives
+89026 Design Thinking and Service Innovation
+89107 Innovation and Entrepreneurship A
+89015 Textile and Fashion Innovation
+15328 Project Innovation and Entrepreneurship</title>
+  </g> 
+  
+
+  <g
+     onclick="window.open('https://www.uts.edu.au/future-students/find-a-course/graduate-certificate-public-sector-innovation', '_blank')"
+     id="text1073-7-0-6-9-57-4-85-66"
+     class="cls-12"
+     onmouseover="style=&quot;cursor: pointer;&quot;" >
+     <path
+        id="path422-DAB-GCinPSI"
+        class="cls-10"
+        d="M109.55,253.25a7.54,7.54,0,1,1-7.54-7.54,7.55,7.55,0,0,1,7.54,7.54"
+        inkscape:label="#path422" />
+     <text
+        class="cls-14"
+        transform="translate(91.81 241.42)"
+        id="text128">GC in PSI</text>
+     <title id="title649">Graduate Certificate in Public Sector Innovation</title>
+  </g>
+  
+  <g
+     onclick="window.open('http://dab.uts.edu.au', '_blank')"
+     id="text1073-7-0-6-9-57-4-85-3"
+     class="cls-12"
+     onmouseover="style=&quot;cursor: pointer;&quot;" >
+     <path
+        id="path432-DAB"
+        class="cls-11"
+        d="M38.11,230.35a10.7,10.7,0,1,1-10.7-10.7,10.7,10.7,0,0,1,10.7,10.7"
+        inkscape:label="#path432" />
+     <text
+        class="cls-13"
+        transform="translate(16.26 210.59)"
+        id="text125">DAB</text>
+     <title id="title651">DAB</title>
+  </g>
+  
+  <g
+     onclick="window.open('http://newsroom.uts.edu.au/news/2018/09/smart-pipes-smart-cities-smart-materials-tech-lab-opens-doors', '_blank')"
+     id="text1073-7-0-6-9-57-4-85-4-2-5-6"
+     class="cls-12"
+     onmouseover="style=&quot;cursor: pointer;&quot;" >
+     <path
+        id="path152-TechLab"
+        d="M427.07,377.66a5.5,5.5,0,1,1-5.5-5.5,5.5,5.5,0,0,1,5.5,5.5"
+        inkscape:label="#path152-0" />
+     <text
+        class="cls-14"
+        transform="translate(376 367.12)"
+        id="text304">Tech Lab</text>
+	 <title id="title639-1">Massive Tech Lab and maker space in Botany</title>
+  </g>
+
+  <g
+     onclick="window.open('http://protospace.uts.edu.au', '_blank')"
+     id="text1073-7-0-6-9-57-4-85-4-2-5"
+     class="cls-12"
+     onmouseover="style=&quot;cursor: pointer;&quot;" >
+     <path
+        id="path152-ProtoSpace"
+        d="M394.45,387.66a5.5,5.5,0,1,1-5.5-5.5,5.5,5.5,0,0,1,5.5,5.5"
+        inkscape:label="#path152" />
+     <text
+        class="cls-14"
+        transform="translate(328.63 377.09)"
+        id="text248">ProtoSpace</text>
+	 <title id="title639">ProtoSpace is a 900m² additive and advanced manufacturing facility</title>
+  </g>  
+  
+  <g
+     onclick="window.open('https://rapido.uts.edu.au', '_blank')"
+     id="text1073-7-0-6-9-57-4-85-4-2-4"
+     class="cls-12"
+     onmouseover="style=&quot;cursor: pointer;&quot;" >
+     <path
+        id="path552-Rapido"
+        d="M361.46,397.29A5.5,5.5,0,1,1,356,391.8a5.5,5.5,0,0,1,5.49,5.49"
+        inkscape:label="#path552" />
+     <text
+        class="cls-14"
+        transform="translate(319.7 387.98)"
+        id="text251">Rapido</text>
+	 <title id="title637">UTS Rapido is an advanced technology development unit</title>
+  </g>  
+  
+  <g
+     onclick="window.open('https://www.uts.edu.au/partners-and-community/data-arena/overview', '_blank')"
+     id="text1073-7-0-6-9-57-4-85-4-2-49"
+     class="cls-12"
+     onmouseover="style=&quot;cursor: pointer;&quot;" >
+     <path
+        id="path562-DataArena"
+        d="M330.11,407.06a5.5,5.5,0,1,1-5.5-5.5,5.49,5.49,0,0,1,5.5,5.5"
+        inkscape:label="#path562" />
+     <text
+        class="cls-14"
+        transform="translate(273.36 395.94)"
+        id="text254">DataArena</text>
+	 <title id="title631">DataArena: a 360-degree interactive data visualisation facility</title>
+  </g>
+
+  <g
+     id="text1073-7-0-6-9-57-4-85-4-6-3"
+     class="cls-12">
+     <path
+        id="path442-FEIT-SharedUGE"
+        class="cls-9"
+        d="M294.35,417a5.3,5.3,0,1,1-5.29-5.3,5.29,5.29,0,0,1,5.29,5.3"
+        inkscape:label="#path442" />
+     <text
+        class="cls-14"
+        transform="translate(220.48 409.36)"
+        id="text257">UG Electives</text>
+	 <title id="title635">UG Electives
+31258 Innovations for Global Relationship Management
+41022 Innovation and Entrepreneurship Studio 1 
+48270 Entrepreneurship and Commercialisation
+49016 Technology and Innovation Management</title>
+  </g>
+
+  <g
+     id="text1073-7-0-6-9-57-4-85-4-6-7"
+     class="cls-12">
+     <path
+        id="path452-FEIT-UGE"
+        class="cls-9"
+        d="M219.54,439.11a6.08,6.08,0,1,1-6.07-6.07,6.07,6.07,0,0,1,6.07,6.07"
+        inkscape:label="#path452" />
+     <text
+        class="cls-14"
+        transform="translate(165.01 428.85)"
+        id="text260">UG Electives</text>
+	 <title id="title653">UG Electives
+41167 Health Innovation Studio
+48081 Innovation Processes</title>
+  </g>
+
+  <g
+     id="text1073-7-0-6-9-57-4-85-4-6-7-0"
+     class="cls-12">
+     <path
+        id="path512-FEIT-PGE"
+        class="cls-10"
+        d="M129.38,466.5a6.47,6.47,0,1,1-6.48-6.45,6.49,6.49,0,0,1,6.48,6.45"
+        inkscape:label="#path512" />
+     <text
+        class="cls-14"
+        transform="translate(70.91 455.95)"
+        id="text263">PG Electives</text>
+     <title id="title655">PG Electives
+32005 Strategic Leadership for Innovation
+48240 Design and Innovation Fundamentals</title>
+  </g>
+
+  <g
+     onclick="window.open('http://feit.uts.edu.au', '_blank')"
+     id="text1073-7-0-6-9-57-4-85-4-6-7-3"
+     class="cls-12"
+     onmouseover="style=&quot;cursor: pointer;&quot;" >
+     <path
+        id="path522-FEIT"
+        class="cls-11"
+        d="M38.06,496.47a10.7,10.7,0,1,1-10.7-10.7,10.7,10.7,0,0,1,10.7,10.7"
+        inkscape:label="#path522" />
+     <text
+        class="cls-13"
+        transform="translate(15.36 524.86)"
+        id="text266">FEIT</text>
+	 <title id="title657">FEIT</title>
+  </g>
+
+  <g
+     id="text1073-7-0-6-9-57-4-85-4-6-7-32"
+     class="cls-12">
+     <path
+        id="path182-LAW-UGE"
+        class="cls-9"
+        d="M349.38,579.55a6.08,6.08,0,1,1-6.07-6.07,6.07,6.07,0,0,1,6.07,6.07"
+        inkscape:label="#path182" />
+     <text
+        class="cls-14"
+        transform="translate(271.83 582.05)"
+        id="text275">UG Electives</text>
+	 <title id="title659">UG Electives
+76105 Disruptive Technologies and the Law
+76107 Applied Project in Law, Innovation and Technology (capstone)</title>
+  </g>
+
+  <g
+     onclick="window.open('https://www.uts.edu.au/future-students/find-a-course/master-intellectual-property', '_blank')"
+     id="text1073-7-0-6-9-57-4-85-4-6-7-7-2"
+     class="cls-12"
+     onmouseover="style=&quot;cursor: pointer;&quot;" >
+     <path
+        id="path472-LAW-MofIP"
+        class="cls-10"
+        d="M328.93,622.89a10.49,10.49,0,1,1-10.49-10.49,10.49,10.49,0,0,1,10.49,10.49"
+        inkscape:label="#path472" />
+     <text
+        class="cls-14"
+        transform="translate(247.81 624.12)"
+        id="text272">Master of IP</text>
+     <title id="title661">Master of IP (Distance mode only)</title>
+  </g>
+
+  <g
+     onclick="window.open('http://law.uts.edu.au', '_blank')"
+     id="text1073-7-0-6-9-57-4-85-4-6-7-7"
+     class="cls-12"
+     onmouseover="style=&quot;cursor: pointer;&quot;" >
+     <path
+        id="path502-LAW"
+        class="cls-11"
+        d="M297.85,679.76a10.7,10.7,0,1,1-10.7-10.69,10.7,10.7,0,0,1,10.7,10.69"
+        inkscape:label="#path502" />
+     <text
+        class="cls-13"
+        transform="translate(265.08 706.47)"
+        id="text269">LAW</text>
+	 <title id="title663">Law</title>
+  </g>
+  
+  <g
+     id="text1073-7-0-6-9-57-4-85-4-6-7-32-9"
+     class="cls-12">
+     <path
+        id="path172-FASS-UGE"
+        class="cls-9"
+        d="M596.36,585.83a5.69,5.69,0,1,1-5.69-5.68,5.69,5.69,0,0,1,5.69,5.68"
+        inkscape:label="#path172" />
+     <text
+        class="cls-14"
+        transform="translate(600.04 588.99)"
+        id="text281">UG Electives</text>
+	 <title id="title669">UG Electives
+54003 Creative Entrepreneurship
+54096 Design Thinking for Social Innovation</title>
+  </g>
+  
+  <g
+     id="text1073-7-0-6-9-57-4-85-4-6-7-0-1"
+     class="cls-12">
+     <path
+        id="path322-FASS-PGE"
+        class="cls-10"
+        d="M618.47,622.5a5.69,5.69,0,1,1-5.67-5.69,5.67,5.67,0,0,1,5.67,5.69"
+        inkscape:label="#path322" />
+     <text
+        class="cls-14"
+        transform="translate(621.85 624.3)"
+        id="text284">PG Electives</text>
+	 <title id="title667">PG Electives
+57195 Entrepreneurial Journalism
+013226 Leading Innovative Practices</title>
+  </g>
+
+  <g
+     onclick="window.open('http://fass.uts.edu.au', '_blank')"
+     id="text1073-7-0-6-9-57-4-85-4-6-7-7-7"
+     class="cls-12"
+     onmouseover="style=&quot;cursor: pointer;&quot;" >
+     <path
+        id="path332-FASS"
+        class="cls-11"
+        d="M655.38,680.15a10.7,10.7,0,1,1-10.69-10.69,10.7,10.7,0,0,1,10.69,10.69"
+        inkscape:label="#path332" />
+     <text
+        class="cls-13"
+        transform="translate(634.61 707.73)"
+        id="text278">FASS</text>
+	 <title id="title665">FASS</title>
+  </g>
+  
+  <g
+     id="text1073-7-0-6-9-57-4-85-4-6-7-7-6-54-3-0"
+     class="cls-12">
+     <path
+        id="path512-Legend-Societies"
+        d="M791,559.19a6.47,6.47,0,1,1-6.48-6.46,6.49,6.49,0,0,1,6.48,6.46"
+        inkscape:label="#path512-4-1-8" />
+     <text
+        class="cls-22"
+        transform="translate(796.27 561.85)"
+        id="text320">Student Societies:</text>
+     <text
+        class="cls-14"
+        transform="translate(796.27 574.35)"
+        id="text322">ACES</text>
+     <text
+        class="cls-14"
+        transform="translate(796.27 586.85)"
+        id="text324">BCII Connect</text>
+     <text
+        class="cls-14"
+        transform="translate(796.27 599.35)"
+        id="text326">HIVE (new)</text>
+     <text
+        class="cls-14"
+        transform="translate(796.27 611.85)"
+        id="text328">PAAS</text>
+     <text
+        class="cls-14"
+        transform="translate(796.27 624.35)"
+        id="text330">ProgSoc</text>
+     <text
+        class="cls-14"
+        transform="translate(796.27 636.85)"
+        id="text332">RoboSoc</text>
+     <text
+        class="cls-14"
+        transform="translate(796.27 649.35)"
+        id="text334">Tech Society</text>
+     <text
+        class="cls-14"
+        transform="translate(796.27 661.85)"
+        id="text336">WiEIT</text>
+     <text
+        class="cls-14"
+        transform="translate(796.27 674.35)"
+        id="text338">Women in Business</text>
+  </g>
+
+  <g
+     id="layer1">
+    <g
+       id="g287">
+      <path
+         id="path3817"
+         class="cls-23"
+         d="M15.37,648.29l48.38.08c.68,0,1.28-.1,1.28,1.35L65,665.65H14.15v-16C14.15,649,14.22,648.29,15.37,648.29Z" />
+      <g
+         id="g5908">
+        <path
+           id="path5906"
+           class="cls-24"
+           d="M28.65,656.44a5.82,5.82,0,0,1-11.64,0h0a5.82,5.82,0,0,1,11.64,0Z" />
+        <g
+           id="g5706">
+          <path
+             id="path5708"
+             d="M27.56,651.7a6.45,6.45,0,0,1,1.94,4.74,6.33,6.33,0,0,1-1.9,4.69,6.61,6.61,0,0,1-4.78,2,6.73,6.73,0,0,1-6.65-6.67,6.49,6.49,0,0,1,2-4.74,6.35,6.35,0,0,1,4.68-1.94A6.45,6.45,0,0,1,27.56,651.7Zm-8.56.87a5.32,5.32,0,0,0-1.63,3.87,5.53,5.53,0,0,0,5.47,5.46,5.34,5.34,0,0,0,3.89-1.64,5.07,5.07,0,0,0,1.57-3.82A5.45,5.45,0,0,0,22.84,651,5.18,5.18,0,0,0,19,652.57Zm2.88,3.22a.82.82,0,0,0-.75-.55c-.59,0-.89.4-.89,1.19s.3,1.19.89,1.19A.85.85,0,0,0,22,657l.81.43a1.88,1.88,0,0,1-1.74,1,1.94,1.94,0,0,1-1.45-.55,2.09,2.09,0,0,1-.54-1.52,2,2,0,0,1,.56-1.51,2.06,2.06,0,0,1,3.16.41Zm3.83,0a.79.79,0,0,0-.73-.55c-.6,0-.9.4-.9,1.19s.3,1.19.9,1.19a.83.83,0,0,0,.82-.58l.83.43a1.89,1.89,0,0,1-1.75,1,1.91,1.91,0,0,1-1.44-.55,2.38,2.38,0,0,1,0-3,2.06,2.06,0,0,1,3.16.41Z" />
+        </g>
+      </g>
+      <path
+         id="path294"
+         d="M64.18,648.08H14.88a1,1,0,0,0-1,1v16.75a.22.22,0,0,0,.22.22H64.92a.21.21,0,0,0,.21-.22V649A1,1,0,0,0,64.18,648.08Zm-49.3.44h49.3a.52.52,0,0,1,.52.52v11.63H29.47a7.58,7.58,0,0,1-13.27,0H14.35V649A.52.52,0,0,1,14.88,648.52Z" />
+      <g
+         id="g296"
+         class="cls-12">
+        <path
+           id="path298"
+           class="cls-24"
+           d="M50.74,664.19a.51.51,0,0,0,.13.16.72.72,0,0,0,.2.09l.24,0,.18,0a.34.34,0,0,0,.17-.05.26.26,0,0,0,.14-.11.24.24,0,0,0,.06-.17.26.26,0,0,0-.08-.19.44.44,0,0,0-.19-.12l-.27-.08-.3-.08-.31-.1a1.17,1.17,0,0,1-.27-.15.67.67,0,0,1-.19-.22.72.72,0,0,1-.07-.33.74.74,0,0,1,.09-.38.78.78,0,0,1,.24-.27,1.33,1.33,0,0,1,.34-.16,1.73,1.73,0,0,1,.38,0,2,2,0,0,1,.43,0,1.17,1.17,0,0,1,.36.16.75.75,0,0,1,.25.28.93.93,0,0,1,.09.42h-.6a.46.46,0,0,0,0-.21.37.37,0,0,0-.12-.13l-.17-.07-.21,0-.15,0a.35.35,0,0,0-.14.06.28.28,0,0,0-.1.09.24.24,0,0,0,0,.15.26.26,0,0,0,0,.14.23.23,0,0,0,.13.09l.25.09.43.11.22.06a1,1,0,0,1,.28.13.82.82,0,0,1,.24.25.67.67,0,0,1,.1.39.86.86,0,0,1-.07.36.89.89,0,0,1-.23.28,1,1,0,0,1-.37.19,1.53,1.53,0,0,1-.51.07,1.74,1.74,0,0,1-.45-.06,1.38,1.38,0,0,1-.39-.18.86.86,0,0,1-.26-.31.93.93,0,0,1-.1-.45h.6a.48.48,0,0,0,.06.24Z" />
+        <path
+           id="path300"
+           class="cls-24"
+           d="M54.24,662.06l1.06,2.83h-.65l-.21-.63H53.38l-.22.63h-.63l1.07-2.83Zm0,1.73-.35-1h0l-.37,1Z" />
+      </g>
+      <g
+         id="g302"
+         class="cls-12">
+        <path
+           id="path304"
+           class="cls-24"
+           d="M39.52,662.06a1.4,1.4,0,0,1,.37,0,.83.83,0,0,1,.29.11.55.55,0,0,1,.18.22.67.67,0,0,1,.07.33.61.61,0,0,1-.1.36.69.69,0,0,1-.29.23.72.72,0,0,1,.4.26.86.86,0,0,1,.13.46.75.75,0,0,1-.09.37.67.67,0,0,1-.22.25.94.94,0,0,1-.32.15,1.57,1.57,0,0,1-.37,0H38.19v-2.83Zm-.07,1.14a.4.4,0,0,0,.27-.08.28.28,0,0,0,.11-.25.34.34,0,0,0,0-.16.22.22,0,0,0-.09-.1.34.34,0,0,0-.14-.05l-.16,0h-.58v.66Zm0,1.2a.55.55,0,0,0,.18,0l.14,0a.23.23,0,0,0,.1-.12.32.32,0,0,0,0-.18.37.37,0,0,0-.12-.31.54.54,0,0,0-.33-.09h-.67v.77Z" />
+        <path
+           id="path306"
+           class="cls-24"
+           d="M40.67,662.06h.7l.66,1.12.66-1.12h.69l-1,1.74v1.09h-.63v-1.1Z" />
+      </g>
+      <g
+         id="g6316">
+        <path
+           id="path6318"
+           class="cls-24"
+           d="M57.62,654.48a4.52,4.52,0,1,1-9,0h0a4.52,4.52,0,0,1,9,0Z" />
+        <g
+           id="g6320">
+          <path
+             id="path6322"
+             d="M53.07,649.53A4.74,4.74,0,0,0,49.59,651a4.86,4.86,0,0,0-1.46,3.52,5,5,0,0,0,4.94,4.95A4.87,4.87,0,0,0,56.62,658,4.69,4.69,0,0,0,58,654.48a4.9,4.9,0,0,0-5-5Zm0,.89a4.06,4.06,0,0,1,4,4.06A3.76,3.76,0,0,1,56,657.31a4,4,0,0,1-5.75,0,3.89,3.89,0,0,1-1.2-2.84,3.93,3.93,0,0,1,1.22-2.87A3.83,3.83,0,0,1,53.09,650.42Z" />
+          <path
+             id="path6324"
+             d="M50.88,653.78a2.1,2.1,0,0,1,2.17-1.91,2.48,2.48,0,0,1,2.55,2.67A2.52,2.52,0,0,1,53,657.19a2.13,2.13,0,0,1-2.19-1.93h1.25c0,.66.47.9,1.09.9s1.16-.66,1.16-1.65-.4-1.61-1.14-1.61a1,1,0,0,0-1.11.88h.36l-1,1-1-1Z" />
+        </g>
+      </g>
+      <g
+         id="g313">
+        <circle
+           id="circle315"
+           class="cls-24"
+           cx="40.96"
+           cy="654.58"
+           r="4.58" />
+        <g
+           id="g317">
+          <path
+             id="path319"
+             d="M42.29,653.25a.33.33,0,0,0-.32-.32h-2a.33.33,0,0,0-.32.32v2h.57v2.39h1.53v-2.39h.57Z" />
+          <circle
+             id="circle321"
+             cx="40.95"
+             cy="651.97"
+             r="0.69" />
+        </g>
+        <path
+           id="path323"
+           d="M41,649.53A4.74,4.74,0,0,0,37.47,651,4.82,4.82,0,0,0,36,654.48,5,5,0,0,0,41,659.43,4.86,4.86,0,0,0,44.49,658a4.69,4.69,0,0,0,1.41-3.47,4.88,4.88,0,0,0-4.95-5Zm0,.89a4.06,4.06,0,0,1,4,4.06,3.78,3.78,0,0,1-1.16,2.83A4,4,0,0,1,41,658.52a4,4,0,0,1-2.85-6.91A3.86,3.86,0,0,1,41,650.42Z" />
+      </g>
+    </g>
+  </g>
+  <g
+     id="text1073-7-0-6-9-57-4-85-4-6-7-7-6"
+     class="cls-12">
+    <text
+       class="cls-14"
+       transform="translate(14.03 678.31)"
+       id="text374">Created by M Bliemel &amp; UTS:IEU (8 Oct 2018)</text>
+  </g>
+</svg>
