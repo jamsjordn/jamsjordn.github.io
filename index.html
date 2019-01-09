@@ -48,7 +48,6 @@ Enteruptors | University of Technology Sydney">
 			height: 0px;
 		}
 
-		.back>div>div>a:hover {}
 
 		.back.b1 {
 			background-image:
@@ -240,15 +239,15 @@ Enteruptors | University of Technology Sydney">
 						'rgba(' + gradients[i].r + ',' + gradients[i].g + ',' + gradients[i].b + ',1) 100%)');
 
 					if (gradients[i].xd === 1) {
-						gradients[i].x += 1;
+						gradients[i].x += .01;
 					} else if (gradients[i].xd === 0) {
-						gradients[i].x -= 1;
+						gradients[i].x -= .01;
 					}
 
 					if (gradients[i].yd === 1) {
-						gradients[i].y += 1;
+						gradients[i].y += .01;
 					} else if (gradients[i].yd === 0) {
-						gradients[i].y -= 1;
+						gradients[i].y -= .01;
 					}
 
 					if (gradients[i].x === 100 && gradients[i].y === 100) {
