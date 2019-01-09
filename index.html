@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-GB" style="height:100%;">
+
 <head>
 	<meta charset="utf-8">
 	<title>James Jordan</title>
@@ -10,196 +11,270 @@ Enteruptors | University of Technology Sydney">
 	<link href="icons/ico.ico" rel="shortcut icon" type="image/x-icon">
 	<script defer src="js/fontawesome-all.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	 crossorigin="anonymous"></script>
 	<style>
 		body {
-			opacity:0;
-			transition:opacity 1s;
+			opacity: 0;
+			transition: opacity 1s;
 		}
+
 		.fontawesome-i2svg-active body {
 			display: initial;
-			opacity:1;
+			opacity: 1;
 		}
-		h1, p {
+
+		h1,
+		p {
 			font-family: 'Open Sans', sans-serif;
 		}
+
 		.back {
-			height:100%;
-			margin:9;
-			display:flex;
+			height: 100%;
+			margin: 9;
+			display: flex;
 			position: absolute;
-			flex-direction:column;
-			justify-content: center ;
-			align-items: center ;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
 			top: 0px;
 			right: 0;
 			width: 100%;
 			height: 100%;
 		}
-		.back>div>div>a{
-			padding:15px;
-			height:0px;	
+
+		.back>div>div>a {
+			padding: 15px;
+			height: 0px;
 		}
-		.back>div>div>a:hover{
+
+		.back>div>div>a:hover {}
+
+		.back.b1 {
+			background-image:
+				radial-gradient(circle at 0% 0%,
+				rgba(255, 0, 0, 0) 60%,
+				rgba(255, 0, 0, 1) 100%);
 		}
-		.back.b1 { 
-			background-image: 
-			radial-gradient(
-				circle at 0% 0%,
-				rgba(255,0,0,0) 60%,
-				rgba(255,0,0,1) 100%
-			);
+
+		.back.b2 {
+			background-image:
+				radial-gradient(circle at 0% 44%,
+				rgba(255, 170, 0, 0) 60%,
+				rgba(255, 170, 0, 1) 100%);
 		}
-		.back.b2 { 
-			background-image: 
-			radial-gradient(
-				circle at 0% 44%,
-				rgba(255,170,0,0) 60%,
-				rgba(255,170,0,1) 100%
-			);
+
+		.back.b3 {
+			background-image:
+				radial-gradient(circle at 0% 89%,
+				rgba(170, 255, 0, 0) 60%,
+				rgba(170, 255, 0, 1) 100%);
 		}
-		.back.b3 { 
-			background-image: 
-			radial-gradient(
-				circle at 0% 89%,
-				rgba(170,255,0,0) 60%,
-				rgba(170,255,0,1) 100%
-			);
+
+		.back.b4 {
+			background-image:
+				radial-gradient(circle at 33% 100%,
+				rgba(0, 255, 0, 0) 60%,
+				rgba(0, 255, 0, 1) 100%);
 		}
-		.back.b4 { 
-			background-image: 
-			radial-gradient(
-				circle at 33% 100%,
-				rgba(0,255,0,0) 60%,
-				rgba(0,255,0,1) 100%
-			);
+
+		.back.b5 {
+			background-image:
+				radial-gradient(circle at 78% 100%,
+				rgba(0, 255, 170, 0) 60%,
+				rgba(0, 255, 170, 1) 100%);
 		}
-		.back.b5 { 
-			background-image: 
-			radial-gradient(
-				circle at 78% 100%,
-				rgba(0,255,170,0) 60%,
-				rgba(0,255,170,1) 100%
-			);
+
+		.back.b6 {
+			background-image:
+				radial-gradient(circle at 100% 78%,
+				rgba(0, 170, 255, 0) 60%,
+				rgba(0, 170, 255, 1) 100%);
 		}
-		.back.b6 { 
-			background-image: 
-			radial-gradient(
-				circle at 100% 78%,
-				rgba(0,170,255,0) 60%,
-				rgba(0,170,255,1) 100%
-			);
+
+		.back.b7 {
+			background-image:
+				radial-gradient(circle at 100% 33%,
+				rgba(0, 0, 255, 0) 60%,
+				rgba(0, 0, 255, 1) 100%);
 		}
-		.back.b7 { 
-			background-image: 
-			radial-gradient(
-				circle at 100% 33%,
-				rgba(0,0,255,0) 60%,
-				rgba(0,0,255,1) 100%
-			);
+
+		.back.b8 {
+			background-image:
+				radial-gradient(circle at 89% 0%,
+				rgba(170, 0, 255, 0) 60%,
+				rgba(170, 0, 255, 1) 100%);
 		}
-		.back.b8 { 
-			background-image: 
-			radial-gradient(
-				circle at 89% 0%,
-				rgba(170,0,255,0) 60%,
-				rgba(170,0,255,1) 100%
-			);
-		}
-		.back.b10 { 
-			background-image: 
-			radial-gradient(
-				circle at 50% 50%,
-				rgba(255,255,255,1) 30%,
-				rgba(255,255,255,0) 40%
-			);
+
+		.back.b10 {
+			background-image:
+				radial-gradient(circle at 50% 50%,
+				rgba(255, 255, 255, 1) 30%,
+				rgba(255, 255, 255, 0) 40%);
 		}
 	</style>
 </head>
+
 <body>
-	<div class="back b3"  id="b3"></div>
-	<div class="back b4"  id="b4"></div>
-	<div class="back b5"  id="b5"></div>
-	<div class="back b6"  id="b6"></div>
-	<div class="back b7"  id="b7"></div>
-	<div class="back b8"  id="b8"></div>
-	<div class="back b1"  id="b1"></div>
-	<div class="back b2"  id="b2"></div>
-	
+	<div class="back b3" id="b3"></div>
+	<div class="back b4" id="b4"></div>
+	<div class="back b5" id="b5"></div>
+	<div class="back b6" id="b6"></div>
+	<div class="back b7" id="b7"></div>
+	<div class="back b8" id="b8"></div>
+	<div class="back b1" id="b1"></div>
+	<div class="back b2" id="b2"></div>
+
 	<div class="back b10" id="b10"></div>
-	
-	<div class="back"><div>
-		<h1 style="text-align: center;">james jordan</h1>
-		<p style="text-align: center;">computers & stuff</p>
-		<div style="padding:20px">
-			<a style="color:black " href="http://instagram.com/jamsjordn" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
-			<a style="color:black" href="http://linkedin.com/in/jamsjordn" target="_blank"><i class="fab fa-linkedin-in fa-2x"></i></a>
-			<a style="color:black" href="http://facebook.com/jamsjordn" target="_blank"><i class="fab fa-facebook-f fa-2x"></i></a>
-			<a style="color:black" href="https://codepen.io/jamsjordn/" target="_blank"><i class="fab fa-codepen fa-2x"></i></a>
+
+	<div class="back">
+		<div>
+			<h1 style="text-align: center;">james jordan</h1>
+			<p style="text-align: center;">computers & stuff</p>
+			<div style="padding:20px">
+				<a style="color:black " href="http://instagram.com/jamsjordn" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+				<a style="color:black" href="http://linkedin.com/in/jamsjordn" target="_blank"><i class="fab fa-linkedin-in fa-2x"></i></a>
+				<a style="color:black" href="http://facebook.com/jamsjordn" target="_blank"><i class="fab fa-facebook-f fa-2x"></i></a>
+				<a style="color:black" href="https://codepen.io/jamsjordn/" target="_blank"><i class="fab fa-codepen fa-2x"></i></a>
+			</div>
 		</div>
-	</div>
-	<script>
-		var gradients=[
-			{"class":"b1",	"r":255,	"g":0,		"b":0,		"x":0,		"y":0,		"xd":1,	"yd":2},
-			{"class":"b2",	"r":255,	"g":170,	"b":0,		"x":44,		"y":0,		"xd":1,	"yd":2},
-			{"class":"b3",	"r":170,	"g":255,	"b":0,		"x":89,		"y":0,		"xd":1,	"yd":1},
-			{"class":"b4",	"r":0,		"g":255,	"b":0,		"x":100,	"y":33,		"xd":2,	"yd":1},
-			{"class":"b5",	"r":0,		"g":255,	"b":170,	"x":100,	"y":78,		"xd":2,	"yd":1},
-			{"class":"b6",	"r":0,		"g":170,	"b":255,	"x":78,		"y":100,	"xd":0,	"yd":2},
-			{"class":"b7",	"r":0,		"g":0,		"b":255,	"x":33,		"y":100,	"xd":0,	"yd":2},
-			{"class":"b8",	"r":170,	"g":0,		"b":255,	"x":0,		"y":89,		"xd":2,	"yd":0},
-			{"class":"b9",	"r":255,	"g":0,		"b":170,	"x":0,		"y":44,		"xd":2,	"yd":0},
-		]
-		
-		$( document ).ready(function() {
-			window.setInterval(function() {
-				spin();
-			}, 100);
-		});
-		function spin() {
-			for (i=0; i<gradients.length; i++){
-				$('#'+gradients[i].class).css('background-image',
-				'radial-gradient('+
-				'circle at '+gradients[i].y+'% '+gradients[i].x+'%,'+
-				'rgba('+gradients[i].r+','+gradients[i].g+','+gradients[i].b+',0) 60%,'+
-				'rgba('+gradients[i].r+','+gradients[i].g+','+gradients[i].b+',1) 100%)');
-				
-				if(gradients[i].xd === 1){
-					gradients[i].x += 1;
-				} else if (gradients[i].xd === 0) {
-					gradients[i].x -= 1;
+		<script>
+			var gradients = [{
+					"class": "b1",
+					"r": 255,
+					"g": 0,
+					"b": 0,
+					"x": 0,
+					"y": 0,
+					"xd": 1,
+					"yd": 2
+				},
+				{
+					"class": "b2",
+					"r": 255,
+					"g": 170,
+					"b": 0,
+					"x": 44,
+					"y": 0,
+					"xd": 1,
+					"yd": 2
+				},
+				{
+					"class": "b3",
+					"r": 170,
+					"g": 255,
+					"b": 0,
+					"x": 89,
+					"y": 0,
+					"xd": 1,
+					"yd": 1
+				},
+				{
+					"class": "b4",
+					"r": 0,
+					"g": 255,
+					"b": 0,
+					"x": 100,
+					"y": 33,
+					"xd": 2,
+					"yd": 1
+				},
+				{
+					"class": "b5",
+					"r": 0,
+					"g": 255,
+					"b": 170,
+					"x": 100,
+					"y": 78,
+					"xd": 2,
+					"yd": 1
+				},
+				{
+					"class": "b6",
+					"r": 0,
+					"g": 170,
+					"b": 255,
+					"x": 78,
+					"y": 100,
+					"xd": 0,
+					"yd": 2
+				},
+				{
+					"class": "b7",
+					"r": 0,
+					"g": 0,
+					"b": 255,
+					"x": 33,
+					"y": 100,
+					"xd": 0,
+					"yd": 2
+				},
+				{
+					"class": "b8",
+					"r": 170,
+					"g": 0,
+					"b": 255,
+					"x": 0,
+					"y": 89,
+					"xd": 2,
+					"yd": 0
+				},
+				{
+					"class": "b9",
+					"r": 255,
+					"g": 0,
+					"b": 170,
+					"x": 0,
+					"y": 44,
+					"xd": 2,
+					"yd": 0
+				},
+			]
+
+			function spin() {
+				for (i = 0; i < gradients.length; i++) {
+					$('#' + gradients[i].class).css('background-image',
+						'radial-gradient(' +
+						'circle at ' + gradients[i].y + '% ' + gradients[i].x + '%,' +
+						'rgba(' + gradients[i].r + ',' + gradients[i].g + ',' + gradients[i].b + ',0) 60%,' +
+						'rgba(' + gradients[i].r + ',' + gradients[i].g + ',' + gradients[i].b + ',1) 100%)');
+
+					if (gradients[i].xd === 1) {
+						gradients[i].x += 1;
+					} else if (gradients[i].xd === 0) {
+						gradients[i].x -= 1;
+					}
+
+					if (gradients[i].yd === 1) {
+						gradients[i].y += 1;
+					} else if (gradients[i].yd === 0) {
+						gradients[i].y -= 1;
+					}
+
+					if (gradients[i].x === 100 && gradients[i].y === 100) {
+						gradients[i].xd = 0;
+						gradients[i].yd = 2;
+					}
+
+					if (gradients[i].x === 0 && gradients[i].y === 100) {
+						gradients[i].xd = 2;
+						gradients[i].yd = 0;
+					}
+
+					if (gradients[i].x === 100 && gradients[i].y === 0) {
+						gradients[i].xd = 2;
+						gradients[i].yd = 1;
+					}
+
+					if (gradients[i].x === 0 && gradients[i].y === 0) {
+						gradients[i].xd = 1;
+						gradients[i].yd = 2;
+					}
 				}
-				
-				if(gradients[i].yd === 1){
-					gradients[i].y += 1;
-				} else if (gradients[i].yd === 0) {
-					gradients[i].y -= 1;
-				}
-				
-				if(gradients[i].x === 100 && gradients[i].y === 100) {
-					gradients[i].xd = 0;
-					gradients[i].yd = 2;
-				}
-				
-				if(gradients[i].x === 0 && gradients[i].y === 100) {
-					gradients[i].xd = 2;
-					gradients[i].yd = 0;
-				}
-				
-				if(gradients[i].x === 100 && gradients[i].y === 0) {
-					gradients[i].xd = 2;
-					gradients[i].yd = 1;
-				}
-				
-				if(gradients[i].x === 0 && gradients[i].y === 0) {
-					gradients[i].xd = 1;
-					gradients[i].yd = 2;
-				}
+				requestAnimationFrame(spin);
 			}
-			
-		}
-		
-	</script>
+			requestAnimationFrame(spin);
+		</script>
 </body>
 
 </html>
