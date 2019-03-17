@@ -18,18 +18,18 @@ document.onkeydown = function (evt) {
 const sections = [
 	"home",
 	"tandem",
-	
+
 ];
 const subSections = [
 	["Main"],
 	["Main", "Description", "Mobile"],
-	
+
 ];
 adjustArrows();
-document.getElementsByClassName('button left')[0].addEventListener('click',leftArrowPressed);
-document.getElementsByClassName('button right')[0].addEventListener('click',rightArrowPressed);
-document.getElementsByClassName('button up')[0].addEventListener('click',upArrowPressed);
-document.getElementsByClassName('button down')[0].addEventListener('click',downArrowPressed);
+document.getElementsByClassName('button left')[0].addEventListener('click', leftArrowPressed);
+document.getElementsByClassName('button right')[0].addEventListener('click', rightArrowPressed);
+document.getElementsByClassName('button up')[0].addEventListener('click', upArrowPressed);
+document.getElementsByClassName('button down')[0].addEventListener('click', downArrowPressed);
 
 function downArrowPressed() {
 	let current = document.getElementsByClassName('section visible')[0];
@@ -125,22 +125,56 @@ function pushSub(direction) {
 }
 
 document.addEventListener('mousewheel', scrollHandler, false);
-let prevWheelDelta = 0;
+
+let prevdeltaY = 0;
+let prevdeltaX = 0;
+
 let maxReached = 0;
 function scrollHandler(e) {
-	if (e.wheelDelta < 0 && e.wheelDelta < prevWheelDelta && !maxReached) {
-		maxReached = true;
-		setTimeout(() => {
-			maxReached = false;
-		}, 2000);
-		downArrowPressed();
-	} else if (e.wheelDelta > 0 && e.wheelDelta > prevWheelDelta && !maxReached) {
-		maxReached = true;
-		setTimeout(() => {
-			maxReached = false;
-		}, 2000);
+	//console.log(e);
+	if (e.deltaY < -100 &&
+		e.deltaY < prevdeltaY &&
+		e.deltaY * e.deltaY > e.deltaX * e.deltaX &&
+		!maxReached) {
 		upArrowPressed();
+		maxReached = true;
+	} else if (e.deltaY > 100 &&
+		e.deltaY > prevdeltaY &&
+		e.deltaY * e.deltaY > e.deltaX * e.deltaX &&
+		!maxReached) {
+		downArrowPressed();
+		maxReached = true;
 	}
-	prevWheelDelta = e.wheelDelta;
+	else if (e.deltaX < -100 &&
+		e.deltaX < prevdeltaX &&
+		e.deltaX * e.deltaX > e.deltaY * e.deltaY &&
+		!maxReached) {
+		leftArrowPressed();
+		maxReached = true;
+	} else if (e.deltaX > 100 &&
+		e.deltaX > prevdeltaX &&
+		e.deltaX * e.deltaX > e.deltaY * e.deltaY &&
+		!maxReached) {
+		rightArrowPressed();
+		maxReached = true;
+	}
+
+	prevdeltaY = e.deltaY;
+	prevdeltaX = e.deltaX;
+	if(maxReached){maxReachedF();}
+
+	function maxReachedF() {
+		
+		if (prevdeltaY * prevdeltaY > 10 || prevdeltaX * prevdeltaX > 10) {
+			maxReached = true;
+			setTimeout(() => {
+				maxReachedF();
+			}, 100);
+		} else {
+			console.log("FREED")
+			console.log(e);
+			maxReached = false;
+		}
+	}
 
 }
