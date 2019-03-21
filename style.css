@@ -3,6 +3,25 @@
   --transitions: all 1.5s ease-in-out;
 }
 
+@media only screen and (max-width: 700px) {
+  #tandem {
+    display: none !important;
+  }
+  .button {
+    display: none !important;
+  }
+  #home {
+    transform: translatey(0);
+    transform: translatex(0);
+    opacity: 1;
+  }
+  #home * {
+    transform: translatey(0);
+    transform: translatex(0);
+    opacity: 1;
+  }
+}
+
 html {
   -ms-overflow-style: none;
   height: 100vh;
@@ -107,7 +126,7 @@ h3 {
 body > div:not(.button) {
   height: 100vh;
   width: 100%;
-  background: #f9f2ec;
+  background: #eef3f5;
   transition: var(--transitions);
   position: absolute;
   z-index: 1;
@@ -139,7 +158,7 @@ body > div.above {
 }
 
 body > div.above > div {
-  transform: translateY(-60vh) scale(0.8);
+  transform: translateY(-60vh) scale(0.6);
   opacity: 0;
 }
 
@@ -148,7 +167,7 @@ body > div.below {
 }
 
 body > div.below > div {
-  transform: translateY(60vh) scale(0.8);
+  transform: translateY(60vh) scale(0.6);
   opacity: 0;
 }
 
@@ -164,11 +183,11 @@ body > div > div {
 }
 
 body > div > div.left {
-  transform: translateX(-100vw);
+  transform: translateX(-110vw) scale(0.6);
 }
 
 body > div > div.right {
-  transform: translateX(100vw);
+  transform: translateX(110vw) scale(0.6);
 }
 
 #home > [data-sub-section="Main"] {
@@ -212,6 +231,11 @@ body > div > div.right {
 }
 
 #tandem > [data-sub-section="Mobile"] > iframe {
+  border: white 3px solid;
+  border-radius: 15px;
+  -webkit-box-shadow: 5px 5px 25px 5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 5px 5px 25px 5px rgba(0, 0, 0, 0.75);
+  box-shadow: 5px 5px 25px 5px rgba(0, 0, 0, 0.75);
   animation: mobile 8s ease-in-out infinite;
   height: 70%;
   width: 70%;

@@ -3,6 +3,25 @@
   --transitions: all 1.5s ease-in-out;
 }
 
+@media only screen and (max-width: 700px) {
+  #tandem {
+    display: none !important;
+  }
+  .button {
+    display: none !important;
+  }
+  #home{
+	transform: translatey(0);
+	transform: translatex(0);
+	opacity: 1;
+	*{
+		transform: translatey(0);
+		transform: translatex(0);
+		opacity: 1;
+	}
+  }
+}
+
 html {
   -ms-overflow-style: none;
   &::-webkit-scrollbar {
@@ -69,11 +88,11 @@ h3 {
   align-content: center;
   transition: all 0.5s ease-in-out;
   border-radius: 50%;
-&:hover{
-	color:black;
-	background:white;
-	cursor: pointer;
-}
+  &:hover {
+    color: black;
+    background: white;
+    cursor: pointer;
+  }
   svg {
     height: 100%;
     width: 100%;
@@ -104,7 +123,7 @@ body > div {
   &:not(.button) {
     height: 100vh;
     width: 100%;
-    background: hsl(30, 50, 95);
+    background: rgb(238, 243, 245);
     transition: var(--transitions);
     position: absolute;
     &:nth-of-type(3n) {
@@ -129,14 +148,14 @@ body > div {
     //top: 10vh;
     transform: translateY(-100vh);
     > div {
-      transform: translateY(-60vh) scale(0.8);
+      transform: translateY(-60vh) scale(0.6);
       opacity: 0;
     }
   }
   &.below {
     transform: translatey(100vh);
     > div {
-      transform: translateY(60vh) scale(0.8);
+      transform: translateY(60vh) scale(0.6);
       opacity: 0;
     }
   }
@@ -150,10 +169,10 @@ body > div {
     width: 100%;
     transition: var(--transitions);
     &.left {
-      transform: translateX(-100vw);
+      transform: translateX(-110vw) scale(0.6);
     }
     &.right {
-      transform: translateX(100vw);
+      transform: translateX(110vw) scale(0.6);
     }
   }
 }
@@ -193,6 +212,13 @@ body > div {
   > [data-sub-section="Mobile"] {
     background: inherit;
     > iframe {
+      border: white 3px solid;
+      border-radius: 15px;
+
+      -webkit-box-shadow: 5px 5px 25px 5px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 5px 5px 25px 5px rgba(0, 0, 0, 0.75);
+      box-shadow: 5px 5px 25px 5px rgba(0, 0, 0, 0.75);
+
       animation: mobile 8s ease-in-out infinite;
       @keyframes mobile {
         0% {
