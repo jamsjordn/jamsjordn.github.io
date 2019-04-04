@@ -1,25 +1,77 @@
-:root {
-  --z-button: 5;
-  --transitions: all 1.5s ease-in-out;
+@media screen and (prefers-reduced-motion: reduce) {
+  * {
+    transition: all 0s !important;
+  }
 }
 
-@media only screen and (max-width: 700px) {
-  #tandem {
-    display: none !important;
+/*** LIGHT THEMES ***/
+:root {
+  --z-button: 5;
+  --background-color: #ffefd5;
+  --foreground-color: black;
+  --faded-color: #aaa;
+  --accent-color: black;
+}
+
+:root nav {
+  --background-color: white;
+  --foreground-color: black;
+  --hover-color: #ddd;
+  --active-color: #ccc;
+}
+
+html[data-parent-theme="Projects"] {
+  --background-color: rgb(238, 243, 245);
+  --foreground-color: black;
+  --accent-color: black;
+}
+
+html[data-parent-theme="Projects"][data-theme="Tandem"] {
+  --background-color: rgb(245, 245, 245);
+  --foreground-color: black;
+  --accent-color: white;
+}
+
+html[data-parent-theme="Projects"][data-theme="jamsjordn.com"] {
+  --background-color: mistyrose;
+  --foreground-color: black;
+  --accent-color: dimgrey;
+}
+
+/*** DARK THEMES ***/
+@media (prefers-color-scheme: dark) {
+  :root {
+    --z-button: 5;
+    --background-color: #000c18;
+    --foreground-color: white;
+    --faded-color: #aaa;
+    --accent-color: white;
   }
-  .button {
-    display: none !important;
+  :root nav {
+    --background-color: #223;
+    --foreground-color: white;
+    --hover-color: #334;
+    --active-color: #445;
   }
-  #home {
-    transform: translatey(0);
-    transform: translatex(0);
-    opacity: 1;
+  html[data-parent-theme="Projects"] {
+    --background-color: #001317;
+    --foreground-color: white;
+    --accent-color: black;
   }
-  #home * {
-    transform: translatey(0);
-    transform: translatex(0);
-    opacity: 1;
+  html[data-parent-theme="Projects"][data-theme="Tandem"] {
+    --background-color: #1a1f23;
+    --foreground-color: white;
+    --accent-color: white;
   }
+  html[data-parent-theme="Projects"][data-theme="jamsjordn.com"] {
+    --background-color: #000c18;
+    --foreground-color: white;
+    --accent-color: white;
+  }
+}
+
+.noAnimation {
+  transition: all 0s !important;
 }
 
 html {
@@ -27,6 +79,9 @@ html {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
+  background: var(--background-color);
+  color: var(--foreground-color);
+  transition: background 1s ease-in-out, color 2s ease-in-out;
 }
 
 html::-webkit-scrollbar {
@@ -38,8 +93,33 @@ body {
   transition: opacity 1s;
   margin: 0;
   overflow: hidden;
+  height: 100%;
+  width: 100%;
+  font-family: "Assistant", sans-serif;
+}
+
+#display {
   height: 100vh;
   width: 100vw;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: 100vh;
+  grid-template-columns: 0px 100%;
+  grid-template-areas: "menu pages";
+}
+
+@media screen and (min-width: 701px) and (max-width: 1200px) {
+  #display {
+    grid-template-columns: 250px 10fr 1fr;
+    grid-template-areas: "menu pages .";
+  }
+}
+
+@media screen and (min-width: 1201px) {
+  #display {
+    grid-template-columns: 1fr 300px 900px 300px 1fr;
+    grid-template-areas: ". menu pages . .";
+  }
 }
 
 a {
@@ -53,172 +133,159 @@ a {
   opacity: 1;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-p {
-  font-family: "Open Sans", sans-serif;
-}
-
 h1 {
   font-size: 65px;
-  line-height: 0;
+  line-height: 65px;
   font-weight: 400;
   font-style: normal;
+  text-align: center;
 }
 
 h3 {
   font-size: 35px;
-  line-height: 0;
+  line-height: 35px;
   font-weight: 400;
   font-style: normal;
 }
 
-.button {
-  opacity: 0;
-  width: 50px;
-  height: 50px;
-  font-size: 3em;
-  color: #99999999;
-  position: fixed;
-  z-index: 5;
-  z-index: var(--z-button);
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  transition: all 0.5s ease-in-out;
-  border-radius: 50%;
+main {
+  position: relative;
+  grid-area: pages;
+  flex-grow: 1;
+  max-width: 1100px;
 }
 
-.button:hover {
-  color: black;
-  background: white;
-  cursor: pointer;
-}
-
-.button svg {
-  height: 100%;
-  width: 100%;
-}
-
-.button.up {
-  left: calc(50% - 25px);
-  top: 20px;
-}
-
-.button.left {
-  top: calc(50% - 25px);
-  left: 20px;
-}
-
-.button.down {
-  left: calc(50% - 25px);
-  bottom: 20px;
-}
-
-.button.right {
-  right: 20px;
-  top: calc(50% - 25px);
-}
-
-body > div:not(.button) {
+article {
+  position: absolute;
+  top: 0;
+  left: 0;
   height: 100vh;
   width: 100%;
-  background: #eef3f5;
-  transition: var(--transitions);
-  position: absolute;
-  z-index: 1;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-body > div:not(.button):nth-of-type(3n) {
-  background: #ddffdd;
+article > div.active {
+  z-index: calc(0 + 1);
 }
 
-body > div:not(.button):nth-of-type(3n + 1) {
-  background: #ddddff;
+article.hiddenAbove {
+  z-index: -1;
 }
 
-body > div:not(.button).visible {
-  z-index: 3;
-}
-
-body > div:not(.button) > div {
-  transition: var(--transitions);
-  z-index: 2;
-}
-
-body > div:not(.button) > div.visible {
-  z-index: 4;
-}
-
-body > div.above {
-  transform: translateY(-100vh);
-}
-
-body > div.above > div {
+article.hiddenAbove > section {
   transform: translateY(-60vh) scale(0.6);
   opacity: 0;
 }
 
-body > div.below {
-  transform: translatey(100vh);
+article.hiddenBelow {
+  z-index: -1;
 }
 
-body > div.below > div {
+article.hiddenBelow > section {
   transform: translateY(60vh) scale(0.6);
   opacity: 0;
 }
 
-body > div > div {
+section {
   position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 100%;
+  height: auto;
+  max-height: 100%;
   width: 100%;
-  transition: var(--transitions);
+  overflow: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  z-index: 10;
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+  transform: translateY(0);
 }
 
-body > div > div.left {
+section.hiddenLeft {
   transform: translateX(-110vw) scale(0.6);
+  opacity: 0;
 }
 
-body > div > div.right {
+section.hiddenRight {
   transform: translateX(110vw) scale(0.6);
+  opacity: 0;
 }
 
-#home > [data-sub-section="Main"] {
+section p,
+section ul,
+section div > p,
+section div > ul {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media screen and (min-width: 701px) and (max-width: 1200px) {
+  section p,
+  section ul,
+  section div > p,
+  section div > ul {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+
+@media screen and (min-width: 1201px) {
+  section p,
+  section ul,
+  section div > p,
+  section div > ul {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+}
+
+section div > p,
+section div > ul {
+  text-align: left;
+}
+
+main > [data-article="James Jordan"] > [data-section="Main"] {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-#home > [data-sub-section="Main"] .socials > a {
+main > [data-article="James Jordan"] > [data-section="Main"] .socials,
+main > [data-article="James Jordan"] > [data-section="Main"] .socials > a {
   padding: 20px;
-  color: black;
 }
 
-#home > [data-sub-section="Main"] div > * {
+main > [data-article="James Jordan"] > [data-section="Main"] div > * {
   text-align: center;
 }
 
-#home > [data-sub-section="Main"] > div > div > a {
+main > [data-article="James Jordan"] > [data-section="Main"] > div > div > a {
   padding: 15px;
   height: 0px;
 }
 
-#tandem {
-  background: #1a1f23;
-  color: white;
+main > [data-article="James Jordan"] > [data-section="Skills"] ul {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+main > [data-article="James Jordan"] > [data-section="Skills"] ul li {
+  list-style-type: none;
+  padding: 10px;
+  font-size: 1.2em;
+}
+
+main > #tandem {
   text-align: center;
   vertical-align: middle;
 }
 
-#tandem > [data-sub-section="Main"] {
+main > #tandem > [data-sub-section="Main"] {
   background: url(images/tandem.png) no-repeat center center, #1a1f23;
   -webkit-background-size: contain;
   -moz-background-size: contain;
@@ -226,11 +293,11 @@ body > div > div.right {
   background-size: contain;
 }
 
-#tandem > [data-sub-section="Mobile"] {
+main > #tandem > [data-sub-section="Mobile"] {
   background: inherit;
 }
 
-#tandem > [data-sub-section="Mobile"] > iframe {
+main > #tandem > [data-sub-section="Mobile"] > iframe {
   border: white 3px solid;
   border-radius: 15px;
   -webkit-box-shadow: 5px 5px 25px 5px rgba(0, 0, 0, 0.75);
@@ -268,6 +335,192 @@ body > div > div.right {
   }
 }
 
-#enteruptors {
+#pages > #enteruptors {
   background: purple;
+}
+
+header {
+  -ms-overflow-style: none;
+}
+
+header::-webkit-scrollbar {
+  width: 0 !important;
+}
+
+@media screen and (max-width: 700px) {
+  header {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+@media screen and (min-width: 701px) {
+  header {
+    grid-area: menu;
+    padding-right: 10px;
+  }
+}
+
+@media screen and (min-width: 1201px) {
+  header {
+    padding: 0px 10px;
+  }
+}
+
+header nav#menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: auto;
+  max-height: 100%;
+  font-weight: 300;
+  font-size: 1.1em;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
+  z-index: 20;
+  border-bottom-right-radius: 20px;
+  transition: all 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+@media screen and (min-width: 1201px) {
+  header nav#menu {
+    border-bottom-left-radius: 20px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  header nav#menu.hidden {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+
+header nav#menu > div {
+  display: flex;
+  height: auto;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: var(--background-color);
+  color: var(--foreground-color);
+  overflow: hidden;
+}
+
+header nav#menu > div:first-of-type {
+  padding-top: 70px;
+}
+
+header nav#menu > div.active .active {
+  background: var(--active-color);
+}
+
+header nav#menu > div.active svg {
+  transform: scaleY(-1);
+}
+
+header nav#menu > div:not(.active) .sub {
+  height: 0px;
+  opacity: 0;
+  overflow: hidden;
+}
+
+header nav#menu > div:not(.active) .sub > div {
+  transform: translateY(0);
+}
+
+header nav#menu > div > div {
+  height: 60px;
+  transition: all 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
+  display: grid;
+  grid-template-columns: 1fr 50px;
+  grid-template-rows: 1fr;
+  grid-template-areas: "text arrow";
+}
+
+header nav#menu > div > div:hover {
+  background: var(--hover-color);
+  cursor: pointer;
+}
+
+header nav#menu > div > div > div {
+  margin: auto 0px auto 15px;
+  grid-area: text;
+}
+
+header nav#menu > div > div.sub > div {
+  margin: auto auto auto 35px;
+  transition: all 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+header nav#menu > div > div.header {
+  z-index: calc(20 + 1);
+}
+
+header nav#menu > div > div.header svg {
+  font-size: 1em;
+  grid-area: arrow;
+  justify-self: center;
+  align-self: center;
+  transition: all 0.3s ease-in-out;
+  padding: 1em;
+}
+
+header > .titleBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: 50px;
+  z-index: 50;
+  display: grid;
+  grid-template-rows: 100%;
+  grid-template-columns: 70px 1fr 70px;
+  grid-template-areas: "hamburger title hamburgerHidden";
+}
+
+@media screen and (min-width: 701px) {
+  header > .titleBar {
+    display: none;
+  }
+}
+
+header > .titleBar * {
+  transition: all 0.7s ease-out;
+}
+
+header > .titleBar .hamburger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  color: var(--faded-color);
+}
+
+header > .titleBar .hamburger:hover {
+  opacity: 1;
+  color: var(--foreground-color);
+  cursor: pointer;
+}
+
+header > .titleBar .hamburger:first-of-type {
+  grid-area: hamburger;
+}
+
+header > .titleBar .hamburger:last-of-type {
+  grid-area: hamburgerHidden;
+}
+
+header > .titleBar .title {
+  grid-area: title;
+  font-size: 2em;
+  line-height: 50px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+header > .titleBar .hidden {
+  opacity: 0;
 }

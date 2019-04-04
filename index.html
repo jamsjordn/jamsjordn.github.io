@@ -1,55 +1,157 @@
 <!DOCTYPE html>
-<html lang="en-GB" style="height:100%;">
+<html lang="en-GB">
 
 <head>
 	<meta charset="utf-8">
 	<title>James Jordan</title>
-	<meta name="description" content="Front End Developer
+	<meta name="description" content="Front-End Developer
 Enteruptors | University of Technology Sydney">
 	<meta name="keywords" content="James,Jordan">
-	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<link href="icons/ico.ico" rel="shortcut icon" type="image/x-icon">
+	<meta name="viewport" content="width=device-width,initial-scale=1,height=device-height,minimum-scale=1.0">
+
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script defer src="js/fontawesome-all.min.js"></script>
 	<script defer src="js/script.js"></script>
-	<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
-	</link>
+	<link href="https://fonts.googleapis.com/css?family=Assistant:200,300,400,600,700,800" rel="stylesheet">
+
+	<link rel="apple-touch-icon" sizes="57x57" href="images/icons/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="images/icons/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/icons/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="images/icons/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/icons/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="images/icons/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="images/icons/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="images/icons/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="images/icons/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="images/icons/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png">
+	<link rel="manifest" href="images/icons/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="images/icons/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
 </head>
 
 <body>
-	<div class="button up"><i class="fas fa-chevron-circle-up"></i></div>
-	<div class="button left"><i class="fas fa-chevron-circle-left"></i></div>
-	<div class="button down"><i class="fas fa-chevron-circle-down"></i></div>
-	<div class="button right"><i class="fas fa-chevron-circle-right"></i></div>
-	<div id="home" class="section visible">
-		<div data-sub-section="Main" class="visible">
-			<h1>James Jordan</h1>
-			<p>Front End Developer</p>
-			<div class="socials">
-				<a href="https://instagram.com/jamsjordn" target="_blank"><i class="fab fa-instagram fa-2x"></i><span class="sr-only">Instagram</span></a>
-				<a href="https://linkedin.com/in/jamsjordn" target="_blank"><i class="fab fa-linkedin-in fa-2x"></i><span class="sr-only">LinkedIn</span></a>
-				<a href="https://facebook.com/jamsjordn" target="_blank"><i class="fab fa-facebook-f fa-2x"></i><span class="sr-only">Facebook</span></a>
-				<a href="https://codepen.io/jamsjordn/" target="_blank"><i class="fab fa-codepen fa-2x"></i><span class="sr-only">Codepen</span></a>
+	<!--
+		<div id="floatingButtons">
+			<div class="button menu closed"><i class="fas fa-bars"></i></div>
+			<div class="button up"><i class="fas fa-chevron-circle-up"></i></div>
+			<div class="button left"><i class="fas fa-chevron-circle-left"></i></div>
+			<div class="button down"><i class="fas fa-chevron-circle-down"></i></div>
+			<div class="button right"><i class="fas fa-chevron-circle-right"></i></div>
+		</div>
+	-->
+	<div id="display">
+		<header>
+			<div class="titleBar">
+				<div class="hamburger"><i class="fas fa-bars fa-2x"></i></div>
+				<div class="title hidden">James Jordan</div>
+				<div class="hamburger hidden"><i class="fas fa-bars fa-2x"></i></div>
 			</div>
-		</div>
-	</div>
-	<div id="tandem" class="section hidden below">
-		<div data-sub-section="Main" class="visible">
-		</div>
-		<div data-sub-section="Description" class="hidden right">
+			<nav id="menu" class="hidden">
+				<div class="">
+					<div class="header" data-menu-item="James Jordan">
+						<div>James Jordan</div>
+						<i class="fas fa-chevron-down"></i>
+					</div>
+					<div class="sub" data-menu-item="Skills">
+						<div>Skills</div>
+					</div>
+				</div>
+				<div>
+					<div class="header" data-menu-item="Projects">
+						<div>Projects</div>
+						<i class="fas fa-chevron-down"></i>
+					</div>
+					<div class="sub" data-menu-item="Tandem">
+						<div>Tandem</div>
+					</div>
+					<!--
+					<div class="sub" data-menu-item="jamsjordn.com">
+						<div>jamsjordn.com</div>
+					</div>
+					<div class="sub" data-menu-item="Web Strategy">
+						<div>Web Strategy</div>
+					</div>
+					-->
+				</div>
+			</nav>
+		</header>
+		<main>
+			<article data-article="James Jordan" id="home" class="active">
+				<section data-section="Main" class="active">
+					<h1>James Jordan</h1>
+					<p>Front-End Developer</p>
+					<div class="socials">
+						<a href="https://instagram.com/jamsjordn"><i class="fab fa-instagram fa-2x"></i><span class="sr-only">Instagram</span></a>
+						<a href="https://linkedin.com/in/jamsjordn"><i class="fab fa-linkedin-in fa-2x"></i><span class="sr-only">LinkedIn</span></a>
+						<a href="https://facebook.com/jamsjordn"><i class="fab fa-facebook-f fa-2x"></i><span class="sr-only">Facebook</span></a>
+						<a href="https://codepen.io/jamsjordn/"><i class="fab fa-codepen fa-2x"></i><span class="sr-only">Codepen</span></a>
+					</div>
+				</section>
+				<section data-section="Skills" class="hiddenRight">
+					<h1>Skills</h1>
+					<ul>
+						<li>ES6</li>
+						<li>HTML5</li>
+						<li>JavaScript</li>
+						<li>jQuery</li>
+						<li>Sass</li>
+						<li>AnyChart</li>
+						<li>gridstack.js</li>
+						<li>SortableJS</li>
+						<li>SpreadJS</li>
+						<li>D3.js</li>
+						<li>Drupal</li>
+						<li>WordPress</li>
+						<li>XAML</li>
+						<li>C++</li>
+						<li>Customer Service</li>
+						<li>Google Earth KML</li>
+						<li>Java</li>
+						<li>Leadership</li>
+						<li>Microsoft Excel</li>
+						<li>Microsoft Flow</li>
+						<li>Node.JS</li>
+						<li>Problem Solving</li>
+						<li>Python</li>
+						<li>Teamwork</li>
+						<li>Visual Basic</li>
+						<li>Zapier</li>
+					</ul>
+				</section>
+			</article>
 
-			<p>In 2018 a fresh new bar in Newtown needed a temporary landing page to direct onlookers the right way.</p>
-			<p>These are some of the features I developed for the site.</p>
-			<p>Visit the live site at <a href="https://www.tandemnewtown.com">tandemnewtown.com</a></p>
+			<article data-article="Projects" class="hiddenBelow">
+				<section data-section="Main">
+					<h1>Projects</h1>
+					<p>Click through to see some of the projects I've worked on, more to come soon.</p>
+				</section>
+				<section data-section="Tandem" class="hiddenRight">
+					<h1>Tandem</h1>
+					<div>
+						<p>In 2018 a friend of mine opened a new cocktail bar in Newtown. It brought the warm, cosy feelings of Scandanavian bars and cafes to Sydney, embracing the concept of hygge</p>
+						<p>This project was to stake a claim on the internet for this bar and allow for expanding upon later. The requirements were simply to get a landing page active on the domain that provided a contact email address.</p>
+						<p>We settled on a design that featured the logo, email address, street address and social media links. The website is responsive, accessible and fast to load. At the time of writing, this landing page has been replaced by the owner with a WordPress site..
+						</p>
+						<p>Visit the <a href="tandem">archived version</a> or view the features below.</p>
+					</div>
+				</section>
+				<!--
+				<section data-section="jamsjordn.com" class="hiddenRight">
+					<h1>jamsjordn.com</h1>
+				</section>
+				<section data-section="Web Strategy" class="hiddenRight">
+					<h1>Web Strategy</h1>
+				</section>
+				-->
+			</article>
 
-		</div>
-		<div data-sub-section="Mobile" class="hidden right">
-			<h3>Mobile Responsive</h3>
-			<iframe src="tandemnewtown.github.io/index.html"></iframe>
-		</div>
-		<!--
+			<!--
 		<div data-sub-section="Accessibility" class="hidden right">
 			Accessible
 		</div>
@@ -57,12 +159,14 @@ Enteruptors | University of Technology Sydney">
 			color Pref
 		</div>
 	-->
-	</div>
-	<!--
+			</article>
+			<!--
 	<div id="enteruptors" class="section hidden below">
 		<div data-sub-section="Main" class="visible">THIS THING</div>
 	</div>
 	-->
+		</main>
+	</div>
 </body>
 
 </html>
