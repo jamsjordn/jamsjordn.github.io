@@ -89,7 +89,6 @@ html::-webkit-scrollbar {
 }
 
 body {
-  opacity: 0;
   transition: opacity 1s;
   margin: 0;
   overflow: hidden;
@@ -132,7 +131,7 @@ a {
 
 .fontawesome-i2svg-active body {
   display: initial;
-  opacity: 1;
+  opacity: 1 !important;
 }
 
 h1 {
