@@ -515,12 +515,12 @@ header > .titleBar .hidden {
   -webkit-box-shadow: 5px 5px 25px 5px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 5px 5px 25px 5px rgba(0, 0, 0, 0.75);
   box-shadow: 5px 5px 25px 5px rgba(0, 0, 0, 0.75);
-  animation: mobile 8s ease-in-out infinite;
+  animation: mobileResponsive 8s ease-in-out infinite;
   width: 90%;
   height: 95%;
 }
 
-@keyframes mobile {
+@keyframes mobileResponsive {
   0% {
     width: 90%;
     height: 95%;

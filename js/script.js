@@ -21,6 +21,21 @@ document.querySelectorAll("nav#menu [data-menu-item]").forEach(menuItem => {
 	});
 });
 
+document.querySelectorAll('body').forEach(body=>{
+	body.addEventListener("click", hideMenu);
+	body.addEventListener("scroll", hideMenu);
+	body.addEventListener("touchmove", hideMenu);
+	function hideMenu(e){
+		let nav = document.getElementById('menu');
+		let alreadyHidden = nav.classList.contains('hidden');
+		let withinMenu = (e.target.closest('nav#menu') !== null);
+		let withinHamburger = (e.target.closest('.hamburger') !== null);
+		if(!(withinMenu || withinHamburger) && !alreadyHidden){
+			document.getElementById('menu').classList.add('hidden');
+			setTitleStatus();
+		}}
+})
+
 
 function activateMenuItem(menuItem) {
 	console.log(menuItem.dataset.menuItem);
