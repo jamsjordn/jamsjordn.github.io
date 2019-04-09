@@ -125,7 +125,7 @@ html {
   &::-webkit-scrollbar {
     width: 0 !important;
   }
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   overflow: hidden;
 
@@ -145,21 +145,25 @@ body {
 }
 
 #display {
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   overflow: hidden;
   display: grid;
-  grid-template-rows: 100vh;
-  grid-template-columns: 0px 100%;
-  grid-template-areas: "menu pages";
+  grid-template-rows: 50px 1fr;
+  grid-template-columns: 100%;
+  grid-template-areas:
+    "titleBar"
+    "pages";
 
   @media #{$half-desktop-media} {
     grid-template-columns: 250px 10fr 1fr;
+    grid-template-rows: 1fr;
     grid-template-areas: "menu pages .";
   }
 
   @media #{$desktop-media} {
     grid-template-columns: 1fr 300px 900px 300px 1fr;
+    grid-template-rows: 1fr;
     grid-template-areas: ". menu pages . .";
   }
 }
@@ -182,6 +186,14 @@ h1 {
   font-style: normal;
   text-align: center;
 }
+h2 {
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  padding-top: 45px;
+}
 h3 {
   font-size: 35px;
   line-height: 35px;
@@ -200,7 +212,7 @@ article {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   z-index: $z-index-article;
   display: flex;
@@ -255,6 +267,13 @@ section {
   &.hiddenRight {
     transform: translateX(110vw) scale(0.6);
     opacity: 0;
+  }
+
+  > *:first-child {
+    margin-top: 150px;
+  }
+  > *:last-child {
+    margin-bottom: 150px;
   }
 
   p,
@@ -327,45 +346,6 @@ main > #tandem {
   }
   > [data-sub-section="Mobile"] {
     background: inherit;
-    > iframe {
-      border: white 3px solid;
-      border-radius: 15px;
-
-      -webkit-box-shadow: 5px 5px 25px 5px rgba(0, 0, 0, 0.75);
-      -moz-box-shadow: 5px 5px 25px 5px rgba(0, 0, 0, 0.75);
-      box-shadow: 5px 5px 25px 5px rgba(0, 0, 0, 0.75);
-
-      animation: mobile 8s ease-in-out infinite;
-      @keyframes mobile {
-        0% {
-          width: 90%;
-          height: 80%;
-        }
-        10% {
-          width: 90%;
-          height: 80%;
-        }
-        40% {
-          width: 400px;
-          height: 60%;
-        }
-        60% {
-          width: 400px;
-          height: 60%;
-        }
-
-        90% {
-          width: 90%;
-          height: 80%;
-        }
-        100% {
-          width: 90%;
-          height: 80%;
-        }
-      }
-      height: 70%;
-      width: 70%;
-    }
   }
 }
 
@@ -377,12 +357,6 @@ header {
   -ms-overflow-style: none;
   &::-webkit-scrollbar {
     width: 0 !important;
-  }
-
-  @media #{$mobile-media} {
-    position: absolute;
-    top: 0;
-    left: 0;
   }
 
   @media #{$non-mobile-media} {
@@ -414,6 +388,9 @@ header {
     }
     @include transition();
     @media #{$mobile-media} {
+      position: fixed;
+      top: 0;
+      left: 0;
       &.hidden {
         opacity: 0;
         transform: translateY(-100%);
@@ -507,13 +484,14 @@ header {
 }
 
 header > .titleBar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100vw;
-  height: 50px;
-
+  //position: fixed;
+  //top: 0;
+  //left: 0;
+  //right: 0;
+  //width: 100vw;
+  //height: 50px;
+  position: relative;
+  grid-area: titleBar;
   z-index: 50;
 
   display: grid;
@@ -553,13 +531,63 @@ header > .titleBar {
 
   .title {
     grid-area: title;
-    font-size: 2em;
+    font-size: 1.5em;
     line-height: 50px;
     text-align: center;
     vertical-align: middle;
   }
 
   .hidden {
-    opacity: 0;
+	opacity: 0;
+	transform: translateY(-200px);
+  }
+}
+
+[data-section="Tandem"] div[data-feature="responsive"] {
+  width: 100%;
+  height:700px;
+  min-height:700px;
+  max-height:700px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  iframe {
+    border: white 3px solid;
+    border-radius: 15px;
+
+    -webkit-box-shadow: 5px 5px 25px 5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 5px 5px 25px 5px rgba(0, 0, 0, 0.75);
+    box-shadow: 5px 5px 25px 5px rgba(0, 0, 0, 0.75);
+
+    animation: mobile 8s ease-in-out infinite;
+    @keyframes mobile {
+      0% {
+        width: 90%;
+        height: 95%;
+      }
+      10% {
+        width: 90%;
+        height: 95%;
+      }
+      40% {
+        width: 50%;
+        height: 60%;
+      }
+      60% {
+        width: 50%;
+        height: 60%;
+      }
+
+      90% {
+        width: 90%;
+        height: 95%;
+      }
+      100% {
+        width: 90%;
+        height: 95%;
+      }
+    }
+    width: 90%;
+    height: 95%;
   }
 }
