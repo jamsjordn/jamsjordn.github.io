@@ -75,14 +75,9 @@ html[data-parent-theme="Projects"][data-theme="jamsjordn.com"] {
 }
 
 html {
-  -ms-overflow-style: none;
   height: 100%;
   width: 100vw;
   overflow: hidden;
-}
-
-html::-webkit-scrollbar {
-  width: 0 !important;
 }
 
 body {
@@ -209,6 +204,11 @@ section {
   z-index: 10;
   transition: transform 1s ease-in-out, opacity 1s ease-in-out;
   transform: translateY(0);
+  -ms-overflow-style: none;
+}
+
+section::-webkit-scrollbar {
+  width: 0px;
 }
 
 section.hiddenLeft {

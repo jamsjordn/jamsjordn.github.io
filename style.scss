@@ -121,10 +121,6 @@ html[data-parent-theme="Projects"] {
 //}
 
 html {
-  -ms-overflow-style: none;
-  &::-webkit-scrollbar {
-    width: 0 !important;
-  }
   height: 100%;
   width: 100vw;
   overflow: hidden;
@@ -255,6 +251,13 @@ section {
   transition: transform 1s ease-in-out, opacity 1s ease-in-out;
 
   transform: translateY(0);
+
+
+  
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    width: 0px;
+  }
 
   &.hiddenLeft {
     transform: translateX(-110vw) scale(0.6);
