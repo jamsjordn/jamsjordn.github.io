@@ -128,14 +128,12 @@ html {
   height: 100%;
   width: 100vw;
   overflow: hidden;
-
-  background: var(--background-color);
-  color: var(--foreground-color);
-  transition: background 1s ease-in-out, color 2s ease-in-out;
 }
 
 body {
-  transition: opacity 1s;
+  background: var(--background-color) !important;
+  color: var(--foreground-color);
+  transition: background 1s ease-in-out, color 1s ease-in-out 0.2s, opacity 1s ease-in-out 0.5s;
   margin: 0;
   overflow: hidden;
   height: 100%;
@@ -174,7 +172,6 @@ a {
 }
 
 .fontawesome-i2svg-active body {
-  display: initial;
   opacity: 1 !important;
 }
 
@@ -537,16 +534,16 @@ header > .titleBar {
   }
 
   .hidden {
-	opacity: 0;
-	transform: translateY(-200px);
+    opacity: 0;
+    transform: translateY(-200px);
   }
 }
 
 [data-section="Tandem"] div[data-feature="responsive"] {
   width: 100%;
-  height:700px;
-  min-height:700px;
-  max-height:700px;
+  height: 700px;
+  min-height: 700px;
+  max-height: 700px;
   display: flex;
   align-items: flex-start;
   justify-content: center;
