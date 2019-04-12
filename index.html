@@ -5,34 +5,34 @@
 	<meta charset="utf-8">
 	<title>James Jordan</title>
 	<meta name="description" content="Front-End Developer
-Enteruptors | University of Technology Sydney">
-	<meta name="keywords" content="James,Jordan">
+Enteruptors">
+	<meta name="keywords" content="James,Jordan,front-end,developer,front end">
 	<meta name="viewport" content="width=device-width,initial-scale=1,height=device-height,minimum-scale=1.0">
 
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<script defer src="js/fontawesome-all.min.js"></script>
-	<script defer src="js/script.js"></script>
+	<link rel="stylesheet" type="text/css" href="public/style/index.css">
+	
 	<link href="https://fonts.googleapis.com/css?family=Assistant:200,300,400,600,700,800" rel="stylesheet">
 
-	<link rel="apple-touch-icon" sizes="57x57" href="images/icons/apple-icon-57x57.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="images/icons/apple-icon-60x60.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="images/icons/apple-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="images/icons/apple-icon-76x76.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="images/icons/apple-icon-114x114.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="images/icons/apple-icon-120x120.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="images/icons/apple-icon-144x144.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="images/icons/apple-icon-152x152.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-icon-180x180.png">
-	<link rel="icon" type="image/png" sizes="192x192" href="images/icons/android-icon-192x192.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="images/icons/favicon-96x96.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png">
-	<link rel="manifest" href="images/icons/manifest.json">
-	<meta name="msapplication-TileColor" content="#ffffff">
-	<meta name="msapplication-TileImage" content="images/icons/ms-icon-144x144.png">
+	<script defer src="public/scripts/fontawesome-all.min.js"></script>
+	<script defer src="public/scripts/index.js"></script>
+
+
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/public/assets/icons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/public/assets/icons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/public/assets/icons/favicon-16x16.png">
+	<link rel="manifest" href="/public/assets/icons/site.webmanifest">
+	<link rel="mask-icon" href="/public/assets/icons/safari-pinned-tab.svg" color="#da532c">
+	<link rel="shortcut icon" href="/public/assets/icons/favicon.ico">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="msapplication-config" content="/public/assets/icons/browserconfig.xml">
 	<meta name="theme-color" content="#ffffff">
+
+	<script>
+		window.onerror = function (e) {
+			alert('This website does not currently support older browsers. Please change browsers or check back at a later date');
+		};
+	</script>
 </head>
 
 <body style="background:white;opacity:0;">
@@ -48,9 +48,8 @@ Enteruptors | University of Technology Sydney">
 	<div id="display">
 		<header>
 			<div class="titleBar">
-				<div class="hamburger"><i class="fas fa-bars fa-2x"></i></div>
+				<div class="hamburger" aria-label="Open menu"><i class="fas fa-bars fa-2x" aria-hidden="true"></i></div>
 				<div class="title hidden">James Jordan</div>
-				<div class="hamburger hidden"><i class="fas fa-bars fa-2x"></i></div>
 			</div>
 			<nav id="menu">
 				<div class="">
@@ -163,7 +162,7 @@ Enteruptors | University of Technology Sydney">
 			color Pref
 		</div>
 	-->
-			</article>
+
 			<!--
 	<div id="enteruptors" class="section hidden below">
 		<div data-sub-section="Main" class="visible">THIS THING</div>

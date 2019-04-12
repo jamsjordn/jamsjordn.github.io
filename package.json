@@ -1,0 +1,33 @@
+{
+	"name": "jamsjordn.github.io",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"dependencies": {
+		"parcel-bundler": "^1.12.3",
+		"request": "^2.88.0"
+	},
+	"devDependencies": {
+		"@babel/cli": "^7.4.3",
+		"@babel/core": "^7.4.3",
+		"babel-cli": "^6.26.0",
+		"babel-preset-es2015": "^6.24.1",
+		"watch": "^1.0.2"
+	},
+	"scripts": {
+		"dev": "watch 'npm run build'",
+		"build": "babel src/scripts/index.js --out-file public/scripts/index.js & sass src/style/index.scss public/style/index.css",
+		"js": "babel src/scripts/index.js --out-file public/scripts/index.js",
+		"sass": "sass src/style/index.scss public/style/index.css"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/jamsjordn/jamsjordn.github.io.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/jamsjordn/jamsjordn.github.io/issues"
+	},
+	"homepage": "https://github.com/jamsjordn/jamsjordn.github.io#readme"
+}
