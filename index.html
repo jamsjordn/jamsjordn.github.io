@@ -10,29 +10,68 @@ Enteruptors">
 	<meta name="viewport" content="width=device-width,initial-scale=1,height=device-height,minimum-scale=1.0">
 
 	<link rel="stylesheet" type="text/css" href="public/style/index.css">
-	
+
 	<link href="https://fonts.googleapis.com/css?family=Assistant:200,300,400,600,700,800" rel="stylesheet">
 
 	<script defer src="public/scripts/fontawesome-all.min.js"></script>
 	<script defer src="public/scripts/index.js"></script>
 
-
-
 	<link rel="apple-touch-icon" sizes="180x180" href="/public/assets/icons/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/public/assets/icons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="/public/assets/icons/android-chrome-192x192.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="/public/assets/icons/favicon-16x16.png">
 	<link rel="manifest" href="/public/assets/icons/site.webmanifest">
 	<link rel="mask-icon" href="/public/assets/icons/safari-pinned-tab.svg" color="#da532c">
 	<link rel="shortcut icon" href="/public/assets/icons/favicon.ico">
 	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="msapplication-TileImage" content="/public/assets/icons/mstile-144x144.png">
 	<meta name="msapplication-config" content="/public/assets/icons/browserconfig.xml">
 	<meta name="theme-color" content="#ffffff">
+
+
 
 	<script>
 		window.onerror = function (e) {
 			alert('This website does not currently support older browsers. Please change browsers or check back at a later date');
 		};
 	</script>
+
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-87207144-1"></script>
+	<script>
+		var useAnalytics = true;
+
+		try {
+			//Turn off analytics if 'analytics=off' is included as a request parameter.
+			var parameters = window.location.search.split('&');
+			if (parameters[0]) {
+				parameters[0] = parameters[0].replace('?', '');
+			}
+			for (var i = 0; i < parameters.length; i++) {
+				var values = parameters[i].split('=');
+				if (values[0] == 'analytics' && values[1] == 'off') {
+					useAnalytics = false;
+				}
+			}
+		} catch (e) {
+			//Just in case something goes wrong...
+			useAnalytics = true;
+		}
+
+		if (useAnalytics) {
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-87207144-1']);
+			_gaq.push(['_trackPageview']);
+
+			(function () {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		}
+	</script>
+
 </head>
 
 <body style="background:white;opacity:0;">
@@ -86,9 +125,8 @@ Enteruptors">
 					<h1>James Jordan</h1>
 					<p>Front-End Developer</p>
 					<div class="socials">
-						<a href="https://instagram.com/jamsjordn"><i class="fab fa-instagram fa-2x"></i><span class="sr-only">Instagram</span></a>
+						<a href="mailto:james.jordan@live.com.au"><i class="far fa-envelope fa-2x"></i><span class="sr-only">email</span></a>
 						<a href="https://linkedin.com/in/jamsjordn"><i class="fab fa-linkedin-in fa-2x"></i><span class="sr-only">LinkedIn</span></a>
-						<a href="https://facebook.com/jamsjordn"><i class="fab fa-facebook-f fa-2x"></i><span class="sr-only">Facebook</span></a>
 						<a href="https://codepen.io/jamsjordn/"><i class="fab fa-codepen fa-2x"></i><span class="sr-only">Codepen</span></a>
 					</div>
 				</section>

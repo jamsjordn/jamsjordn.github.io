@@ -225,12 +225,6 @@ header {
     transform: translateY(0);
     -ms-overflow-style: none;
   }
-  section::before {
-    flex: grow;
-  }
-  section::after {
-    flex: grow;
-  }
   section::-webkit-scrollbar {
     width: 0px;
   }
@@ -243,10 +237,26 @@ header {
     opacity: 0;
   }
   section > *:first-child {
-    margin-top: 150px;
+    margin-top: 40px;
   }
   section > *:last-child {
-    margin-bottom: 150px;
+    margin-bottom: 40px;
+  }
+  @media screen and (min-width: 701px) and (max-width: 1200px) {
+    section > *:first-child {
+      margin-top: 100px;
+    }
+    section > *:last-child {
+      margin-bottom: 100px;
+    }
+  }
+  @media screen and (min-width: 1201px) {
+    section > *:first-child {
+      margin-top: 150px;
+    }
+    section > *:last-child {
+      margin-bottom: 150px;
+    }
   }
   section p,
 section ul,

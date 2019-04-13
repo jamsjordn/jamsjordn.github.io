@@ -139,7 +139,6 @@ body {
   }
 }
 
-
 [data-article="James Jordan"] [data-section="Main"] {
   text-align: center;
 
@@ -283,14 +282,6 @@ header {
 
     transform: translateY(0);
 
-    &::before {
-      flex: grow;
-    }
-
-    &::after {
-      flex: grow;
-    }
-
     -ms-overflow-style: none;
     &::-webkit-scrollbar {
       width: 0px;
@@ -304,12 +295,27 @@ header {
       transform: translateX(110vw) scale(0.6);
       opacity: 0;
     }
-
     > *:first-child {
-      margin-top: 150px;
+      margin-top: 40px;
     }
     > *:last-child {
-      margin-bottom: 150px;
+      margin-bottom: 40px;
+    }
+    @media #{$half-desktop-media} {
+      > *:first-child {
+        margin-top: 100px;
+      }
+      > *:last-child {
+        margin-bottom: 100px;
+      }
+    }
+    @media #{$desktop-media} {
+      > *:first-child {
+        margin-top: 150px;
+      }
+      > *:last-child {
+        margin-bottom: 150px;
+      }
     }
 
     p,
