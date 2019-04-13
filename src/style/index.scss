@@ -579,14 +579,8 @@ header {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    iframe {
-      border: white 3px solid;
-      border-radius: 15px;
 
-      -webkit-box-shadow: 5px 5px 25px 5px rgba(0, 0, 0, 0.75);
-      -moz-box-shadow: 5px 5px 25px 5px rgba(0, 0, 0, 0.75);
-      box-shadow: 5px 5px 25px 5px rgba(0, 0, 0, 0.75);
-
+    .iframeWrapper {
       animation: mobileResponsive 8s ease-in-out infinite;
       @keyframes mobileResponsive {
         0% {
@@ -624,5 +618,22 @@ header {
     body * {
       //display: block !important;
     }
+  }
+}
+
+.iframeWrapper {
+  overflow: hidden;
+
+  border: white 3px solid;
+  border-radius: 15px;
+
+  -webkit-box-shadow: 5px 5px 25px 5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 5px 5px 25px 5px rgba(0, 0, 0, 0.75);
+  box-shadow: 5px 5px 25px 5px rgba(0, 0, 0, 0.75);
+
+  iframe {
+    height: 100%;
+    width: 100%;
+    border: 0px;
   }
 }
