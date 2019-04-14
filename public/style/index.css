@@ -1,6 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
 @media screen and (prefers-reduced-motion: reduce) {
   * {
-    transition: all 0s !important;
+    transition: opacity 1s ease-out, background 1s ease-out, color 1s ease-out, background-color 1s ease-out;
+    animation: none !important;
   }
 }
 /*** LIGHT THEMES ***/
@@ -80,7 +85,7 @@ body {
   background: var(--background-color) !important;
   color: black;
   color: var(--foreground-color);
-  transition: background 1s ease-in-out, color 1s ease-in-out 0.2s, opacity 1s ease-in-out 0.5s;
+  transition: background 1.4s ease-in-out, height 1.4s ease-in-out, width 1.4s ease-in-out, opacity 1.4s ease-in-out, transform 1.4s ease-in-out;
   font-family: "Assistant", sans-serif;
   margin: auto;
 }
@@ -200,14 +205,14 @@ header {
     z-index: -1;
   }
   article.hiddenAbove > section {
-    transform: translateY(-60vh) scale(0.6);
+    transform: translateY(-100vh) scale(0.8);
     opacity: 0;
   }
   article.hiddenBelow {
     z-index: -1;
   }
   article.hiddenBelow > section {
-    transform: translateY(60vh) scale(0.6);
+    transform: translateY(100vh) scale(0.6);
     opacity: 0;
   }
 
@@ -221,7 +226,7 @@ header {
     align-items: center;
     flex-direction: column;
     z-index: 10;
-    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+    transition: background 1.4s ease-in-out, height 1.4s ease-in-out, width 1.4s ease-in-out, opacity 1.4s ease-in-out, transform 1.4s ease-in-out;
     transform: translateY(0);
     -ms-overflow-style: none;
   }
@@ -258,34 +263,41 @@ header {
       margin-bottom: 150px;
     }
   }
-  section p,
-section ul,
-section div > p,
-section div > ul {
+  section > p,
+section > ul,
+section > div > p,
+section > div > li,
+section > div > .projectLinks {
     padding-left: 20px;
     padding-right: 20px;
+    text-align: justify;
   }
   @media screen and (min-width: 701px) and (max-width: 1200px) {
-    section p,
-section ul,
-section div > p,
-section div > ul {
+    section > p,
+section > ul,
+section > div > p,
+section > div > li,
+section > div > .projectLinks {
       padding-left: 10%;
       padding-right: 10%;
     }
   }
   @media screen and (min-width: 1201px) {
-    section p,
-section ul,
-section div > p,
-section div > ul {
+    section > p,
+section > ul,
+section > div > p,
+section > div > li,
+section > div > .projectLinks {
       padding-left: 20%;
       padding-right: 20%;
     }
   }
   section div > p,
 section div > ul {
-    text-align: left;
+    text-align: justify;
+  }
+  section > div {
+    width: 100%;
   }
 
   main > [data-article="James Jordan"] > [data-section=Main] {
@@ -357,7 +369,7 @@ section div > ul {
       box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
       z-index: 20;
       border-bottom-right-radius: 20px;
-      transition: all 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
+      transition: background 0.3s ease-out, height 0.3s ease-out, width 0.3s ease-out, opacity 0.3s ease-out, transform 0.3s ease-out;
     }
     @media screen and (min-width: 1201px) {
       header nav#menu {
@@ -403,7 +415,7 @@ section div > ul {
     }
     header nav#menu > div > div {
       height: 60px;
-      transition: all 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
+      transition: background 0.3s ease-out, height 0.3s ease-out, width 0.3s ease-out, opacity 0.3s ease-out, transform 0.3s ease-out;
       display: grid;
       grid-template-columns: 1fr 50px;
       grid-template-rows: 1fr;
@@ -419,7 +431,7 @@ section div > ul {
     }
     header nav#menu > div > div.sub > div {
       margin: auto auto auto 35px;
-      transition: all 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
+      transition: background 0.3s ease-out, height 0.3s ease-out, width 0.3s ease-out, opacity 0.3s ease-out, transform 0.3s ease-out;
     }
     header nav#menu > div > div.header {
       z-index: calc(20 + 1);
@@ -448,7 +460,7 @@ section div > ul {
     }
   }
   header > .titleBar * {
-    transition: all 0.7s ease-out;
+    transition: background 0.3s ease-out, height 0.3s ease-out, width 0.3s ease-out, opacity 0.3s ease-out, transform 0.3s ease-out;
   }
   header > .titleBar .hamburger {
     display: flex;
@@ -534,6 +546,59 @@ section div > ul {
   height: 100%;
   width: 100%;
   border: 0px;
+}
+
+[projectsGrid] {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  place-items: start center;
+}
+[projectsGrid] > li {
+  list-style-type: none;
+  padding: 20px;
+}
+[projectsGrid] > li > img {
+  width: 100%;
+  max-height: 300px;
+  border: white 3px solid;
+  border-radius: 15px;
+  object-fit: cover;
+  box-sizing: border-box;
+  -webkit-box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.25);
+  box-shadow: 2px 2px 6px 1px rgba(0, 0, 0, 0.55);
+}
+[projectsGrid] > li > p {
+  font-size: 1.1em;
+  padding: 5px;
+}
+
+.projectLinks > a {
+  display: block;
+  float: left;
+  padding: 10px 15px;
+  border-radius: 13px;
+  border: white 2px solid;
+  background: var(--background-color);
+  color: var(--foreground-color);
+  transition: box-shadow 0.1s ease-out, transform 0.1s ease-out;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.55);
+}
+.projectLinks > a:hover {
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.55);
+  transform: scale(1.02);
+}
+@supports (display: grid) {
+  .projectLinks {
+    padding-top: 10px;
+    place-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+  .projectLinks a {
+    float: none;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

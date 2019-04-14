@@ -8,10 +8,20 @@ $z-index-article: 0;
 $z-index-section: 10;
 $z-index-nav: 20;
 
+* {
+  box-sizing: border-box;
+}
+
 //Sass Mixins
 @mixin transition() {
-  transition: all 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: background 1.4s ease-in-out, height 1.4s ease-in-out, width 1.4s ease-in-out, opacity 1.4s ease-in-out,
+    transform 1.4s ease-in-out;
 }
+@mixin transition-small() {
+  transition: background 0.3s ease-out, height 0.3s ease-out, width 0.3s ease-out, opacity 0.3s ease-out,
+    transform 0.3s ease-out;
+}
+
 @mixin transitionIn() {
   transition: all 0.7s linear; //cubic-bezier(0.165, 0.84, 0.44, 1);
 }
@@ -22,7 +32,8 @@ $z-index-nav: 20;
 //Accessibilty
 @media screen and (prefers-reduced-motion: reduce) {
   * {
-    transition: all 0s !important;
+    transition: opacity 1s ease-out, background 1s ease-out, color 1s ease-out, background-color 1s ease-out;
+    animation: none !important;
   }
 }
 
@@ -130,7 +141,7 @@ body {
 
   color: black;
   color: var(--foreground-color);
-  transition: background 1s ease-in-out, color 1s ease-in-out 0.2s, opacity 1s ease-in-out 0.5s;
+  @include transition();
   font-family: "Assistant", sans-serif;
   margin: auto;
 
@@ -251,7 +262,7 @@ header {
       //top: 10vh;
       //transform: translateY(-100vh);
       > section {
-        transform: translateY(-60vh) scale(0.6);
+        transform: translateY(-100vh) scale(0.8);
         opacity: 0;
       }
     }
@@ -259,7 +270,7 @@ header {
       z-index: -1;
       //transform: translatey(100vh);
       > section {
-        transform: translateY(60vh) scale(0.6);
+        transform: translateY(100vh) scale(0.6);
         opacity: 0;
       }
     }
@@ -277,9 +288,7 @@ header {
     flex-direction: column;
 
     z-index: $z-index-section;
-
-    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
-
+    @include transition();
     transform: translateY(0);
 
     -ms-overflow-style: none;
@@ -318,12 +327,14 @@ header {
       }
     }
 
-    p,
-    ul,
-    div > p,
-    div > ul {
+    > p,
+    > ul,
+    > div > p,
+    > div > li,
+    > div > .projectLinks {
       padding-left: 20px;
       padding-right: 20px;
+      text-align: justify;
 
       @media #{$half-desktop-media} {
         padding-left: 10%;
@@ -337,7 +348,10 @@ header {
     }
     div > p,
     div > ul {
-      text-align: left;
+      text-align: justify;
+    }
+    > div {
+      width: 100%;
     }
   }
   main > [data-article="James Jordan"] {
@@ -415,7 +429,7 @@ header {
         @media #{$desktop-media} {
           border-bottom-left-radius: 20px;
         }
-        @include transition();
+        @include transition-small();
         @media #{$mobile-media} {
           position: fixed;
           top: 0;
@@ -474,7 +488,7 @@ header {
 
           > div {
             height: 60px;
-            @include transition();
+            @include transition-small();
             &:hover {
               background: var(--hover-color);
               cursor: pointer;
@@ -490,7 +504,7 @@ header {
             }
             &.sub > div {
               margin: auto auto auto 35px;
-              @include transition();
+              @include transition-small();
             }
             &.header {
               z-index: calc(#{$z-index-nav} + 1);
@@ -532,7 +546,7 @@ header {
       display: none;
     }
     * {
-      transition: all 0.7s ease-out;
+      @include transition-small();
     }
 
     .hamburger {
@@ -635,5 +649,62 @@ header {
     height: 100%;
     width: 100%;
     border: 0px;
+  }
+}
+
+[projectsGrid] {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  place-items: start center;
+
+  > li {
+    list-style-type: none;
+    padding: 20px;
+    > img {
+      width: 100%;
+      max-height: 300px;
+      border: white 3px solid;
+      border-radius: 15px;
+      object-fit: cover;
+      box-sizing: border-box;
+
+      -webkit-box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.25);
+      -moz-box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.25);
+      box-shadow: 2px 2px 6px 1px rgba(0, 0, 0, 0.55);
+    }
+    > p {
+      font-size: 1.1em;
+      padding: 5px;
+    }
+  }
+}
+
+.projectLinks {
+  > a {
+    display: block;
+    float: left;
+    //height: 2em;
+    padding: 10px 15px;
+    border-radius: 13px;
+    border: white 2px solid;
+    background: var(--background-color);
+    color: var(--foreground-color);
+    transition: box-shadow 0.1s ease-out, transform 0.1s ease-out;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.55);
+    &:hover {
+      box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.55);
+      transform: scale(1.02);
+    }
+  }
+  @supports (display: grid) {
+    padding-top: 10px;
+    place-items: center;
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    a {
+      float: none;
+    }
   }
 }

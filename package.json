@@ -4,6 +4,7 @@
 	"description": "",
 	"main": "index.js",
 	"dependencies": {
+		"onchange": "^5.2.0",
 		"parcel-bundler": "^1.12.3",
 		"request": "^2.88.0"
 	},
@@ -15,7 +16,7 @@
 		"watch": "^1.0.2"
 	},
 	"scripts": {
-		"dev": "watch 'npm run build'",
+		"dev": "onchange \"src/**/*\"  -- npm run build",
 		"build": "babel src/scripts/index.js --out-file public/scripts/index.js & sass src/style/index.scss public/style/index.css",
 		"js": "babel src/scripts/index.js --out-file public/scripts/index.js",
 		"sass": "sass src/style/index.scss public/style/index.css"
