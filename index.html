@@ -90,7 +90,7 @@ Enteruptors">
 				<div class="hamburger" aria-label="Open menu"><i class="fas fa-bars fa-2x" aria-hidden="true"></i></div>
 				<div class="title hidden">James Jordan</div>
 			</div>
-			<nav id="menu">
+			<nav id="menu" class="hidden">
 				<div class="">
 					<div class="header" data-menu-item="James Jordan">
 						<div>James Jordan</div>
@@ -122,7 +122,7 @@ Enteruptors">
 					<div class="socials">
 						<a href="mailto:james.jordan@live.com.au"><i class="far fa-envelope fa-2x"></i><span class="sr-only">email</span></a>
 						<a href="https://linkedin.com/in/jamsjordn"><i class="fab fa-linkedin-in fa-2x"></i><span class="sr-only">LinkedIn</span></a>
-						<a href="https://codepen.io/jamsjordn/"><i class="fab fa-codepen fa-2x"></i><span class="sr-only">Codepen</span></a>
+						<a href="https://github.com/jamsjordn"><i class="fab fa-github fa-2x"></i><span class="sr-only">GitHub</span></a>
 					</div>
 				</section>
 				<section data-section="Skills" class="hiddenRight">
@@ -163,21 +163,21 @@ Enteruptors">
 					<h1>Projects</h1>
 					<ul projectsGrid>
 						<li data-project="Tandem">
-							<img src="public/assets/images/Tandem Screenshot.png" alt="Tandem site screenshot" />
+							<a href="/tandem"><img src="public/assets/images/Tandem Screenshot.png" alt="Tandem site screenshot" /></a>
 							<p>A new 'Hygge' inspired bar in Newtown required a landing page to stake their place on the internet.</p>
-							<div class="projectLinks">
+							<div class="buttonContainer">
 								<!--a href="#tandem"><i class="far fa-info"></i> Info</a-->
-								<a href="/tandem"><i class="far fa-desktop"></i> Live</a>
-								<a href="https://github.com/jamsjordn/tandem"><i class="far fa-code"></i> Source</a>
+								<a href="/tandem" data-button-type="live"><i class="far fa-desktop"></i> Live</a>
+								<a href="https://github.com/jamsjordn/tandem" data-button-type="github"><i class="far fa-code"></i> Source</a>
 							</div>
 						</li>
 						<li data-project="jamsjordn">
-							<img src="public/assets/images/JamsJordan Screenshot.png" alt="James Jordan site screenshot" />
+							<a href="/"><img src="public/assets/images/JamsJordan Screenshot.png" alt="James Jordan site screenshot" /></a>
 							<p>The website you're on right now, built to showcase my projects and skills.</p>
-							<div class="projectLinks">
+							<div class="buttonContainer">
 								<!--a href="#jamsjordn.com"><i class="far fa-info"></i> Info</a-->
-								<a href="/"><i class="far fa-desktop"></i> Live</a>
-								<a href="https://github.com/jamsjordn/jamsjordn.github.io"><i class="far fa-code"></i> Source</a>
+								<a href="/" data-button-type="live"><i class="far fa-desktop"></i> Live</a>
+								<a href="https://github.com/jamsjordn/jamsjordn.github.io" data-button-type="github"><i class="far fa-code"></i> Source</a>
 							</div>
 						</li>
 					</ul>
@@ -185,19 +185,19 @@ Enteruptors">
 				</section>
 				<section data-section="Tandem" class="hiddenRight">
 					<h1>Tandem</h1>
-					<div>
-						<p>In 2018 a friend of mine opened a new cocktail bar in Newtown. It brought the warm, cosy feelings of Scandanavian bars and cafes to Sydney, embracing the concept of hygge.</p>
-						<p>This project was to stake a claim on the internet for this bar and allow for expanding upon later. The requirements were simply to get a landing page active on the domain that provided a contact email address.</p>
-						<p>We settled on a design that featured the logo, email address, street address and social media links. The website is responsive, accessible and fast to load. At the time of writing, this landing page has been replaced by the owner with a WordPress site.</p>
-						<div class="projectLinks">
-							<a href="/tandem"><i class="far fa-desktop"></i> Live</a>
-							<a href="https://github.com/jamsjordn/tandem"><i class="far fa-code"></i> Source</a>
-						</div>
+
+					<p>In 2018 a friend of mine opened a new cocktail bar in Newtown. It brought the warm, cosy feelings of Scandanavian bars and cafes to Sydney, embracing the concept of hygge.</p>
+					<p>This project was to stake a claim on the internet for this bar and allow for expanding upon later. The requirements were simply to get a landing page active on the domain that provided a contact email address.</p>
+					<p>We settled on a design that featured the logo, email address, street address and social media links. The website is responsive, accessible and fast to load. At the time of writing, this landing page has been replaced by the owner with a WordPress site.</p>
+					<div class="buttonContainer">
+						<a href="/tandem" data-button-type="live"><i class="far fa-desktop"></i> Live</a>
+						<a href="https://github.com/jamsjordn/tandem" data-button-type="github"><i class="far fa-code"></i> Source</a>
 					</div>
+
 					<h2>Mobile Responsive</h2>
 					<div data-feature="responsive">
 						<div class="iframeWrapper">
-							<iframe src="https://jamsjordn.com/tandem"></iframe>
+							<iframe title="Tandem website" src="https://jamsjordn.com/tandem"></iframe>
 						</div>
 					</div>
 				</section>
@@ -205,9 +205,9 @@ Enteruptors">
 					<h1>jamsjordn.com</h1>
 					<div>
 						<p></p>
-						<div class="projectLinks">
-							<a href="/"><i class="far fa-desktop"></i> Live</a>
-							<a href="https://github.com/jamsjordn/jamsjordn.github.io"><i class="far fa-code"></i> Source</a>
+						<div class="buttonContainer">
+							<a href="/"><i class="far fa-desktop" data-button-type="live"></i> Live</a>
+							<a href="https://github.com/jamsjordn/jamsjordn.github.io" data-button-type="github"><i class="far fa-code"></i> Source</a>
 						</div>
 					</div>
 				</section>

@@ -12,7 +12,9 @@
   --faded-color: #aaa;
   --accent-color: black;
 }
-:root nav {
+:root nav,
+:root .button,
+:root [data-button-type] {
   --background-color: white;
   --foreground-color: black;
   --hover-color: #ddd;
@@ -44,7 +46,9 @@ html[data-parent-theme=Projects][data-theme="jamsjordn.com"] {
     --faded-color: #aaa;
     --accent-color: white;
   }
-  :root nav {
+  :root nav,
+:root .button,
+:root [data-button-type] {
     --background-color: #223;
     --foreground-color: white;
     --hover-color: #334;
@@ -259,31 +263,25 @@ header {
       margin-bottom: 150px;
     }
   }
-  section > p,
-section > ul,
-section > div > p,
-section > div > li,
-section > div > .projectLinks {
+  section > * {
+    width: 100%;
+  }
+  section > *.fullwidth {
+    padding: 0;
+  }
+  section > *:not(.fullWidth) {
     padding-left: 20px;
     padding-right: 20px;
-    text-align: justify;
+    box-sizing: border-box;
   }
   @media screen and (min-width: 701px) and (max-width: 1200px) {
-    section > p,
-section > ul,
-section > div > p,
-section > div > li,
-section > div > .projectLinks {
+    section > *:not(.fullWidth) {
       padding-left: 10%;
       padding-right: 10%;
     }
   }
   @media screen and (min-width: 1201px) {
-    section > p,
-section > ul,
-section > div > p,
-section > div > li,
-section > div > .projectLinks {
+    section > *:not(.fullWidth) {
       padding-left: 20%;
       padding-right: 20%;
     }
@@ -291,9 +289,6 @@ section > div > .projectLinks {
   section div > p,
 section div > ul {
     text-align: justify;
-  }
-  section > div {
-    width: 100%;
   }
 
   main > [data-article="James Jordan"] > [data-section=Main] {
@@ -491,6 +486,8 @@ section div > ul {
 
   [data-section=Tandem] div[data-feature=responsive] {
     width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
     height: 700px;
     min-height: 700px;
     max-height: 700px;
@@ -547,6 +544,8 @@ section div > ul {
 [projectsGrid] {
   display: grid;
   width: 100%;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   place-items: start center;
 }
@@ -554,7 +553,7 @@ section div > ul {
   list-style-type: none;
   padding: 20px;
 }
-[projectsGrid] > li > img {
+[projectsGrid] > li > a > img {
   width: 100%;
   max-height: 300px;
   border: white 3px solid;
@@ -570,31 +569,69 @@ section div > ul {
   padding: 5px;
 }
 
-.projectLinks > a {
-  display: block;
-  float: left;
-  padding: 10px 15px;
-  border-radius: 13px;
-  border: white 2px solid;
-  background: var(--background-color);
-  color: var(--foreground-color);
-  transition: box-shadow 0.1s ease-out, transform 0.1s ease-out;
-  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.55);
-}
-.projectLinks > a:hover {
-  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.55);
-  transform: scale(1.02);
+.buttonContainer {
+  padding-top: 10px;
 }
 @supports (display: grid) {
-  .projectLinks {
-    padding-top: 10px;
+  .buttonContainer {
     place-items: center;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   }
-  .projectLinks a {
+  .buttonContainer a {
     float: none;
   }
+}
+.buttonContainer > a, .buttonContainer > .button,
+.buttonContainer [data-button-type] {
+  float: left;
+}
+
+.button,
+[data-button-type] {
+  box-sizing: border-box;
+  display: block;
+  position: relative;
+  padding: 10px 15px;
+  border-radius: 13px;
+  border: white 2px solid;
+  background: white;
+  background: var(--background-color);
+  color: black;
+  color: var(--foreground-color);
+  transition: all 0.15s ease-out;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.65);
+  z-index: auto;
+}
+.button[data-button-type=live],
+[data-button-type][data-button-type=live] {
+  --accent: orangered;
+}
+.button[data-button-type=github],
+[data-button-type][data-button-type=github] {
+  --accent: #6f42c1;
+}
+.button::after,
+[data-button-type]::after {
+  opacity: 0;
+  transition: all 0.15s ease-out;
+  content: "";
+  border-radius: 11px;
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  box-shadow: 0px 0px 5px 5px var(--accent);
+}
+.button:hover,
+[data-button-type]:hover {
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.85);
+}
+.button:hover::after,
+[data-button-type]:hover::after {
+  opacity: 1;
 }
 
 /*# sourceMappingURL=index.css.map */
