@@ -1,7 +1,3 @@
-* {
-  box-sizing: border-box;
-}
-
 @media screen and (prefers-reduced-motion: reduce) {
   * {
     transition: opacity 1s ease-out, background 1s ease-out, color 1s ease-out, background-color 1s ease-out;
