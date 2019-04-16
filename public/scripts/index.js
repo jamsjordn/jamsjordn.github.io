@@ -7,6 +7,12 @@ document.onkeydown = function (evt) {	evt = evt || window.event;	switch (evt.key
 */
 
 function load() {
+
+	var menuItem = document.querySelectorAll("[data-menu-item=\"" + location.hash.substr(1) + "\"]")[0];
+	if (menuItem) {
+		setActiveMenuItem(menuItem);
+		activateMenuItem(menuItem);
+	}
 	setMenuEvents();
 }
 load();
@@ -28,9 +34,11 @@ function setMenuEvents() {
 				} else if (menuItem.classList.contains("header")) {
 					setActiveMenuItem(menuItem);
 					activateMenuItem(menuItem);
+					setHash(menuItem);
 				} else if (menuItem.classList.contains("sub") && !menuItem.classList.contains("active")) {
 					setActiveMenuItem(menuItem);
 					activateMenuItem(menuItem);
+					setHash(menuItem);
 				}
 			});
 		});
@@ -166,3 +174,15 @@ function setActiveMenuItem(menuItem) {
 		menuItem.parentNode.classList.add("active");
 	}
 }
+
+function setHash(menuItem) {
+	location.hash = "#" + menuItem.dataset.menuItem;
+}
+
+function locationHashChanged() {
+	if (location.hash === '#cool-feature') {
+		console.log("You're visiting a cool feature!");
+	}
+}
+
+window.onhashchange = locationHashChanged;

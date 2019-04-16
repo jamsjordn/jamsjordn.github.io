@@ -86,7 +86,7 @@ body {
   color: black;
   color: var(--foreground-color);
   transition: background 1.4s ease-in-out, height 1.4s ease-in-out, width 1.4s ease-in-out, opacity 1.4s ease-in-out, transform 1.4s ease-in-out;
-  font-family: "Assistant", sans-serif;
+  font-family: "Assistant", "Arial", sans-serif;
   margin: auto;
 }
 .fontawesome-i2svg-active body {
