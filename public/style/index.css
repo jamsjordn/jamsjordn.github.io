@@ -388,7 +388,7 @@ section div > ul {
       overflow: hidden;
     }
     header nav#menu > div:first-of-type {
-      padding-top: 80%;
+      padding-top: 70px;
     }
     header nav#menu > div.active .active {
       background: var(--active-color);
