@@ -117,7 +117,7 @@ a {
 h1 {
   font-size: 65px;
   line-height: 65px;
-  font-weight: 400;
+  font-weight: 300;
   font-style: normal;
   text-align: center;
 }
@@ -125,7 +125,7 @@ h1 {
 h2 {
   font-size: 45px;
   line-height: 45px;
-  font-weight: 400;
+  font-weight: 300;
   font-style: normal;
   text-align: center;
   padding-top: 45px;
@@ -134,7 +134,7 @@ h2 {
 h3 {
   font-size: 35px;
   line-height: 35px;
-  font-weight: 400;
+  font-weight: 300;
   font-style: normal;
 }
 
@@ -388,7 +388,7 @@ section div > ul {
       overflow: hidden;
     }
     header nav#menu > div:first-of-type {
-      padding-top: 70px;
+      padding-top: 80%;
     }
     header nav#menu > div.active .active {
       background: var(--active-color);
