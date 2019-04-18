@@ -393,7 +393,7 @@ section div > ul {
     header nav#menu > div.active .active {
       background: var(--active-color);
     }
-    header nav#menu > div.active svg {
+    header nav#menu > div.active i {
       transform: scaleY(-1);
     }
     header nav#menu > div:not(.active) .sub {
@@ -427,7 +427,7 @@ section div > ul {
     header nav#menu > div > div.header {
       z-index: calc(20 + 1);
     }
-    header nav#menu > div > div.header svg {
+    header nav#menu > div > div.header i {
       font-size: 1em;
       grid-area: arrow;
       justify-self: center;
@@ -632,6 +632,37 @@ section div > ul {
 .button:hover::after,
 [data-button-type]:hover::after {
   opacity: 1;
+}
+
+i + .hidden {
+  clip: rect(0, 0, 0, 0);
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+}
+
+i[class*=" fa-"],
+i[class^=fa-] {
+  /* Style from fontello */
+  font-family: "font-awesome-min";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: 0.2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fa-2x {
+  font-size: 2em;
 }
 
 /*# sourceMappingURL=index.css.map */

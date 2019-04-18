@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+ 
+.fa-github:before { content: '\47'; } /* 'G' */
+.fa-linkedin-in:before { content: '\4c'; } /* 'L' */
+.fa-chevron-down:before { content: '\2228'; } /* '∨' */
+.fa-bars:before { content: '\2630'; } /* '☰' */
+.fa-envelope:before { content: '\2709'; } /* '✉' */
+.fa-desktop-1:before { content: '🖳'; } /* '\1f5b3' */
+.fa-code:before { content: '🖹'; } /* '\1f5b9' */

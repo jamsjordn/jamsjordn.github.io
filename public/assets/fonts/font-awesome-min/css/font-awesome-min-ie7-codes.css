@@ -1,0 +1,8 @@
+
+.fa-github { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x47;&nbsp;'); }
+.fa-linkedin-in { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x4c;&nbsp;'); }
+.fa-chevron-down { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x2228;&nbsp;'); }
+.fa-bars { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x2630;&nbsp;'); }
+.fa-envelope { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x2709;&nbsp;'); }
+.fa-desktop-1 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x1f5b3;&nbsp;'); }
+.fa-code { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x1f5b9;&nbsp;'); }
