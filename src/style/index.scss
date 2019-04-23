@@ -8,18 +8,16 @@ $z-index-article: 0;
 $z-index-section: 10;
 $z-index-nav: 20;
 
-* {
-	//box-sizing: border-box;
-}
-
 //Sass Mixins
 @mixin transition() {
-	transition: background 1.4s ease-in-out, height 1.4s ease-in-out, width 1.4s ease-in-out, opacity 1.4s ease-in-out,
-		transform 1.4s ease-in-out;
+	transition-duration: 1.4s;
+	transition-timing-function: ease-in-out;
+	transition-property: background, transform, opacity, visibility;
 }
 @mixin transition-small() {
-	transition: background 0.3s ease-out, height 0.3s ease-out, width 0.3s ease-out, opacity 0.3s ease-out,
-		transform 0.3s ease-out;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-out;
+	transition-property: background, transform, opacity, visibility, height, width, filter;
 }
 
 @mixin transitionIn() {
@@ -37,14 +35,13 @@ $z-index-nav: 20;
 	}
 }
 
-/*** LIGHT THEMES ***/
-//@media (prefers-color-scheme: light) {
-:root {
+/*** LIGHT THEME ***/
+@mixin light-theme() {
 	--z-button: 5;
-	--background-color: #ffefd5;
+	--background-color: #f9f7ff;
 	--foreground-color: black;
 	--faded-color: #aaa;
-	--accent-color: black;
+	--accent-color: #E19F20;
 
 	nav,
 	.button,
@@ -54,90 +51,77 @@ $z-index-nav: 20;
 		--hover-color: #ddd;
 		--active-color: #ccc;
 	}
-}
 
-html[data-parent-theme="Projects"] {
-	--background-color: rgb(238, 243, 245);
-	--foreground-color: black;
-	--accent-color: black;
-
-	&[data-theme="Tandem"] {
-		--background-color: rgb(245, 245, 245);
-		--foreground-color: black;
-		--accent-color: white;
+	.light-only {
+		visibility: visible;
+		opacity: 1;
+		transform: scale(1);
 	}
-
-	&[data-theme="jamsjordn.com"] {
-		--background-color: mistyrose;
-		--foreground-color: black;
-		--accent-color: dimgrey;
+	.dark-only {
+		visibility: hidden;
+		opacity: 0;
+		transform: scale(0);
 	}
 }
-//}
 
 /*** DARK THEMES ***/
-@media (prefers-color-scheme: dark) {
-	:root {
-		--z-button: 5;
-		--background-color: #000c18;
+@mixin dark-theme() {
+	--z-button: 5;
+	--background-color: #000c18;
+	//--background-color: #2b2635;
+	--foreground-color: white;
+	--faded-color: #aaa;
+	--faded-color: #d8f3ff;
+	--accent-color: #E19F20;
+	nav,
+	.button,
+	[data-button-type] {
+		--background-color: #223;
+		--background-color: #2f3842;
 		--foreground-color: white;
-		--faded-color: #aaa;
-		--accent-color: white;
-		nav,
-		.button,
-		[data-button-type] {
-			--background-color: #223;
-			--foreground-color: white;
-			--hover-color: #334;
-			--active-color: #445;
-		}
+		--hover-color: #334;
+		--active-color: #445;
 	}
-
-	html[data-parent-theme="Projects"] {
-		--background-color: #001317;
-		--foreground-color: white;
-		--accent-color: black;
-
-		&[data-theme="Tandem"] {
-			--background-color: #1a1f23;
-			--foreground-color: white;
-			--accent-color: white;
-		}
-
-		&[data-theme="jamsjordn.com"] {
-			--background-color: #000c18;
-			--foreground-color: white;
-			--accent-color: white;
-		}
+	.dark-only {
+		visibility: visible;
+		opacity: 1;
+		transform: scale(1);
+	}
+	.light-only {
+		visibility: hidden;
+		opacity: 0;
+		transform: scale(0);
 	}
 }
 
-.noAnimation {
+:root {
+	@include light-theme();
+	@media (prefers-color-scheme: light) {
+		@include light-theme();
+	}
+	@media (prefers-color-scheme: dark) {
+		@include dark-theme();
+	}
+	&[data-theme="dark"] {
+		@include dark-theme();
+	}
+	&[data-theme="light"] {
+		@include light-theme();
+	}
+}
+
+* {
+	@include transition-small();
+	//box-sizing: border-box;
+}
+.noAnimation,
+.noAnimation * {
 	transition: all 0s !important;
 }
-
-//@media only screen and (max-width: 700px) {
-//  #tandem {
-//    display: none !important;
-//  }
-//  .button {
-//    display: none !important;
-//  }
-//  #home {
-//    transform: translatey(0);
-//    transform: translatex(0);
-//    opacity: 1;
-//    * {
-//      transform: translatey(0);
-//      transform: translatex(0);
-//      opacity: 1;
-//    }
-//  }
-//}
-
 html {
 	height: 100%;
 	width: 100vw;
+	@include transition();
 }
 body {
 	background: #ffefd5;
@@ -174,6 +158,9 @@ a {
 	text-decoration: none;
 	font-weight: bold;
 	color: inherit;
+	&:hover {
+		cursor: pointer;
+	}
 }
 
 h1 {
@@ -468,7 +455,7 @@ header {
 						.active {
 							background: var(--active-color);
 						}
-						i {
+						svg {
 							transform: scaleY(-1);
 						}
 						.sub {
@@ -512,7 +499,7 @@ header {
 						&.header {
 							z-index: calc(#{$z-index-nav} + 1);
 							//background: lightgreen;
-							i {
+							svg {
 								font-size: 1em;
 								grid-area: arrow;
 								justify-self: center;
@@ -672,6 +659,7 @@ header {
 			width: 100%;
 			max-height: 300px;
 			border: white 3px solid;
+			background: white;
 			border-radius: 15px;
 			object-fit: cover;
 			box-sizing: border-box;
@@ -703,6 +691,9 @@ header {
 	[data-button-type] {
 		float: left;
 		//height: 2em;
+		& > * {
+			vertical-align: middle;
+		}
 	}
 }
 
@@ -729,18 +720,35 @@ header {
 		--accent: #6f42c1;
 	}
 
+	//&::after {
+	//	opacity: 0;
+	//	transition: all 0.15s ease-out;
+	//	content: "";
+	//	border-radius: 11px;
+	//	z-index: -1;
+	//	position: absolute;
+	//	width: 100%;
+	//	height: 100%;
+	//	top: 0;
+	//	left: 0;
+	//	box-shadow: 0px 0px 5px 5px var(--accent);
+	//}
+
 	&::after {
-		opacity: 0;
-		transition: all 0.15s ease-out;
+		opacity: 1;
+		//clip-path: 0px 0px 0px 0px;
 		content: "";
-		border-radius: 11px;
-		z-index: -1;
+
+		border-radius: 13px;
+		border: #E19F20 2px solid;
+		border: var(--accent-color) 2px solid;
+		top: -2px;
+		left: -2px;
+		right: -2px;
+		bottom: -2px;
+		clip-path: inset(-4% 104% -4% -4%);
 		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		left: 0;
-		box-shadow: 0px 0px 5px 5px var(--accent);
+		transition: clip-path 0.4s ease-in-out;
 	}
 
 	&:hover {
@@ -748,12 +756,16 @@ header {
 		box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.85);
 		&::after {
 			opacity: 1;
+			cursor: pointer;
+			clip-path: inset(-4% -4% -4% -4%);
+
 			//transform: translateY(0px) scale(1.05);
 		}
 	}
 }
 
-i + .hidden {
+i + .hidden,
+svg + .hidden {
 	clip: rect(0, 0, 0, 0);
 	width: 1px;
 	height: 1px;
@@ -761,31 +773,33 @@ i + .hidden {
 	position: absolute;
 }
 
-i[class*=" fa-"],
-i[class^="fa-"] {
-	/* Style from fontello */
-	font-family: "font-awesome-min";
-	font-style: normal;
-	font-weight: normal;
-	speak: none;
-
-	display: inline-block;
-	text-decoration: inherit;
-	width: 1em;
-	margin-right: 0.2em;
-	text-align: center;
-
-	font-variant: normal;
-	text-transform: none;
-
-	line-height: 1em;
-
-	//margin-left: 0.2em;
-
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+#dayNightToggle {
+	position: fixed;
+	right: 7px;
+	top: 7px;
+	width: 42px;
+	height: 42px;
+	background: white;
+	background: var(--background-color);
+	box-shadow: 0px 0px 10px 0px white;
+	box-shadow: 0px 0px 10px 0px var(--background-color);
+	display: grid;
+	place-items: center;
+	grid-template: 100% / 100%;
+	z-index: 1000;
+	border-radius: 50%;
+	overflow: none;
+	&:hover {
+		filter: grayscale(1) invert(100%);
+	}
+	@include transition-small();
+	> svg {
+		grid-area: 1/1/1/1;
+		@include transition-small();
+	}
 }
 
-.fa-2x {
-	font-size: 2em;
+svg {
+	fill: black;
+	fill: var(--foreground-color);
 }

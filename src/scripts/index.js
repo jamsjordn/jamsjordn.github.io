@@ -3,23 +3,50 @@ document.onkeydown = function (evt) {	evt = evt || window.event;	switch (evt.key
 */
 
 function load() {
+	const html = document.getElementsByTagName('html')[0];
+	html.classList.add('noAnimation');
+	setTheme();
 
+	scrollToNextSection();
 	let menuItem = document.querySelectorAll(`[data-menu-item="${location.hash.substr(1)}"]`)[0];
 	if (menuItem) {
 		setActiveMenuItem(menuItem);
 		activateMenuItem(menuItem);
 	}
 	setMenuEvents();
+	window.requestAnimationFrame(() => {
+		html.classList.remove('noAnimation');
+		window.requestAnimationFrame(() => {
+			html.style.opacity = 1;
+		});
+	});
 }
 load();
 
+function setTheme() {
+	const html = document.getElementsByTagName('html')[0];
+	if (!window.matchMedia) {
+		html.dataset.theme = "light";
+	} else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+		html.dataset.theme = "dark"
+	} else {
+		html.dataset.theme = "light"
+	}
+
+	const themeToggle = document.getElementById('dayNightToggle');
+	themeToggle.addEventListener('click', () => {
+		if (html.dataset.theme === 'dark') {
+			html.dataset.theme = 'light'
+		} else {
+			html.dataset.theme = 'dark'
+		}
+	})
+}
+
 function setMenuEvents() {
 	setMenuSelectionEvents();
-
 	setCloseMenuWhenClickedAway();
 	setHamburgerIconEvents();
-
-
 
 	function setMenuSelectionEvents() {
 		// Open and close the relevant menu items when items and arrows are clicked
@@ -99,12 +126,6 @@ function activateMenuItem(menuItem) {
 
 	let chosenArticle = document.querySelectorAll(`article[data-article="${articleName}"]`)[0];
 	let chosenSection = document.querySelectorAll(`article[data-article="${articleName}"] section[data-section="${sectionName}"]`)[0];
-
-
-	//Set CSS Themes
-	document.documentElement.dataset.parentTheme = articleName;
-	document.documentElement.dataset.theme = sectionName;
-
 
 	let menuItems = document.querySelectorAll('nav [data-menu-item]');
 	let iChosenSection = [...menuItems].indexOf(menuItem);
@@ -189,3 +210,33 @@ function locationHashChanged() {
 }
 
 window.onhashchange = locationHashChanged;
+
+
+function scrollToNextSection() {
+	let scrolling = false;
+	document.querySelectorAll('section').forEach(sectiona => {
+		//section.addEventListener(scroll, (e) => {
+		//	console.log(e);
+		//	if (!scrolling) {
+		//		scrolling = true;
+		//		window.requestAnimationFrame(function () {
+		//			scrolling = false;
+		//		})
+		//	}
+		//})
+		let startPositionB = null;
+		sectiona.addEventListener("scroll", scrollNext);
+		function scrollNext(e) {
+			if (!scrolling) {
+				console.log(e);
+				if (startPositionB == null) startPositionB = (
+					e.target.scrollHeight - e.target.scrollTop - e.target.clientHeight);
+				window.requestAnimationFrame(() => {
+					scrolling = false;
+				})
+				console.log(startPositionB);
+			}
+			scrolling = true;
+		}
+	});
+}

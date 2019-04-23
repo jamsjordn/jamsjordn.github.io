@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
@@ -7,19 +7,48 @@ document.onkeydown = function (evt) {	evt = evt || window.event;	switch (evt.key
 */
 
 function load() {
+	var html = document.getElementsByTagName('html')[0];
+	html.classList.add('noAnimation');
+	setTheme();
 
-	var menuItem = document.querySelectorAll("[data-menu-item=\"" + location.hash.substr(1) + "\"]")[0];
+	scrollToNextSection();
+	var menuItem = document.querySelectorAll('[data-menu-item="' + location.hash.substr(1) + '"]')[0];
 	if (menuItem) {
 		setActiveMenuItem(menuItem);
 		activateMenuItem(menuItem);
 	}
 	setMenuEvents();
+	window.requestAnimationFrame(function () {
+		html.classList.remove('noAnimation');
+		window.requestAnimationFrame(function () {
+			html.style.opacity = 1;
+		});
+	});
 }
 load();
 
+function setTheme() {
+	var html = document.getElementsByTagName('html')[0];
+	if (!window.matchMedia) {
+		html.dataset.theme = "light";
+	} else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+		html.dataset.theme = "dark";
+	} else {
+		html.dataset.theme = "light";
+	}
+
+	var themeToggle = document.getElementById('dayNightToggle');
+	themeToggle.addEventListener('click', function () {
+		if (html.dataset.theme === 'dark') {
+			html.dataset.theme = 'light';
+		} else {
+			html.dataset.theme = 'dark';
+		}
+	});
+}
+
 function setMenuEvents() {
 	setMenuSelectionEvents();
-
 	setCloseMenuWhenClickedAway();
 	setHamburgerIconEvents();
 
@@ -98,12 +127,8 @@ function activateMenuItem(menuItem) {
 	var articleName = menuItem.parentNode.querySelectorAll('.header')[0].dataset.menuItem;
 	if (sectionName === articleName) sectionName = "Main";
 
-	var chosenArticle = document.querySelectorAll("article[data-article=\"" + articleName + "\"]")[0];
-	var chosenSection = document.querySelectorAll("article[data-article=\"" + articleName + "\"] section[data-section=\"" + sectionName + "\"]")[0];
-
-	//Set CSS Themes
-	document.documentElement.dataset.parentTheme = articleName;
-	document.documentElement.dataset.theme = sectionName;
+	var chosenArticle = document.querySelectorAll('article[data-article="' + articleName + '"]')[0];
+	var chosenSection = document.querySelectorAll('article[data-article="' + articleName + '"] section[data-section="' + sectionName + '"]')[0];
 
 	var menuItems = document.querySelectorAll('nav [data-menu-item]');
 	var iChosenSection = [].concat(_toConsumableArray(menuItems)).indexOf(menuItem);
@@ -124,7 +149,7 @@ function activateMenuItem(menuItem) {
 	});
 
 	function slideSections(articleName) {
-		document.querySelectorAll("article[data-article=\"" + articleName + "\"] section").forEach(function (section) {
+		document.querySelectorAll('article[data-article="' + articleName + '"] section').forEach(function (section) {
 			var iCurrentSection = [].concat(_toConsumableArray(menuItems)).indexOf([].concat(_toConsumableArray(menuItems)).find(function (el) {
 				if (section.dataset.section === "Main") {
 					return el.dataset.menuItem === section.parentNode.dataset.article;
@@ -176,7 +201,7 @@ function setActiveMenuItem(menuItem) {
 }
 
 function setHash(menuItem) {
-	location.hash = "#" + menuItem.dataset.menuItem;
+	location.hash = '#' + menuItem.dataset.menuItem;
 }
 
 function locationHashChanged() {
@@ -186,3 +211,31 @@ function locationHashChanged() {
 }
 
 window.onhashchange = locationHashChanged;
+
+function scrollToNextSection() {
+	var scrolling = false;
+	document.querySelectorAll('section').forEach(function (sectiona) {
+		//section.addEventListener(scroll, (e) => {
+		//	console.log(e);
+		//	if (!scrolling) {
+		//		scrolling = true;
+		//		window.requestAnimationFrame(function () {
+		//			scrolling = false;
+		//		})
+		//	}
+		//})
+		var startPositionB = null;
+		sectiona.addEventListener("scroll", scrollNext);
+		function scrollNext(e) {
+			if (!scrolling) {
+				console.log(e);
+				if (startPositionB == null) startPositionB = e.target.scrollHeight - e.target.scrollTop - e.target.clientHeight;
+				window.requestAnimationFrame(function () {
+					scrolling = false;
+				});
+				console.log(startPositionB);
+			}
+			scrolling = true;
+		}
+	});
+}
