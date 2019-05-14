@@ -25,12 +25,21 @@ load();
 
 function setTheme() {
 	const html = document.getElementsByTagName('html')[0];
-	if (!window.matchMedia) {
-		html.dataset.theme = "light";
-	} else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-		html.dataset.theme = "dark"
-	} else {
-		html.dataset.theme = "light"
+
+	if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark')) {
+		try {
+			window.matchMedia('(prefers-color-scheme: dark').addEventListener('change', () => matchTheme());
+		} catch (err) { }
+	}
+
+	function matchTheme() {
+		if (!window.matchMedia) {
+			html.dataset.theme = "light";
+		} else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+			html.dataset.theme = "dark"
+		} else {
+			html.dataset.theme = "light"
+		}
 	}
 
 	const themeToggle = document.getElementById('dayNightToggle');
@@ -41,6 +50,8 @@ function setTheme() {
 			html.dataset.theme = 'dark'
 		}
 	})
+
+	matchTheme();
 }
 
 function setMenuEvents() {

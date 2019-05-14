@@ -48,6 +48,7 @@ h3 {
   --faded-color: #aaa;
   --accent-color: #ff994a;
   --faded-accent-color: #ffe9d9;
+  --accent-background-color:#D93D00;
 }
 :root nav,
 :root .button,
@@ -75,6 +76,7 @@ h3 {
     --faded-color: #aaa;
     --accent-color: #ff994a;
     --faded-accent-color: #ffe9d9;
+    --accent-background-color:#D93D00;
   }
   :root nav,
 :root .button,
@@ -104,6 +106,7 @@ h3 {
     --faded-color: #d8f3ff;
     --accent-color: #ff7d1a;
     --faded-accent-color: #b25712;
+    --accent-background-color: #ff6000;
   }
   :root h1,
 :root h2,
@@ -139,6 +142,7 @@ h3 {
   --faded-color: #d8f3ff;
   --accent-color: #ff7d1a;
   --faded-accent-color: #b25712;
+  --accent-background-color: #ff6000;
 }
 :root[data-theme=dark] h1,
 :root[data-theme=dark] h2,
@@ -172,6 +176,7 @@ h3 {
   --faded-color: #aaa;
   --accent-color: #ff994a;
   --faded-accent-color: #ffe9d9;
+  --accent-background-color:#D93D00;
 }
 :root[data-theme=light] nav,
 :root[data-theme=light] .button,

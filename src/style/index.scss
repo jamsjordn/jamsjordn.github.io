@@ -8,6 +8,37 @@ $z-index-article: 0;
 $z-index-section: 10;
 $z-index-nav: 20;
 
+//Font defaults
+a {
+	text-decoration: none;
+	font-weight: bolder;
+	color: inherit;
+	&:hover {
+		cursor: pointer;
+	}
+}
+h1 {
+	font-size: 65px;
+	line-height: 65px;
+	font-weight: 300;
+	font-style: normal;
+	text-align: center;
+}
+h2 {
+	font-size: 45px;
+	line-height: 45px;
+	font-weight: 300;
+	font-style: normal;
+	text-align: center;
+	padding-top: 45px;
+}
+h3 {
+	font-size: 35px;
+	line-height: 35px;
+	font-weight: 300;
+	font-style: normal;
+}
+
 //Sass Mixins
 @mixin transition() {
 	transition-duration: 1.4s;
@@ -17,7 +48,7 @@ $z-index-nav: 20;
 @mixin transition-small() {
 	transition-duration: 0.3s;
 	transition-timing-function: ease-out;
-	transition-property: background, transform, opacity, visibility, height, width, filter;
+	transition-property: background, transform, opacity, visibility, height, width, filter, clip-path;
 }
 
 @mixin transitionIn() {
@@ -29,8 +60,10 @@ $z-index-nav: 20;
 
 //Accessibilty
 @media screen and (prefers-reduced-motion: reduce) {
-	* {
-		transition: opacity 1s ease-out, background 1s ease-out, color 1s ease-out, background-color 1s ease-out;
+	*,
+	*::after,
+	*::before {
+		transition: opacity 1s ease-out, background 1s ease-out, color 1s ease-out, background-color 1s ease-out !important;
 		animation: none !important;
 	}
 }
@@ -41,7 +74,9 @@ $z-index-nav: 20;
 	--background-color: #f9f7ff;
 	--foreground-color: black;
 	--faded-color: #aaa;
-	--accent-color: #E19F20;
+	--accent-color: #ff994a;
+	--faded-accent-color: #ffe9d9;
+	--accent-background-color:#D93D00;
 
 	nav,
 	.button,
@@ -66,13 +101,21 @@ $z-index-nav: 20;
 
 /*** DARK THEMES ***/
 @mixin dark-theme() {
+	h1,
+	h2,
+	h3,
+	nav#menu {
+		font-weight: 400;
+	}
 	--z-button: 5;
 	--background-color: #000c18;
 	//--background-color: #2b2635;
 	--foreground-color: white;
 	--faded-color: #aaa;
 	--faded-color: #d8f3ff;
-	--accent-color: #E19F20;
+	--accent-color: #ff7d1a;
+	--faded-accent-color: #b25712;
+	--accent-background-color: #ff6000;
 	nav,
 	.button,
 	[data-button-type] {
@@ -419,7 +462,7 @@ header {
 				@media #{$desktop-media} {
 					border-bottom-left-radius: 20px;
 				}
-				@include transition-small();
+				@include transition();
 				@media #{$mobile-media} {
 					position: fixed;
 					top: 0;
@@ -442,47 +485,50 @@ header {
 						padding-top: 70px;
 					}
 
-					&:last-of-type:not(.active) > .header {
-					}
-
-					> div:first-of-type {
-					}
-
 					&.active {
-						> div:first-of-type {
-						}
-
 						.active {
-							background: var(--active-color);
+							background-position: 0% 0%;
+							font-weight: bolder;
 						}
 						svg {
 							transform: scaleY(-1);
 						}
-						.sub {
-							//transform: scaleY(1);
-						}
 					}
 
 					&:not(.active) {
-						> div:first-of-type {
-						}
 						.sub {
 							height: 0px;
-							opacity: 0;
 							overflow: hidden;
 							> div {
 								transform: translateY(0);
+                opacity: 0;
 							}
 						}
 					}
 
 					> div {
 						height: 60px;
-						@include transition-small();
 						&:hover {
-							background: var(--hover-color);
+							background-position: 47% 0%;
 							cursor: pointer;
 						}
+
+						background: white;
+						background: var(--background-color);
+						background: radial-gradient(
+							circle at 0%,
+							var(--accent-color) 0%,
+							var(--accent-color) 30%,
+							var(--faded-accent-color) 33%,
+							var(--faded-accent-color) 60%,
+							var(--background-color) 66%,
+							var(--background-color) 100%
+						);
+						background-position: 100% 0%;
+						background-repeat: no-repeat;
+						background-size: 350% 100%;
+
+						position: relative;
 						display: grid;
 						grid-template-columns: 1fr 50px;
 						grid-template-rows: 1fr;
@@ -491,6 +537,8 @@ header {
 						> div {
 							margin: auto 0px auto 15px;
 							grid-area: text;
+
+							z-index: calc(#{$z-index-nav} + 4);
 						}
 						&.sub > div {
 							margin: auto auto auto 35px;
@@ -500,12 +548,17 @@ header {
 							z-index: calc(#{$z-index-nav} + 1);
 							//background: lightgreen;
 							svg {
+								z-index: calc(#{$z-index-nav} + 4);
 								font-size: 1em;
 								grid-area: arrow;
 								justify-self: center;
 								align-self: center;
 								transition: all 0.3s ease-in-out;
 								padding: 1em;
+								&:hover {
+									filter: invert(1);
+									transition-delay: 0.2s;
+								}
 							}
 						}
 						&:not(.header) {
@@ -680,6 +733,7 @@ header {
 	@supports (display: grid) {
 		place-items: center;
 		display: grid;
+		grid-gap: 15px;
 		grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 		a {
 			float: none;
@@ -707,17 +761,51 @@ header {
 	border: white 2px solid;
 	background: white;
 	background: var(--background-color);
+	background: linear-gradient(
+		to right,
+		var(--accent-color) 0%,
+		var(--accent-color) 50%,
+		var(--background-color) 50%,
+		var(--background-color) 100%
+	);
+	background-position: 100% 0%;
+	background-repeat: no-repeat;
+	background-size: 220% 100%;
 	color: black;
 	color: var(--foreground-color);
-	transition: all 0.15s ease-out;
+	transition: all 0.25s ease-out;
 	box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.65);
 	z-index: auto;
+	margin: auto;
 	&[data-button-type="live"] {
 		--accent: orangered;
 	}
 
 	&[data-button-type="github"] {
 		--accent: #6f42c1;
+	}
+
+	&:hover {
+		//background: var(--hover-color);
+
+		background-position: 0% 0%;
+		transition: all 0.35s ease-out;
+		cursor: pointer;
+		&::before {
+			//clip-path: inset(-0.5px -30px round 0px 30px 30px 0px);
+			//transition: clip-path 0.7s ease-out;
+		}
+	}
+	&::before {
+		//background: var(--accent-color);
+		//content: "";
+		//position: absolute;
+		//top: 0;
+		//left: 0;
+		//right: 0;
+		//bottom: 0;
+		//clip-path: inset(-0.5px 102% -2px -2px round 0px 60px 60px 0px);
+		//transition: clip-path 0.3s ease-in;
 	}
 
 	//&::after {
@@ -735,12 +823,13 @@ header {
 	//}
 
 	&::after {
+		/*
 		opacity: 1;
 		//clip-path: 0px 0px 0px 0px;
 		content: "";
 
 		border-radius: 13px;
-		border: #E19F20 2px solid;
+		border: #e19f20 2px solid;
 		border: var(--accent-color) 2px solid;
 		top: -2px;
 		left: -2px;
@@ -749,15 +838,18 @@ header {
 		clip-path: inset(-4% 104% -4% -4%);
 		position: absolute;
 		transition: clip-path 0.4s ease-in-out;
+		*/
 	}
 
 	&:hover {
 		//transform: translateY(0px) scale(1.05);
 		box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.85);
 		&::after {
+			/*
 			opacity: 1;
 			cursor: pointer;
 			clip-path: inset(-4% -4% -4% -4%);
+			*/
 
 			//transform: translateY(0px) scale(1.05);
 		}
