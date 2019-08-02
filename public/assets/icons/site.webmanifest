@@ -58,5 +58,7 @@
     ],
     "theme_color": "#ffffff",
     "background_color": "#ffffff",
+    "lang": "en-AU",
+    "start_url": "/",
     "display": "standalone"
 }
