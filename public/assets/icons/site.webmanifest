@@ -29,8 +29,7 @@
         {
             "src": "/public/assets/icons/android-chrome-144x144.png",
             "sizes": "144x144",
-            "type": "image/png",
-            "purpose":"maskable"
+            "type": "image/png"
         },
         {
             "src": "/public/assets/icons/android-chrome-192x192.png",
